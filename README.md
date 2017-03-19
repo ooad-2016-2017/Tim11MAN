@@ -5,7 +5,7 @@ Clanovi tima:
 2. Ajdin Locic
 3. Nejra Kulovic
 
-OPIS TEME
+##OPIS TEME
 
 Cilj ovog projekta je sistem koji će omogućiti korisnicima taxi usluga da na jednostavan način dođu do prijevoza. Sistem također pruža mogućnost taxi prevoznicima da se registruju i na taj način pružaju svoje usluge. Putem aplikacije, korisnik je u mogućnosti vidjeti lokaciju najbližeg vozila koje je na raspolaganju, broj vozila, ime vozača i druge informacije koje su važne korisniku. U nastavku dokumenta navedene su i objašnjene detaljnije specifikacije sistema. 
 
@@ -14,7 +14,7 @@ Nerijetko se dešava da ste u žurbi i da vam je što prije potreban prijevoz do
 Danas je jednostavno ne zamislivo da neka kompanija poput vaše nema ovako efikasan, jednostavan i veoma jeftin sistem.
 Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će sa ovim sistemo poslovanje vaše kompanije biti daleko poboljšano i organizovano. S ovim sistemom dobijate uvid u sveukupni rad vaše kompanije poput nadgledanja vozača, vozila, mogućnosti registracije korisnika i još mnogo toga.
 
-PROCESI
+##PROCESI
 
 **Registracija korisnika** - Korisnici su u mogućnosti da prilikom pokretanja aplikacije obave registraciju ukoliko ne posjeduju profil.
 
