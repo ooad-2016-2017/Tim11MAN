@@ -37,7 +37,7 @@ Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će 
 * mogućnost dodavanja/brisanja vozača unutar kompanije
 * mogućnost registracije vozača za svaku kompaniju
 * mogućnost provjere slobodnih vozača
-* mogucnost pracenja po mapi
+* mogućnost praćenja po mapi
 * mogućnost odabira rute na mapi
 
 ## AKTERI
