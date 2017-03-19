@@ -39,3 +39,11 @@ Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će 
 * mogućnost provjere slobodnih vozača
 * mogucnost pracenja po mapi
 * mogućnost odabira rute na mapi
+
+## AKTERI
+
+* mušterija
+* vozač taxija
+* taxi kompanija
+* dispečer
+* supervizor
