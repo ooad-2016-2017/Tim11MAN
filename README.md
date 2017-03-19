@@ -13,3 +13,19 @@ Nerijetko se dešava da ste u žurbi i da vam je što prije potreban prijevoz do
 
 Danas je jednostavno ne zamislivo da neka kompanija poput vaše nema ovako efikasan, jednostavan i veoma jeftin sistem.
 Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će sa ovim sistemo poslovanje vaše kompanije biti daleko poboljšano i organizovano. S ovim sistemom dobijate uvid u sveukupni rad vaše kompanije poput nadgledanja vozača, vozila, mogućnosti registracije korisnika i još mnogo toga.
+
+PROCESI
+
+**Registracija korisnika** - Korisnici su u mogućnosti da prilikom pokretanja aplikacije obave registraciju ukoliko ne posjeduju profil.
+
+**Prijava korisnika** - Ukoliko korisnici posjeduju profil mogu obaviti prijavu na sistem.
+
+**Prijava kompanije** - Kompanija sa zasebnog profila se prijavljuje na sistem i dobija drugačiji oblik forme preko kojeg ima uvid u svoje vozače i vozila i također mogućnost dodavanja novih vozaca.
+
+**Registracija kompanije** - Supervizor mogućnostima svoje forme može da registruje novu kompaniju unutar sistema.
+
+**Prijava dispečera** - On prijavom na sistem dobija preko svoje forme mogućnost uvida u vozila i vozače.
+
+**Registracija dispečera** - Supervizor može da registruje i novog dispečera sa svim njegovim ovlastima.
+
+**Kontaktiranje taksija** - Korisnik preko svoje forme unosi svoju lokaciju ili preko GPS se određuje njegova lokacija nakon čega bira željenu lokaciju, dobija informaciju o najbližim taksitima. U slučaju odabira nekog od taksista prikazuje se stanje tj. da li je taksi slobodan i podaci o vozilu i cijena usluge.
