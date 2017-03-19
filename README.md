@@ -30,7 +30,7 @@ Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će 
 
 * *Kontaktiranje taksija* - Mušterija preko svoje forme unosi svoju lokaciju ili preko GPS se određuje njegova lokacija nakon čega bira željenu lokaciju, dobija informaciju o najbližim taksitima. U slučaju odabira nekog od taksista prikazuje se stanje tj. da li je taksi slobodan i podaci o vozilu i cijena usluge.
 
-** FUNKCIONALNOSTI **
+** FUNKCIONALNOSTI *
 
 * mogućnost registracije kompanije
 * mogućnost registracije klijenta
