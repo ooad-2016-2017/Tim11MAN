@@ -34,6 +34,7 @@ Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će 
 
 * mogućnost registracije kompanije
 * mogućnost registracije klijenta
+* mogućnost prijave na sistem
 * mogućnost dodavanja/brisanja vozača unutar kompanije
 * mogućnost registracije vozača za svaku kompaniju
 * mogućnost provjere slobodnih vozača
