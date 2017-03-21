@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="404a0fe3-69ca-4070-b690-57b90f06d435"
+    Name="72d9c69b-63b5-494c-bf4a-de892ecd6794"
     Publisher="CN=korisnik"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="404a0fe3-69ca-4070-b690-57b90f06d435" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="72d9c69b-63b5-494c-bf4a-de892ecd6794" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ProjekatTaxiAgencijaMAN</DisplayName>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{a21195c9-153b-45b4-a6cd-878cd6c08acf}</ProjectGuid>
+    <ProjectGuid>{ffdd0eb6-56c8-4a13-ae70-bca19c445c06}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProjekatTaxiAgencijaMAN</RootNamespace>
