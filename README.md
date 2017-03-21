@@ -40,6 +40,7 @@ Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će 
 * mogućnost provjere slobodnih vozača
 * mogućnost praćenja po mapi
 * mogućnost odabira rute na mapi
+* mogućnost pregleda ostvarenih vožnji
 
 ## AKTERI
 
