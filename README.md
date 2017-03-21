@@ -44,8 +44,8 @@ Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će 
 
 ## AKTERI
 
-* mušterija
-* vozač taxija
-* taxi kompanija
-* dispečer
-* supervizor
+* *mušterija* - korisnik aplikacije koji koristi taxi prevoz
+* *vozač taxija* - korisnik aplikacije koji prevozi mušterije
+* *taxi kompanija* - korisnik aplikacije koji ima uvid u svoja vozila i zaposlene vozače
+* *dispečer* - osoba koja povezuje mušterije i vozače
+* *supervizor* - osoba koja upravlja cijelim sistemom
