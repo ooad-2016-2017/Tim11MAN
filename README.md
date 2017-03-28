@@ -1,4 +1,4 @@
-# Taxi agencija MAN
+﻿# Taxi agencija MAN
 
 Clanovi tima: 
 1. Muhamed Kapo
@@ -28,7 +28,7 @@ Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će 
 
 * *Registracija dispečera* - Supervizor može da registruje i novog dispečera sa svim njegovim ovlastima.
 
-* *Kontaktiranje taksija* - Mušterija preko svoje forme unosi svoju lokaciju ili preko GPS se određuje njegova lokacija nakon čega bira željenu lokaciju, dobija informaciju o najbližim taksitima. U slučaju odabira nekog od taksista prikazuje se stanje tj. da li je taksi slobodan i podaci o vozilu i cijena usluge.
+* *Kontaktiranje taksija* - Mušterija bira željenu lokaciju, unosi svoju lokaciju ili preko GPS se određuje njegova lokacija nakon čega dobija informaciju o najbližim taksitima. U slučaju odabira nekog od taksista prikazuje se stanje tj. da li je taksi slobodan i podaci o vozilu i cijena usluge.
 
 ## FUNKCIONALNOSTI
 
