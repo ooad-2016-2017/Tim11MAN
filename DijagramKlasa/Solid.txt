@@ -1,0 +1,31 @@
+## <center>SOLID principi</center>
+
+**1. Princip pojedinačne odgovornosti**
+
+Princip pojedinačne odgovornosti ili SRP kaže da bi svaka klasa trebala imati 
+samo jedan razlog za promjenu. Pod ovim se misli da klasa treba da se bavi samo 
+jednom konkretnom stvari, dakle, klase treba da imaju pojedinačnu odgovornost. 
+Vidimo da u dijagramu klasa imamo klase Vozilo i Vozac, klasa Vozac se veže za 
+klasu Vozilo ali one obavljaju različite stvari, posmatrajuči i ostale klase 
+uočavamo da SRP princip nije narušen.
+
+**2. Otvoreno zatvoren princip**
+
+Otvoreno zatvoren princip ili OCP glasi: Entiteti softvera (klase, moduli, 
+funkcije) trebali bi biti otvoreni za nadogradnju, ali zatvoreni za 
+modifikacije. To znači da treba da se može mijenjati okruženje oko modula ali 
+ne i sam modul. U klasi Ruta vidimo da ima vezu sa interfejsom Google Maps, 
+tako da nikakve promjene koje se dešavaju u interfejsu Google Maps ne mogu 
+uticati na promjene u klasi Ruta. Sve ostale klase su korektno modifikovane i 
+do neke mjere se mogu nadograditi, što bi bilo i poželjno.
+
+**3. Liskov princip zamjene**
+
+Liskov princip zamjene ili LSP kaže da podtipovi moraju biti zamjenjivi 
+njihovim osnovnim tipovima. Ovaj princip se odnosi na nasljeđivanje a kako 
+vidimo u dijagramu klasa imamo nasljeđivanje klase RegistrovanaMušterija iz 
+Mušterija. Između klase RegistrovanaMušterija i Mušterija nema razloga da bi se 
+ovaj princip narušio jer trenutno i ne postoji metoda u klasi Mušterija koja se 
+ne bi mogla implementirati u izvedenoj klasi RegistrovanaMušterija tj. metoda 
+koja bi bila besmislena u klasi RegistrovanaMušterija za implementaciju. Tako 
+da je Liskov princip zadovoljen.
