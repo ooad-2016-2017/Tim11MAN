@@ -29,3 +29,13 @@ ovaj princip narušio jer trenutno i ne postoji metoda u klasi Mušterija koja s
 ne bi mogla implementirati u izvedenoj klasi RegistrovanaMušterija tj. metoda 
 koja bi bila besmislena u klasi RegistrovanaMušterija za implementaciju. Tako 
 da je Liskov princip zadovoljen.
+
+4. Princip inverzije ovisnosti
+
+Moduli visokog nivoa ne bi trebali ovisiti od modula niskog nivoa, oba bi trebalo 
+da ovise od apstrakcija. Nasljedjivanje klasa vrsi se iz apstraktne klase 
+(npr. iz apstraktne klase Zaposlenik naslijedjene su klase Vozac, Dispecer i Supervizor), 
+te izvedene klase zavise od apstraktne klase, ali ne i jedna od druge. Promjena u klasi Vozac 
+ne dovodi do promjene u ostalim izvedenim klasama, niti u samoj apstraktnoj klasi. Ista neovisnost 
+je prisutna u slucaju promjene u klasama Musterija i RegistrovanaMusterija. Na osnovu navedenog 
+mozemo zakljuciti da je ispunjen princip inverzije ovisnosti.
