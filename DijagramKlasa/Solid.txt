@@ -1,6 +1,6 @@
-## <center>SOLID principi</center>
+SOLID principi:
 
-**1. Princip pojedinačne odgovornosti**
+1. Princip pojedinačne odgovornosti
 
 Princip pojedinačne odgovornosti ili SRP kaže da bi svaka klasa trebala imati 
 samo jedan razlog za promjenu. Pod ovim se misli da klasa treba da se bavi samo 
@@ -9,7 +9,7 @@ Vidimo da u dijagramu klasa imamo klase Vozilo i Vozac, klasa Vozac se veže za
 klasu Vozilo ali one obavljaju različite stvari, posmatrajuči i ostale klase 
 uočavamo da SRP princip nije narušen.
 
-**2. Otvoreno zatvoren princip**
+2. Otvoreno zatvoren princip
 
 Otvoreno zatvoren princip ili OCP glasi: Entiteti softvera (klase, moduli, 
 funkcije) trebali bi biti otvoreni za nadogradnju, ali zatvoreni za 
@@ -19,7 +19,7 @@ tako da nikakve promjene koje se dešavaju u interfejsu Google Maps ne mogu
 uticati na promjene u klasi Ruta. Sve ostale klase su korektno modifikovane i 
 do neke mjere se mogu nadograditi, što bi bilo i poželjno.
 
-**3. Liskov princip zamjene**
+3. Liskov princip zamjene
 
 Liskov princip zamjene ili LSP kaže da podtipovi moraju biti zamjenjivi 
 njihovim osnovnim tipovima. Ovaj princip se odnosi na nasljeđivanje a kako 
