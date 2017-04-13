@@ -42,4 +42,7 @@ mozemo zakljuciti da je ispunjen princip inverzije ovisnosti.
 
 5. Princip izoliranja interfejsa
 
-Iako neke od klasa, zbog veceg broja metoda, podsjecaju na "debele" klase, ipak su vecina tih metoda neophodne get i set metode. Metode koje se odnosena funkcionalnost klase i sistema su osnovne metode potrebne korisnicima i koje ce oni cesto koristiti. Dakle, na dijagramu se ne pojavljuju "debele" klase  te mozemo zakljuciti da je ispunjen i posljenji od pet SOLID principa.
+Iako neke od klasa, zbog većeg broja metoda, podsjećaju na "debele" klase, ipak su većina 
+tih metoda neophodne get i set metode. Metode koje se odnosena funkcionalnost klase i sistema su osnovne 
+metode potrebne korisnicima i koje će oni često koristiti. Dakle, na dijagramu se ne pojavljuju "debele" klase  
+te možemo zaključiti da je ispunjen i posljenji od pet SOLID principa.
