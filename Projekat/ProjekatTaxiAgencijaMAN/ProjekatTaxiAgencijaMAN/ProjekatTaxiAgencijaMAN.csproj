@@ -98,6 +98,9 @@
     <Compile Include="forme\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
     </Compile>
+    <Compile Include="forme\Slika.xaml.cs">
+      <DependentUpon>Slika.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -137,6 +140,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="forme\PrijavaNaSistem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="forme\RegistracijaKompanije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="forme\RegistracijaMusterije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="forme\Slika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="forme\UrediProfilKompanije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="forme\UrediProfilMusterije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

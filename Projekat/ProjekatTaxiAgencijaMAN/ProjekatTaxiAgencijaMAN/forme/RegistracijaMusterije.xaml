@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="ProjekatTaxiAgencijaMAN.RegistracijaMusterije"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatTaxiAgencijaMAN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlockImeMusterije" HorizontalAlignment="Left" Margin="26,112,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockPrezimeMusterije" HorizontalAlignment="Left" Margin="26,138,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockDatumRodjenja" HorizontalAlignment="Left" Margin="26,168,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockEmail" HorizontalAlignment="Left" Margin="26,228,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockBrojTelefona" HorizontalAlignment="Left" Margin="26,198,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"/>
+        <Button x:Name="buttonRegistrujKompaniju" Content="Registruj" HorizontalAlignment="Left" Margin="26,293,0,0" VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="textBoxImeMusterije" HorizontalAlignment="Left" Margin="170,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
+        <TextBox x:Name="textBoxAdresaKompanije" HorizontalAlignment="Left" Margin="170,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
+        <TextBox x:Name="textBoxBrojTelefona" HorizontalAlignment="Left" Margin="170,193,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10" RenderTransformOrigin="0.513,1.12"/>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Margin="170,223,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
+        <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="216,293,0,0" VerticalAlignment="Top" Width="114" Height="32"/>
+        <DatePicker x:Name="datePickerDatumRodjenja" HorizontalAlignment="Left" Margin="170,163,0,0" VerticalAlignment="Top" Width="154" Height="25" MinWidth="114"/>
+
+    </Grid>
+</Page>
