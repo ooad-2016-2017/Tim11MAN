@@ -1,4 +1,5 @@
 {
+  "locked": false,
   "version": 2,
   "targets": {
     "UAP,Version=v10.0": {
@@ -35,32 +36,16 @@
           "Microsoft.Net.Native.SharedLibrary-arm": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x64": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x86": "1.6.0"
-        },
-        "build": {
-          "build/Microsoft.Net.Native.Compiler.props": {},
-          "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
       "Microsoft.Net.Native.SharedLibrary-arm/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-arm.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-arm.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x64/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x64.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x64.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x86/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x86.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.NETCore/5.0.2": {
         "type": "package",
@@ -2238,32 +2223,16 @@
           "Microsoft.Net.Native.SharedLibrary-arm": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x64": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x86": "1.6.0"
-        },
-        "build": {
-          "build/Microsoft.Net.Native.Compiler.props": {},
-          "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
       "Microsoft.Net.Native.SharedLibrary-arm/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-arm.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-arm.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x64/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x64.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x64.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x86/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x86.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.NETCore/5.0.2": {
         "type": "package",
@@ -4524,32 +4493,16 @@
           "Microsoft.Net.Native.SharedLibrary-arm": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x64": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x86": "1.6.0"
-        },
-        "build": {
-          "build/Microsoft.Net.Native.Compiler.props": {},
-          "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
       "Microsoft.Net.Native.SharedLibrary-arm/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-arm.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-arm.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x64/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x64.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x64.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x86/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x86.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.NETCore/5.0.2": {
         "type": "package",
@@ -6849,32 +6802,16 @@
           "Microsoft.Net.Native.SharedLibrary-arm": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x64": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x86": "1.6.0"
-        },
-        "build": {
-          "build/Microsoft.Net.Native.Compiler.props": {},
-          "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
       "Microsoft.Net.Native.SharedLibrary-arm/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-arm.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-arm.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x64/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x64.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x64.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x86/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x86.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.NETCore/5.0.2": {
         "type": "package",
@@ -9144,32 +9081,16 @@
           "Microsoft.Net.Native.SharedLibrary-arm": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x64": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x86": "1.6.0"
-        },
-        "build": {
-          "build/Microsoft.Net.Native.Compiler.props": {},
-          "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
       "Microsoft.Net.Native.SharedLibrary-arm/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-arm.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-arm.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x64/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x64.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x64.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x86/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x86.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.NETCore/5.0.2": {
         "type": "package",
@@ -11478,32 +11399,16 @@
           "Microsoft.Net.Native.SharedLibrary-arm": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x64": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x86": "1.6.0"
-        },
-        "build": {
-          "build/Microsoft.Net.Native.Compiler.props": {},
-          "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
       "Microsoft.Net.Native.SharedLibrary-arm/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-arm.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-arm.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x64/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x64.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x64.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x86/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x86.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.NETCore/5.0.2": {
         "type": "package",
@@ -13773,32 +13678,16 @@
           "Microsoft.Net.Native.SharedLibrary-arm": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x64": "1.6.0",
           "Microsoft.Net.Native.SharedLibrary-x86": "1.6.0"
-        },
-        "build": {
-          "build/Microsoft.Net.Native.Compiler.props": {},
-          "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
       "Microsoft.Net.Native.SharedLibrary-arm/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-arm.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-arm.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x64/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x64.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x64.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.Net.Native.SharedLibrary-x86/1.6.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Net.Native.SharedLibrary-x86.props": {},
-          "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
-        }
+        "type": "package"
       },
       "Microsoft.NETCore/5.0.2": {
         "type": "package",
@@ -18371,14 +18260,13 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/5.3.1": {
-      "sha512": "pYCI0GC3pt29yFzhboHYnWmTIjaJ2K/L/aPNOHshrM1yQojxIp8cYdcDDd27r4GCSrSnkELVJ/x38OF06jqdmQ==",
+      "sha512": "j4QdwqcrgAdLIuO+Fbf2DrDYWc0WM4lYSSeoeWXNSu1hr4sYcL+YbIq/TDg7nktest7nVtG09TjCItpczOgjuA==",
       "type": "package",
-      "path": "microsoft.netcore.universalwindowsplatform/5.3.1",
       "files": [
+        "Microsoft.NETCore.UniversalWindowsPlatform.5.3.1.nupkg.sha512",
+        "Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "microsoft.netcore.universalwindowsplatform.5.3.1.nupkg.sha512",
-        "microsoft.netcore.universalwindowsplatform.nuspec"
+        "dotnet_library_license.txt"
       ]
     },
     "Microsoft.NETCore.Windows.ApiSets/1.0.1": {
@@ -24342,43 +24230,5 @@
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.3.1"
     ],
     "UAP,Version=v10.0": []
-  },
-  "packageFolders": {
-    "C:\\Users\\KiMu\\.nuget\\packages\\": {}
-  },
-  "project": {
-    "restore": {
-      "projectUniqueName": "C:\\Users\\KiMu\\Desktop\\OOAD GITGUI\\Zadatak\\Projekat\\ProjekatTaxiAgencijaMAN\\ProjekatTaxiAgencijaMAN\\ProjekatTaxiAgencijaMAN.csproj",
-      "projectName": "ProjekatTaxiAgencijaMAN",
-      "projectPath": "C:\\Users\\KiMu\\Desktop\\OOAD GITGUI\\Zadatak\\Projekat\\ProjekatTaxiAgencijaMAN\\ProjekatTaxiAgencijaMAN\\ProjekatTaxiAgencijaMAN.csproj",
-      "projectJsonPath": "C:\\Users\\KiMu\\Desktop\\OOAD GITGUI\\Zadatak\\Projekat\\ProjekatTaxiAgencijaMAN\\ProjekatTaxiAgencijaMAN\\project.json",
-      "projectStyle": "ProjectJson"
-    },
-    "dependencies": {
-      "Microsoft.NETCore.UniversalWindowsPlatform": "[5.3.1, )"
-    },
-    "frameworks": {
-      "uap10.0": {}
-    },
-    "runtimes": {
-      "win10-arm": {
-        "#import": []
-      },
-      "win10-arm-aot": {
-        "#import": []
-      },
-      "win10-x64": {
-        "#import": []
-      },
-      "win10-x64-aot": {
-        "#import": []
-      },
-      "win10-x86": {
-        "#import": []
-      },
-      "win10-x86-aot": {
-        "#import": []
-      }
-    }
   }
 }
