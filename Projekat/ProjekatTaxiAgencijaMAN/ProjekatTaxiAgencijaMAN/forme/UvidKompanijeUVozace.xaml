@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="ProjekatTaxiAgencijaMAN.UvidKompanijeUVozace"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatTaxiAgencijaMAN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="27,29,0,0" TextWrapping="Wrap" Text="Korisnicko ime:" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxKorisnickoIme" Margin="194,17,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="48,97,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="48,134,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="48,172,0,0" TextWrapping="Wrap" Text="Predjeni kilomteri:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="48,209,0,0" TextWrapping="Wrap" Text="Broj voznji:" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxIme" Margin="194,85,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxPrezime" Margin="194,122,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxPredjeniKilometri" Margin="194,160,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxBrojVoznji" Margin="194,197,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButtonDnevni" Content="Dnevni" HorizontalAlignment="Left" Margin="47,335,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButtonMjesecni" Content="Mjesecni" HorizontalAlignment="Left" Margin="213,335,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="48,275,0,0" TextWrapping="Wrap" Text="Registracija vozila" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxRegistracijaVozila" Margin="194,263,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+    </Grid>
+</Page>

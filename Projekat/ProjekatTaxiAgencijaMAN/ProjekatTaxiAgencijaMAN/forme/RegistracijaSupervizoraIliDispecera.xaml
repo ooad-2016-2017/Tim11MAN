@@ -1,0 +1,29 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatTaxiAgencijaMAN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:forme="using:ProjekatTaxiAgencijaMAN.forme"
+    x:Class="ProjekatTaxiAgencijaMAN.RegistracijaSupervizoraIliDispecera"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="textBoxIme" Margin="178,51,28,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961"/>
+        <TextBox x:Name="textBoxPrezime" Margin="178,88,28,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961" Height="34"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="37,63,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="37,102,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="37,141,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxBrojTelefona" Margin="178,127,28,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961" Height="34"/>
+        <TextBlock x:Name="textBlockDatumRodjenja" HorizontalAlignment="Left" Margin="37,181,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePickerDatumRodjenja" HorizontalAlignment="Left" Margin="178,176,0,0" VerticalAlignment="Top" Height="25" MinWidth="114" Width="154"/>
+
+        <TextBlock x:Name="textBlockDatumZaposlenja" HorizontalAlignment="Left" Margin="37,215,0,0" TextWrapping="Wrap" Text="Datum zaposlenja:" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePickerDatumZaposlenja" HorizontalAlignment="Left" Margin="178,210,0,0" VerticalAlignment="Top" Height="25" MinWidth="114" Width="154"/>
+        <forme:Registracija HorizontalAlignment="Left" Margin="6,246,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RadioButtonSupervizor" Content="Supervizor" HorizontalAlignment="Left" Margin="37,415,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RadioButtonDispecer" Content="Dispecer" HorizontalAlignment="Left" Margin="212,415,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonRegistruj" Content="Registruj" HorizontalAlignment="Left" Margin="37,488,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="252,488,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Page>

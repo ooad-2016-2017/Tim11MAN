@@ -132,33 +132,45 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[12];
+            _typeNameTable = new string[18];
             _typeNameTable[0] = "ProjekatTaxiAgencijaMAN.BrisanjeVozaca";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "ProjekatTaxiAgencijaMAN.KontaktiranjeTaksija";
             _typeNameTable[4] = "ProjekatTaxiAgencijaMAN.forme.Prijava";
             _typeNameTable[5] = "ProjekatTaxiAgencijaMAN.PrijavaNaSistem";
-            _typeNameTable[6] = "ProjekatTaxiAgencijaMAN.RegistracijaKompanije";
-            _typeNameTable[7] = "ProjekatTaxiAgencijaMAN.RegistracijaMusterije";
-            _typeNameTable[8] = "ProjekatTaxiAgencijaMAN.forme.Slika";
-            _typeNameTable[9] = "ProjekatTaxiAgencijaMAN.UrediProfilKompanije";
-            _typeNameTable[10] = "ProjekatTaxiAgencijaMAN.UrediProfilMusterije";
-            _typeNameTable[11] = "ProjekatTaxiAgencijaMAN.MainPage";
+            _typeNameTable[6] = "ProjekatTaxiAgencijaMAN.forme.Registracija";
+            _typeNameTable[7] = "ProjekatTaxiAgencijaMAN.RegistracijaKompanije";
+            _typeNameTable[8] = "ProjekatTaxiAgencijaMAN.RegistracijaMusterije";
+            _typeNameTable[9] = "ProjekatTaxiAgencijaMAN.RegistracijaVozaca";
+            _typeNameTable[10] = "ProjekatTaxiAgencijaMAN.ReviewSlanje";
+            _typeNameTable[11] = "ProjekatTaxiAgencijaMAN.forme.Slika";
+            _typeNameTable[12] = "ProjekatTaxiAgencijaMAN.UrediProfilKompanije";
+            _typeNameTable[13] = "ProjekatTaxiAgencijaMAN.UrediProfilMusterije";
+            _typeNameTable[14] = "ProjekatTaxiAgencijaMAN.UredjivanjeVozaca";
+            _typeNameTable[15] = "ProjekatTaxiAgencijaMAN.UvidKompanijeUVozace";
+            _typeNameTable[16] = "ProjekatTaxiAgencijaMAN.UvidKompanijeUVozila";
+            _typeNameTable[17] = "ProjekatTaxiAgencijaMAN.MainPage";
 
-            _typeTable = new global::System.Type[12];
+            _typeTable = new global::System.Type[18];
             _typeTable[0] = typeof(global::ProjekatTaxiAgencijaMAN.BrisanjeVozaca);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::ProjekatTaxiAgencijaMAN.KontaktiranjeTaksija);
             _typeTable[4] = typeof(global::ProjekatTaxiAgencijaMAN.forme.Prijava);
             _typeTable[5] = typeof(global::ProjekatTaxiAgencijaMAN.PrijavaNaSistem);
-            _typeTable[6] = typeof(global::ProjekatTaxiAgencijaMAN.RegistracijaKompanije);
-            _typeTable[7] = typeof(global::ProjekatTaxiAgencijaMAN.RegistracijaMusterije);
-            _typeTable[8] = typeof(global::ProjekatTaxiAgencijaMAN.forme.Slika);
-            _typeTable[9] = typeof(global::ProjekatTaxiAgencijaMAN.UrediProfilKompanije);
-            _typeTable[10] = typeof(global::ProjekatTaxiAgencijaMAN.UrediProfilMusterije);
-            _typeTable[11] = typeof(global::ProjekatTaxiAgencijaMAN.MainPage);
+            _typeTable[6] = typeof(global::ProjekatTaxiAgencijaMAN.forme.Registracija);
+            _typeTable[7] = typeof(global::ProjekatTaxiAgencijaMAN.RegistracijaKompanije);
+            _typeTable[8] = typeof(global::ProjekatTaxiAgencijaMAN.RegistracijaMusterije);
+            _typeTable[9] = typeof(global::ProjekatTaxiAgencijaMAN.RegistracijaVozaca);
+            _typeTable[10] = typeof(global::ProjekatTaxiAgencijaMAN.ReviewSlanje);
+            _typeTable[11] = typeof(global::ProjekatTaxiAgencijaMAN.forme.Slika);
+            _typeTable[12] = typeof(global::ProjekatTaxiAgencijaMAN.UrediProfilKompanije);
+            _typeTable[13] = typeof(global::ProjekatTaxiAgencijaMAN.UrediProfilMusterije);
+            _typeTable[14] = typeof(global::ProjekatTaxiAgencijaMAN.UredjivanjeVozaca);
+            _typeTable[15] = typeof(global::ProjekatTaxiAgencijaMAN.UvidKompanijeUVozace);
+            _typeTable[16] = typeof(global::ProjekatTaxiAgencijaMAN.UvidKompanijeUVozila);
+            _typeTable[17] = typeof(global::ProjekatTaxiAgencijaMAN.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -197,12 +209,18 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
         private object Activate_3_KontaktiranjeTaksija() { return new global::ProjekatTaxiAgencijaMAN.KontaktiranjeTaksija(); }
         private object Activate_4_Prijava() { return new global::ProjekatTaxiAgencijaMAN.forme.Prijava(); }
         private object Activate_5_PrijavaNaSistem() { return new global::ProjekatTaxiAgencijaMAN.PrijavaNaSistem(); }
-        private object Activate_6_RegistracijaKompanije() { return new global::ProjekatTaxiAgencijaMAN.RegistracijaKompanije(); }
-        private object Activate_7_RegistracijaMusterije() { return new global::ProjekatTaxiAgencijaMAN.RegistracijaMusterije(); }
-        private object Activate_8_Slika() { return new global::ProjekatTaxiAgencijaMAN.forme.Slika(); }
-        private object Activate_9_UrediProfilKompanije() { return new global::ProjekatTaxiAgencijaMAN.UrediProfilKompanije(); }
-        private object Activate_10_UrediProfilMusterije() { return new global::ProjekatTaxiAgencijaMAN.UrediProfilMusterije(); }
-        private object Activate_11_MainPage() { return new global::ProjekatTaxiAgencijaMAN.MainPage(); }
+        private object Activate_6_Registracija() { return new global::ProjekatTaxiAgencijaMAN.forme.Registracija(); }
+        private object Activate_7_RegistracijaKompanije() { return new global::ProjekatTaxiAgencijaMAN.RegistracijaKompanije(); }
+        private object Activate_8_RegistracijaMusterije() { return new global::ProjekatTaxiAgencijaMAN.RegistracijaMusterije(); }
+        private object Activate_9_RegistracijaVozaca() { return new global::ProjekatTaxiAgencijaMAN.RegistracijaVozaca(); }
+        private object Activate_10_ReviewSlanje() { return new global::ProjekatTaxiAgencijaMAN.ReviewSlanje(); }
+        private object Activate_11_Slika() { return new global::ProjekatTaxiAgencijaMAN.forme.Slika(); }
+        private object Activate_12_UrediProfilKompanije() { return new global::ProjekatTaxiAgencijaMAN.UrediProfilKompanije(); }
+        private object Activate_13_UrediProfilMusterije() { return new global::ProjekatTaxiAgencijaMAN.UrediProfilMusterije(); }
+        private object Activate_14_UredjivanjeVozaca() { return new global::ProjekatTaxiAgencijaMAN.UredjivanjeVozaca(); }
+        private object Activate_15_UvidKompanijeUVozace() { return new global::ProjekatTaxiAgencijaMAN.UvidKompanijeUVozace(); }
+        private object Activate_16_UvidKompanijeUVozila() { return new global::ProjekatTaxiAgencijaMAN.UvidKompanijeUVozila(); }
+        private object Activate_17_MainPage() { return new global::ProjekatTaxiAgencijaMAN.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -250,44 +268,86 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 6:   //  ProjekatTaxiAgencijaMAN.RegistracijaKompanije
-                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_RegistracijaKompanije;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 7:   //  ProjekatTaxiAgencijaMAN.RegistracijaMusterije
-                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_RegistracijaMusterije;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 8:   //  ProjekatTaxiAgencijaMAN.forme.Slika
+            case 6:   //  ProjekatTaxiAgencijaMAN.forme.Registracija
                 userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_8_Slika;
+                userType.Activator = Activate_6_Registracija;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  ProjekatTaxiAgencijaMAN.UrediProfilKompanije
+            case 7:   //  ProjekatTaxiAgencijaMAN.RegistracijaKompanije
                 userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_UrediProfilKompanije;
+                userType.Activator = Activate_7_RegistracijaKompanije;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  ProjekatTaxiAgencijaMAN.UrediProfilMusterije
+            case 8:   //  ProjekatTaxiAgencijaMAN.RegistracijaMusterije
                 userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_UrediProfilMusterije;
+                userType.Activator = Activate_8_RegistracijaMusterije;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  ProjekatTaxiAgencijaMAN.MainPage
+            case 9:   //  ProjekatTaxiAgencijaMAN.RegistracijaVozaca
                 userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_MainPage;
+                userType.Activator = Activate_9_RegistracijaVozaca;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  ProjekatTaxiAgencijaMAN.ReviewSlanje
+                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_ReviewSlanje;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  ProjekatTaxiAgencijaMAN.forme.Slika
+                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_11_Slika;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  ProjekatTaxiAgencijaMAN.UrediProfilKompanije
+                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_12_UrediProfilKompanije;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  ProjekatTaxiAgencijaMAN.UrediProfilMusterije
+                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_13_UrediProfilMusterije;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 14:   //  ProjekatTaxiAgencijaMAN.UredjivanjeVozaca
+                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_14_UredjivanjeVozaca;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 15:   //  ProjekatTaxiAgencijaMAN.UvidKompanijeUVozace
+                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_15_UvidKompanijeUVozace;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 16:   //  ProjekatTaxiAgencijaMAN.UvidKompanijeUVozila
+                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_UvidKompanijeUVozila;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  ProjekatTaxiAgencijaMAN.MainPage
+                userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_17_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

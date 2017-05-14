@@ -3,9 +3,15 @@ forme\BrisanjeVozaca.xbf
 forme\KontaktiranjeTaksija.xbf
 forme\Prijava.xbf
 forme\PrijavaNaSistem.xbf
+forme\Registracija.xbf
 forme\RegistracijaKompanije.xbf
 forme\RegistracijaMusterije.xbf
+forme\RegistracijaVozaca.xbf
+forme\ReviewSlanje.xbf
 forme\Slika.xbf
 forme\UrediProfilKompanije.xbf
 forme\UrediProfilMusterije.xbf
+forme\UredjivanjeVozaca.xbf
+forme\UvidKompanijeUVozace.xbf
+forme\UvidKompanijeUVozila.xbf
 MainPage.xbf

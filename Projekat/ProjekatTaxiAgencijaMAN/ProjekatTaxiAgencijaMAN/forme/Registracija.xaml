@@ -1,0 +1,20 @@
+﻿<UserControl
+    x:Class="ProjekatTaxiAgencijaMAN.forme.Registracija"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatTaxiAgencijaMAN.forme"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="170"
+    d:DesignWidth="370">
+
+    <Grid Margin="0,0,9.667,9.667">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Korisnicko ime:" VerticalAlignment="Top" Margin="31,39,0,0"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sifra" VerticalAlignment="Top" Margin="31,76,0,0"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Potvrdi sifru:" VerticalAlignment="Top" Margin="31,113,0,0"/>
+        <TextBox x:Name="textBoxKorisnickoIme" HorizontalAlignment="Left" Margin="170,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156" Height="20"/>
+        <TextBox x:Name="textBoxSifra" HorizontalAlignment="Left" Margin="170,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
+        <TextBox x:Name="textBoxPotvrdiSifru" HorizontalAlignment="Left" Margin="170,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
+    </Grid>
+</UserControl>
