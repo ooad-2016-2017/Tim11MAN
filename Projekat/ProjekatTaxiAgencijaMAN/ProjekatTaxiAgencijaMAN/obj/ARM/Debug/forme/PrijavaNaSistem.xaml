@@ -1,0 +1,17 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatTaxiAgencijaMAN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:forme="using:ProjekatTaxiAgencijaMAN.forme"
+    x:Class="ProjekatTaxiAgencijaMAN.PrijavaNaSistem"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <forme:Prijava HorizontalAlignment="Left" Margin="8,80,0,0" VerticalAlignment="Top"/>
+        <Button x:ConnectionId='1' x:Name="buttonPrijava" Content="Prijava" HorizontalAlignment="Left" Margin="86,250,0,0" VerticalAlignment="Top" Width="174" FontSize="20" Height="45"/>
+        <TextBlock x:ConnectionId='2' x:Name="textBlockRegistracija" Margin="123,374,0,0" Text=" Registruj se" VerticalAlignment="Top" RenderTransformOrigin="-1.102,0.733" Height="27" HorizontalAlignment="Left" Width="96" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" FontWeight="Bold"/>
+    </Grid>
+</Page>
+
