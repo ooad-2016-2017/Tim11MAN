@@ -6,11 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignHeight="261.627"
+    d:DesignWidth="181.925">
 
-    <Grid Margin="0,0,219,0">
-        <Image x:Name="slikaProfila" HorizontalAlignment="Left" Height="169" Margin="35,10,0,0" VerticalAlignment="Top" Width="112"/>
+    <Grid Margin="0,0,10.333,-0.333">
+        <Image x:Name="slikaProfila" Source="slikaProfila.jpg" HorizontalAlignment="Left" Height="169" Margin="35,10,0,0" VerticalAlignment="Top" Width="112"/>
         <Button x:Name="buttonUcitaj" Content="Ucitaj" HorizontalAlignment="Left" Margin="35,213,0,0" VerticalAlignment="Top" Width="112"/>
 
     </Grid>
