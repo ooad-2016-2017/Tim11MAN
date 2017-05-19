@@ -10,6 +10,78 @@
     d:DesignWidth="370">
 
     <Grid>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockUsername.Margin" Value="26,59,0,0"/>
+                        <Setter Target="textBlockUsername.Height" Value="55"/>
+                        <Setter Target="textBlockUsername.Width" Value="195"/>
+                        <Setter Target="textBlockUsername.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockPassword.Margin" Value="26,127,0,0"/>
+                        <Setter Target="textBlockPassword.Height" Value="43"/>
+                        <Setter Target="textBlockPassword.Width" Value="91"/>
+                        <Setter Target="textBlockPassword.FontSize" Value="25"/>
+
+                        <Setter Target="textBoxUsername.Margin" Value="267,43,0,0"/>
+                        <Setter Target="textBoxUsername.Height" Value="45"/>
+                        <Setter Target="textBoxUsername.Width" Value="239"/>
+                        <Setter Target="textBoxUsername.FontSize" Value="25"/>
+
+                        <Setter Target="textBoxPassword.Margin" Value="267,127,0,0"/>
+                        <Setter Target="textBoxPassword.Height" Value="45"/>
+                        <Setter Target="textBoxPassword.Width" Value="239"/>
+                        <Setter Target="textBoxPassword.FontSize" Value="25"/>
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockUsername.Margin" Value="151,97,0,0"/>
+                        <Setter Target="textBlockUsername.Height" Value="55"/>
+                        <Setter Target="textBlockUsername.Width" Value="307"/>
+                        <Setter Target="textBlockUsername.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockPassword.Margin" Value="165,244,0,0"/>
+                        <Setter Target="textBlockPassword.Height" Value="43"/>
+                        <Setter Target="textBlockPassword.Width" Value="91"/>
+                        <Setter Target="textBlockPassword.FontSize" Value="30"/>
+
+                        <Setter Target="textBoxUsername.Margin" Value="458,97,0,0"/>
+                        <Setter Target="textBoxUsername.Height" Value="50"/>
+                        <Setter Target="textBoxUsername.Width" Value="365"/>
+                        <Setter Target="textBoxUsername.FontSize" Value="30"/>
+
+                        <Setter Target="textBoxPassword.Margin" Value="458,244,0,0"/>
+                        <Setter Target="textBoxPassword.Height" Value="50"/>
+                        <Setter Target="textBoxPassword.Width" Value="365"/>
+                        <Setter Target="textBoxPassword.FontSize" Value="30"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <TextBlock x:Name="textBlockUsername" HorizontalAlignment="Left" Margin="26,41,0,0" TextWrapping="Wrap" Text="Korisničko ime:" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Width="109" Height="22"/>
         <TextBlock x:Name="textBlockPassword" HorizontalAlignment="Left" Margin="26,101,0,0" TextWrapping="Wrap" Text="Šifra:" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Width="37" Height="22"/>
         <TextBox x:Name="textBoxUsername" HorizontalAlignment="Left" Margin="170,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Height="35"/>

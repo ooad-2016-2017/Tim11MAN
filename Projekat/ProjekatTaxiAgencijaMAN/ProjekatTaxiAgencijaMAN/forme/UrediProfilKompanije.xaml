@@ -10,20 +10,18 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Grid Margin="45,331,21,62">
-            <TextBlock x:Name="textBlockNazivKompanije" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Naziv:" VerticalAlignment="Top"/>
-            <TextBlock x:Name="textBlockAdresaKompanije" HorizontalAlignment="Left" Margin="0,38,0,0" TextWrapping="Wrap" Text="Adresa:" VerticalAlignment="Top"/>
-            <TextBlock x:Name="textBlockDatumOsnivanja" HorizontalAlignment="Left" Margin="0,73,0,0" TextWrapping="Wrap" Text="Datum osnivanja:" VerticalAlignment="Top"/>
-            <TextBlock x:Name="textBlockEmail" HorizontalAlignment="Left" Margin="0,147,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top"/>
-            <TextBlock x:Name="textBlockBrojTelefona" HorizontalAlignment="Left" Margin="0,112,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"/>
-            <Button x:Name="buttonSpremiIzmjene" Content="Spremi izmjene" HorizontalAlignment="Left" Margin="140,215,0,0" VerticalAlignment="Top" Width="154"/>
-            <TextBox x:Name="textBoxNazivKompanije" HorizontalAlignment="Left" Margin="140,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
-            <TextBox x:Name="textBoxAdresaKompanije" HorizontalAlignment="Left" Margin="140,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
-            <TextBox x:Name="textBoxBrojTelefona" HorizontalAlignment="Left" Margin="140,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10" RenderTransformOrigin="0.513,1.12"/>
-            <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Margin="140,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
-            <DatePicker x:Name="datePickerDatumOsnivanja" HorizontalAlignment="Left" Margin="140,71,0,0" VerticalAlignment="Top" MinWidth="114" Width="154" Height="25"/>
 
-        </Grid>
+        <TextBlock x:Name="textBlockNazivKompanije" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Naziv:" VerticalAlignment="Top" Margin="45,331,0,0"/>
+        <TextBlock x:Name="textBlockAdresaKompanije" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Adresa:" VerticalAlignment="Top" Margin="45,369,0,0"/>
+        <TextBlock x:Name="textBlockDatumOsnivanja" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Datum osnivanja:" VerticalAlignment="Top" Margin="45,404,0,0"/>
+        <TextBlock x:Name="textBlockEmail" HorizontalAlignment="Left" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" Margin="45,478,0,0"/>
+        <TextBlock x:Name="textBlockBrojTelefona" HorizontalAlignment="Left" Margin="45,443,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"/>
+        <Button x:Name="buttonSpremiIzmjene" Content="Spremi izmjene" HorizontalAlignment="Left" Margin="185,546,0,0" VerticalAlignment="Top" Width="154"/>
+        <TextBox x:Name="textBoxNazivKompanije" HorizontalAlignment="Left" Margin="185,331,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
+        <TextBox x:Name="textBoxAdresaKompanije" HorizontalAlignment="Left" Margin="185,369,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
+        <TextBox x:Name="textBoxBrojTelefona" HorizontalAlignment="Left" Margin="185,443,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10" RenderTransformOrigin="0.513,1.12"/>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Margin="185,478,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
+        <DatePicker x:Name="datePickerDatumOsnivanja" HorizontalAlignment="Left" Margin="185,402,0,0" VerticalAlignment="Top" MinWidth="114" Width="154" Height="25"/>
 
         <forme:Slika HorizontalAlignment="Left" Margin="91,48,0,0" VerticalAlignment="Top"/>
 

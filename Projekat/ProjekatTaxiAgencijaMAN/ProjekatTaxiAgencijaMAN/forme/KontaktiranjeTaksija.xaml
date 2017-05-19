@@ -9,6 +9,157 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBlockImeP.Margin" Value="24,52,0,0"/>
+                        <Setter Target="textBlockImeP.Height" Value="45"/>
+                        <Setter Target="textBlockImeP.Width" Value="57"/>
+                        <Setter Target="textBlockImeP.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockPrezimeP.Margin" Value="24,136,0,0"/>
+                        <Setter Target="textBlockPrezimeP.Height" Value="44"/>
+                        <Setter Target="textBlockPrezimeP.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockBrojTelP.Margin" Value="24,223,0,0"/>
+                        <Setter Target="textBlockBrojTelP.Height" Value="45"/>
+                        <Setter Target="textBlockBrojTelP.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockLokacijaP.Margin" Value="24,309,0,0"/>
+                        <Setter Target="textBlockLokacijaP.Height" Value="45"/>
+                        <Setter Target="textBlockLokacijaP.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockRutaP.Margin" Value="555,52,0,0"/>
+                        <Setter Target="textBlockRutaP.Height" Value="45"/>
+                        <Setter Target="textBlockRutaP.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockNapomenaP.Margin" Value="29,414,0,0"/>
+                        <Setter Target="textBlockNapomenaP.Height" Value="45"/>
+                        <Setter Target="textBlockNapomenaP.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockCijenaP.Margin" Value="29,537,0,0"/>
+                        <Setter Target="textBlockCijenaP.Height" Value="45"/>
+                        <Setter Target="textBlockCijenaP.FontSize" Value="25"/>
+
+                        <Setter Target="textBoxImeP.Margin" Value="220,52,0,0"/>
+                        <Setter Target="textBoxImeP.Height" Value="45"/>
+                        <Setter Target="textBoxImeP.Width" Value="267"/>
+                        <Setter Target="textBoxImeP.FontSize" Value="25"/>
+
+                        <Setter Target="textBoxPrezimeP.Margin" Value="220,136,0,0"/>
+                        <Setter Target="textBoxPrezimeP.Height" Value="45"/>
+                        <Setter Target="textBoxPrezimeP.Width" Value="267"/>
+                        <Setter Target="textBoxPrezimeP.FontSize" Value="25"/>
+
+                        <Setter Target="textBoxBrojTelP.Margin" Value="220,224,0,0"/>
+                        <Setter Target="textBoxBrojTelP.Height" Value="45"/>
+                        <Setter Target="textBoxBrojTelP.Width" Value="267"/>
+                        <Setter Target="textBoxBrojTelP.FontSize" Value="25"/>
+
+                        <Setter Target="textBoxLokacijaP.Margin" Value="220,309,0,0"/>
+                        <Setter Target="textBoxLokacijaP.Height" Value="45"/>
+                        <Setter Target="textBoxLokacijaP.Width" Value="267"/>
+                        <Setter Target="textBoxLokacijaP.FontSize" Value="25"/>
+
+                        <Setter Target="textBoxNapomenaP.Margin" Value="29,466,0,0"/>
+                        <Setter Target="textBoxNapomenaP.Height" Value="45"/>
+                        <Setter Target="textBoxNapomenaP.Width" Value="458"/>
+                        <Setter Target="textBoxNapomenaP.FontSize" Value="25"/>
+
+                        <Setter Target="mapaPodaci.Margin" Value="555,103,0,0"/>
+                        <Setter Target="mapaPodaci.Height" Value="440"/>
+                        <Setter Target="mapaPodaci.Width" Value="427"/>
+
+                        <Setter Target="buttonZahtjevP.Margin" Value="807,564,0,0"/>
+                        <Setter Target="buttonZahtjevP.FontSize" Value="25"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBlockImeP.Margin" Value="97,67,0,0"/>
+                        <Setter Target="textBlockImeP.Height" Value="45"/>
+                        <Setter Target="textBlockImeP.Width" Value="57"/>
+                        <Setter Target="textBlockImeP.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockPrezimeP.Margin" Value="97,151,0,0"/>
+                        <Setter Target="textBlockPrezimeP.Height" Value="45"/>
+                        <Setter Target="textBlockPrezimeP.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockBrojTelP.Margin" Value="97,238,0,0"/>
+                        <Setter Target="textBlockBrojTelP.Height" Value="45"/>
+                        <Setter Target="textBlockBrojTelP.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockLokacijaP.Margin" Value="97,324,0,0"/>
+                        <Setter Target="textBlockLokacijaP.Height" Value="45"/>
+                        <Setter Target="textBlockLokacijaP.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockRutaP.Margin" Value="749,52,0,0"/>
+                        <Setter Target="textBlockRutaP.Height" Value="45"/>
+                        <Setter Target="textBlockRutaP.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockNapomenaP.Margin" Value="102,429,0,0"/>
+                        <Setter Target="textBlockNapomenaP.Height" Value="45"/>
+                        <Setter Target="textBlockNapomenaP.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockCijenaP.Margin" Value="102,552,0,0"/>
+                        <Setter Target="textBlockCijenaP.Height" Value="45"/>
+                        <Setter Target="textBlockCijenaP.FontSize" Value="30"/>
+
+                        <Setter Target="textBoxImeP.Margin" Value="293,67,0,0"/>
+                        <Setter Target="textBoxImeP.Height" Value="45"/>
+                        <Setter Target="textBoxImeP.Width" Value="267"/>
+                        <Setter Target="textBoxImeP.FontSize" Value="30"/>
+
+                        <Setter Target="textBoxPrezimeP.Margin" Value="293,151,0,0"/>
+                        <Setter Target="textBoxPrezimeP.Height" Value="45"/>
+                        <Setter Target="textBoxPrezimeP.Width" Value="267"/>
+                        <Setter Target="textBoxPrezimeP.FontSize" Value="30"/>
+
+                        <Setter Target="textBoxBrojTelP.Margin" Value="293,239,0,0"/>
+                        <Setter Target="textBoxBrojTelP.Height" Value="45"/>
+                        <Setter Target="textBoxBrojTelP.Width" Value="267"/>
+                        <Setter Target="textBoxBrojTelP.FontSize" Value="30"/>
+
+                        <Setter Target="textBoxLokacijaP.Margin" Value="293,324,0,0"/>
+                        <Setter Target="textBoxLokacijaP.Height" Value="45"/>
+                        <Setter Target="textBoxLokacijaP.Width" Value="267"/>
+                        <Setter Target="textBoxLokacijaP.FontSize" Value="30"/>
+
+                        <Setter Target="textBoxNapomenaP.Margin" Value="102,481,0,0"/>
+                        <Setter Target="textBoxNapomenaP.Height" Value="45"/>
+                        <Setter Target="textBoxNapomenaP.Width" Value="458"/>
+                        <Setter Target="textBoxNapomenaP.FontSize" Value="30"/>
+
+                        <Setter Target="mapaPodaci.Margin" Value="749,102,0,0"/>
+                        <Setter Target="mapaPodaci.Height" Value="442"/>
+                        <Setter Target="mapaPodaci.Width" Value="483"/>
+
+                        <Setter Target="buttonZahtjevP.Margin" Value="986,628,0,0"/>
+                        <Setter Target="buttonZahtjevP.FontSize" Value="30"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
         <TextBlock x:Name="textBlockImeP" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Height="31"/>
         <TextBlock x:Name="textBlockPrezimeP" HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"  Height="31" RenderTransformOrigin="0.591,2.5"/>
         <TextBlock x:Name="textBlockBrojTelP" HorizontalAlignment="Left" Margin="10,92,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"  Height="29"/>
@@ -24,4 +175,5 @@
         <TextBlock x:Name="textBlockCijenaP" HorizontalAlignment="Left" Margin="10,540,0,0" TextWrapping="Wrap" Text="Cijena:" VerticalAlignment="Top"/>
         <Button x:Name="buttonZahtjevP" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="121,598,0,0" VerticalAlignment="Top"/>
     </Grid>
+
 </Page>

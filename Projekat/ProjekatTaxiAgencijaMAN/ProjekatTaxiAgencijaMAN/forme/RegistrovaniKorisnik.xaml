@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="ProjekatTaxiAgencijaMAN.RegistrovaniKorisnik"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatTaxiAgencijaMAN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="buttonUrediProfil" Content="Uredi profil" HorizontalAlignment="Left" Margin="50,357,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="buttonKontaktirajTaxi" Content="Kontaktiraj Taxi" HorizontalAlignment="Left" Margin="50,282,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockIme" HorizontalAlignment="Left" Margin="50,74,0,0" TextWrapping="Wrap" Text="Ime korisnika
+                   " VerticalAlignment="Top" Width="155" FontSize="20" Height="43"/>
+        <TextBlock x:Name="textBlockPrezime" HorizontalAlignment="Left" Margin="51,122,0,0" TextWrapping="Wrap" Text="Prezime korisnika" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="buttonReview" Content="Review" HorizontalAlignment="Left" Margin="50,436,0,0" VerticalAlignment="Top" Width="119"/>
+
+    </Grid>
+</Page>

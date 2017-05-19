@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="ProjekatTaxiAgencijaMAN.ProfilKompanije"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatTaxiAgencijaMAN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="buttonUrediProfil" Content="Uredi profil" HorizontalAlignment="Left" Margin="51,262,0,0" VerticalAlignment="Top" Width="205" FontSize="20" Height="52"/>
+        <TextBlock x:Name="textBlockNaziv" HorizontalAlignment="Left" Margin="50,74,0,0" TextWrapping="Wrap" Text="Naziv kompanije" VerticalAlignment="Top" Width="155" FontSize="20" Height="43"/>
+        <TextBlock x:Name="textBlockAdresa" HorizontalAlignment="Left" Margin="51,122,0,0" TextWrapping="Wrap" Text="Adresa kompanije" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="buttonRegistrujVozaca" Content="Registruj vozaca" HorizontalAlignment="Left" Margin="51,361,0,0" VerticalAlignment="Top" Width="204" Height="57" FontSize="20"/>
+        <Button x:Name="buttonUvid" Content="Uvid" HorizontalAlignment="Left" Margin="50,573,0,0" VerticalAlignment="Top" FontSize="20" Height="57" Width="204"/>
+        <Button x:Name="buttonUrediVozaca" Content="Uredi vozaca" HorizontalAlignment="Left" Margin="52,467,0,0" VerticalAlignment="Top" Width="204" Height="57" FontSize="20"/>
+
+    </Grid>
+</Page>

@@ -8,10 +8,90 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBlockZaBrisanje.Margin" Value="135,74,0,0"/>
+                        <Setter Target="textBlockZaBrisanje.FontSize" Value="30"/>
+                        <Setter Target="textBlockZaBrisanje.Height" Value="49"/>
+                        <Setter Target="textBlockZaBrisanje.Width" Value="164"/>
+
+                        <Setter Target="textBoxPretraziV.Margin" Value="344,68,0,0"/>
+                        <Setter Target="textBoxPretraziV.FontSize" Value="30"/>
+                        <Setter Target="textBoxPretraziV.Height" Value="50"/>
+                        <Setter Target="textBoxPretraziV.Width" Value="354"/>
+                        <Setter Target="textBoxPretraziV.Text" Value="Tablet"/>
+
+                        <Setter Target="buttonPretrazi.Margin" Value="753,68,0,522"/>
+                        <Setter Target="buttonPretrazi.Height" Value="50"/>
+                        <Setter Target="buttonPretrazi.Width" Value="150"/>
+                        <Setter Target="buttonPretrazi.FontSize" Value="30"/>
+
+                        <Setter Target="buttonObrisi.Margin" Value="398,547,0,0"/>
+                        <Setter Target="buttonObrisi.Height" Value="50"/>
+                        <Setter Target="buttonObrisi.Width" Value="300"/>
+                        <Setter Target="buttonObrisi.FontSize" Value="30"/>
+
+                        <Setter Target="listView.Margin" Value="333,173,0,0"/>
+                        <Setter Target="listView.Width" Value="365"/>
+                        <Setter Target="listView.Height" Value="334"/>
+                        <Setter Target="listView.FontSize" Value="45"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBlockZaBrisanje.Margin" Value="135,86,0,0"/>
+                        <Setter Target="textBlockZaBrisanje.FontSize" Value="40"/>
+                        <Setter Target="textBlockZaBrisanje.Height" Value="60"/>
+                        <Setter Target="textBlockZaBrisanje.Width" Value="265"/>
+
+                        <Setter Target="textBoxPretraziV.Margin" Value="432,74,0,0"/>
+                        <Setter Target="textBoxPretraziV.FontSize" Value="40"/>
+                        <Setter Target="textBoxPretraziV.Height" Value="70"/>
+                        <Setter Target="textBoxPretraziV.Width" Value="350"/>
+                        <Setter Target="textBoxPretraziV.Text" Value="Desktop"/>
+
+                        <Setter Target="buttonPretrazi.Margin" Value="917,74,0,562"/>
+                        <Setter Target="buttonPretrazi.Height" Value="70"/>
+                        <Setter Target="buttonPretrazi.Width" Value="150"/>
+                        <Setter Target="buttonPretrazi.FontSize" Value="40"/>
+
+                        <Setter Target="buttonObrisi.Margin" Value="556,626,0,0"/>
+                        <Setter Target="buttonObrisi.Height" Value="70"/>
+                        <Setter Target="buttonObrisi.Width" Value="250"/>
+                        <Setter Target="buttonObrisi.FontSize" Value="40"/>
+
+                        <Setter Target="listView.Margin" Value="431,185,0,0"/>
+
+                        <Setter Target="listView.Width" Value="425"/>
+                        <Setter Target="listView.Height" Value="404"/>
+                        <Setter Target="listView.FontSize" Value="40"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
         <TextBlock x:Name="textBlockZaBrisanje" HorizontalAlignment="Left" Margin="20,69,0,0" TextWrapping="Wrap" Text="Ime vozača:" VerticalAlignment="Top" RenderTransformOrigin="0.941,0.35" FontSize="17" Height="27"/>
         <TextBox x:Name="textBoxPretraziV" HorizontalAlignment="Left" Margin="130,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="133" Height="36"/>
-        <Button x:Name="button" Content="Pretraži                 " HorizontalAlignment="Left" Margin="274,64,0,0" VerticalAlignment="Top" Height="36"/>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="219" Margin="50,171,0,0" VerticalAlignment="Top" Width="260"/>
-        <Button x:Name="button1" Content="Obriši vozača" HorizontalAlignment="Left" Margin="198,396,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.518,2.542" Height="36"/>
+        <Button x:Name="buttonPretrazi" Content="Pretraži                 " HorizontalAlignment="Left" Margin="274,64,0,0" VerticalAlignment="Top" Height="36"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="219" Margin="50,171,0,0" VerticalAlignment="Top" Width="260" Background="#FFEAEAEA"/>
+        <Button x:Name="buttonObrisi" Content="Obriši vozača" HorizontalAlignment="Left" Margin="202,441,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.518,2.542" Height="36"/>
     </Grid>
 </Page>

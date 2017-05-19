@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
+// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace ProjekatTaxiAgencijaMAN.forme
 {
@@ -22,11 +22,6 @@ namespace ProjekatTaxiAgencijaMAN.forme
         public Registracija()
         {
             this.InitializeComponent();
-        }
-
-        private void textBox_Copy_TextChanged(System.Object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
