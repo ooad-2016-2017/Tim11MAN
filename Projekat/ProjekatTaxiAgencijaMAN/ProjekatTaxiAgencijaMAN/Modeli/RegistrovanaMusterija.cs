@@ -8,7 +8,7 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class RegistrovanaMusterija : Musterija
     {
-        private string imeKorisnika, prezimeKorisnika, korisnickoIme, password, emailAdresa;
+        private string imeKorisnika, prezimeKorisnika, korisnickoIme, password, emailAdresa, brojTelefona;
         private DateTime datumRodjenja;
         private List<DateTime> datumVoznji; //atribut uz pomoc kojeg ce se pored ostalog odredjivati popust
 
@@ -74,6 +74,18 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
             set
             {
                 emailAdresa = value;
+            }
+        }
+
+        public String BrojTelefona
+        {
+            get
+            {
+                return brojTelefona;
+            }
+            set
+            {
+                brojTelefona = value;
             }
         }
 

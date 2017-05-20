@@ -8,7 +8,14 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Musterija
     {
-        private int idKorisnika;
+        private static int idKorisnikaglobalni = 0;
+        private int idKorisnika = 0;
+
+        public Musterija()
+        {
+            idKorisnika = idKorisnikaglobalni;
+            idKorisnikaglobalni++;
+        }
 
         public int IdKorisnika
         {

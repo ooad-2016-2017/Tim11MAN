@@ -9,7 +9,7 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
     public class Vozilo
     {
         private string vrstaVozila, registracijskeTablice, brojVozila;
-        private double srednjaBrzina;
+        private double predjenikilometri;
         private int godisteVozila;
 
         public string VrstaVozila
@@ -51,16 +51,16 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
             }
         }
 
-        public double SrednjaBrzina
+        public double PredjeniKilometri
         {
             get
             {
-                return srednjaBrzina;
+                return predjenikilometri;
             }
 
             set
             {
-                srednjaBrzina = value;
+                predjenikilometri = value;
             }
         }
 

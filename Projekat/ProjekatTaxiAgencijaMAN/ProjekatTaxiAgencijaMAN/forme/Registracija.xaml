@@ -13,8 +13,8 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Korisnicko ime:" VerticalAlignment="Top" Margin="31,39,0,0"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sifra" VerticalAlignment="Top" Margin="31,76,0,0"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Potvrdi sifru:" VerticalAlignment="Top" Margin="31,113,0,0"/>
-        <TextBox x:Name="textBoxKorisnickoIme" HorizontalAlignment="Left" Margin="170,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156" Height="20"/>
-        <TextBox x:Name="textBoxSifra" HorizontalAlignment="Left" Margin="170,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
-        <TextBox x:Name="textBoxPotvrdiSifru" HorizontalAlignment="Left" Margin="170,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
+        <TextBox x:Name="textBoxKorisnickoIme" HorizontalAlignment="Left" Margin="170,27,0,0" TextWrapping="Wrap" Text="{Binding Path=kime, Mode=TwoWay}" VerticalAlignment="Top" Width="156" Height="20"/>
+        <TextBox x:Name="textBoxSifra" HorizontalAlignment="Left" Margin="170,64,0,0" TextWrapping="Wrap" Text="{Binding Path=ksifra, Mode=TwoWay}" VerticalAlignment="Top" Width="156"/>
+        <TextBox x:Name="textBoxPotvrdiSifru" HorizontalAlignment="Left" Margin="170,101,0,0" TextWrapping="Wrap" Text="{Binding Path=ksifraponovo, Mode=TwoWay}" VerticalAlignment="Top" Width="156"/>
     </Grid>
 </UserControl>

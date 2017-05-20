@@ -9,28 +9,26 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:Name="textBoxIme" Margin="178,51,28,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961"/>
-        <TextBox x:Name="textBoxPrezime" Margin="178,88,28,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961" Height="34"/>
+        <TextBox x:Name="textBoxIme" Margin="178,51,28,0" TextWrapping="Wrap" Text="{Binding Path=imeVozaca, Mode=TwoWay}" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961"/>
+        <TextBox x:Name="textBoxPrezime" Margin="178,88,28,0" TextWrapping="Wrap" Text="{Binding Path=prezimeVozaca, Mode=TwoWay}" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961" Height="34"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="37,63,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="37,102,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="37,141,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxBrojTelefona" Margin="178,127,28,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961" Height="34"/>
+        <TextBox x:Name="textBoxBrojTelefona" Margin="178,127,28,0" TextWrapping="Wrap" Text="{Binding Path=brojTelefonaVozaca, Mode=TwoWay}" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961" Height="34"/>
         <TextBlock x:Name="textBlockDatumRodjenja" HorizontalAlignment="Left" Margin="37,181,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top"/>
-        <DatePicker x:Name="datePickerDatumRodjenja" HorizontalAlignment="Left" Margin="178,176,0,0" VerticalAlignment="Top" Height="25" MinWidth="114" Width="154"/>
+        <DatePicker x:Name="datePickerDatumRodjenja" HorizontalAlignment="Left" Date="{Binding Path=datumVozaca, Mode=TwoWay}" Margin="178,176,0,0" VerticalAlignment="Top" Height="25" MinWidth="114" Width="154"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="100,26,0,0" TextWrapping="Wrap" Text="Podaci o vozacu" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="100,415,0,0" TextWrapping="Wrap" Text="Podaci o vozilu" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="37,462,0,0" TextWrapping="Wrap" Text="Model:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="37,499,0,0" TextWrapping="Wrap" Text="Godište:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="37,536,0,0" TextWrapping="Wrap" Text="Registracija:" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxModel" HorizontalAlignment="Left" Margin="178,450,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154"/>
-        <TextBox x:Name="textBoxGodiste" HorizontalAlignment="Left" Margin="178,487,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.564,0.438"/>
-        <TextBox x:Name="textBoxRegistracija" HorizontalAlignment="Left" Margin="178,524,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154"/>
-        <Button x:Name="buttonRegistruj" Content="Registruj" HorizontalAlignment="Left" Margin="37,598,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="237,598,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.841,0.354"/>
-
-        <forme:Registracija HorizontalAlignment="Left" Margin="6,262,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="100,276,0,0" TextWrapping="Wrap" Text="Podaci o vozilu" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="37,323,0,0" TextWrapping="Wrap" Text="Model:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="37,360,0,0" TextWrapping="Wrap" Text="Godište:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="37,397,0,0" TextWrapping="Wrap" Text="Registracija:" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxModel" HorizontalAlignment="Left" Margin="178,311,0,0" TextWrapping="Wrap" Text="{Binding Path=modelVozila, Mode=TwoWay}" VerticalAlignment="Top" Width="154"/>
+        <TextBox x:Name="textBoxGodiste" HorizontalAlignment="Left" Margin="178,348,0,0" TextWrapping="Wrap" Text="{Binding Path=godisteVozila, Mode=TwoWay}" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.564,0.438"/>
+        <TextBox x:Name="textBoxRegistracija" HorizontalAlignment="Left" Margin="178,385,0,0" TextWrapping="Wrap" Text="{Binding Path=registracijaVozila, Mode=TwoWay}" VerticalAlignment="Top" Width="154"/>
+        <Button x:Name="buttonRegistruj" Content="Registruj" HorizontalAlignment="Left" Margin="37,459,0,0" VerticalAlignment="Top" Command="{Binding Path=RegistracijaVozaca}"/>
+        <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="237,459,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.841,0.354"/>
         <TextBlock x:Name="textBlockDatumZaposlenja" HorizontalAlignment="Left" Margin="37,215,0,0" TextWrapping="Wrap" Text="Datum zaposlenja:" VerticalAlignment="Top"/>
-        <DatePicker x:Name="datePickerDatumZaposlenja" HorizontalAlignment="Left" Margin="178,210,0,0" VerticalAlignment="Top" Height="25" MinWidth="114" Width="154"/>
+        <DatePicker x:Name="datePickerDatumZaposlenja" HorizontalAlignment="Left" Margin="178,210,0,0" Date="{Binding Path=datumZVozaca, Mode=TwoWay}" VerticalAlignment="Top" Height="25" MinWidth="114" Width="154"/>
 
     </Grid>
 </Page>

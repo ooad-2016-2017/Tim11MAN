@@ -9,10 +9,34 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Kompanija
     {
-        private string nazivKompanije, adresaKompanije, emailKompanije;
+        private string nazivKompanije, adresaKompanije, emailKompanije, korisnickoIme, sifra;
         private DateTime datumOsnivanja;
         private int brojTelefona;
         private List<Zaposlenik> listaZaposlenika;
+
+        public string KorisnickoIme
+        {
+            get
+            {
+                return korisnickoIme;
+            }
+            set
+            {
+                korisnickoIme = value;
+            }
+        }
+
+        public string Sifra
+        {
+            get
+            {
+                return sifra;
+            }
+            set
+            {
+                sifra = value;
+            }
+        }
 
         public string NazivKompanije
         {

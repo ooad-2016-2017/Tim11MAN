@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="ProjekatTaxiAgencijaMAN.forme.KontaktiranjeVozaca"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatTaxiAgencijaMAN.forme"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlockID" HorizontalAlignment="Left" Margin="43,39,0,0" TextWrapping="Wrap" Text="ID vozaca:" VerticalAlignment="Top" RenderTransformOrigin="0.468,-1.7"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="152,27,0,0" TextWrapping="Wrap" Text="{Binding Path=id, Mode=TwoWay}" VerticalAlignment="Top" Width="146"/>
+        <Button x:Name="buttonPretrazi" Command="{Binding Path=PretraziVozaca}" Content="Pretrazi" HorizontalAlignment="Left" Margin="81,92,0,0" VerticalAlignment="Top" Width="155"/>
+        <TextBlock x:Name="textBlockBrojTelefona" HorizontalAlignment="Left" Margin="43,179,0,0" TextWrapping="Wrap" Text="{Binding Path=brojTelefonaVozaca,UpdateSourceTrigger=Default, Mode=TwoWay}" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

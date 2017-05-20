@@ -8,9 +8,42 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Zaposlenik
     {
+        private static int id=0;
         private int idZaposlenog;
         private string ime, prezime, brojTelefona, korisnickoIme, password;
         private DateTime datumRodjenja, datumZaposlenja;
+
+        public Zaposlenik()
+        {
+            idZaposlenog = id;
+            id++;
+        }
+
+        public string KorisnickoIme
+        {
+            get
+            {
+                return korisnickoIme;
+            }
+
+            set
+            {
+                korisnickoIme = value;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+
+            set
+            {
+                password = value;
+            }
+        }
 
         public int IdZaposlenog
         {
@@ -61,32 +94,6 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
             set
             {
                 brojTelefona = value;
-            }
-        }
-
-        public string KorisnickoIme
-        {
-            get
-            {
-                return korisnickoIme;
-            }
-
-            set
-            {
-                korisnickoIme = value;
-            }
-        }
-
-        public string Password
-        {
-            get
-            {
-                return password;
-            }
-
-            set
-            {
-                password = value;
             }
         }
 

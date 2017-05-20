@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="ProjekatTaxiAgencijaMAN.Dispecer"
+    x:Class="ProjekatTaxiAgencijaMAN.forme.Dispecer"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:ProjekatTaxiAgencijaMAN"
+    xmlns:local="using:ProjekatTaxiAgencijaMAN.forme"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -39,8 +39,8 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <Button x:Name="buttonKontaktirajVozaca" Content="Kontaktiraj vozaca" HorizontalAlignment="Left" Margin="73,317,0,0" VerticalAlignment="Top" Width="205" Height="57" FontSize="20"/>
-        <Button x:Name="buttonProvjera" Content="Provjeri vozila" HorizontalAlignment="Left" Margin="73,437,0,0" VerticalAlignment="Top" Height="57" Width="205" FontSize="20"/>
+        <Button x:Name="buttonKontaktirajVozaca" Command="{Binding Path=KontaktiranjeVozacaD}" Content="Kontaktiraj vozaca" HorizontalAlignment="Left" Margin="73,317,0,0" VerticalAlignment="Top" Width="205" Height="57" FontSize="20"/>
+        <Button x:Name="buttonProvjera" Command="{Binding Path=ProvjeraVozilaD}" Content="Provjeri vozila" HorizontalAlignment="Left" Margin="73,437,0,0" VerticalAlignment="Top" Height="57" Width="205" FontSize="20"/>
 
     </Grid>
 </Page>

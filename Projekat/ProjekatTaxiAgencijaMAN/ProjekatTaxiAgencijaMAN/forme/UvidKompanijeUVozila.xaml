@@ -9,19 +9,20 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="27,29,0,0" TextWrapping="Wrap" Text="Registracija vozila:" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxRegistracija" Margin="194,17,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="48,97,0,0" TextWrapping="Wrap" Text="Godište vozila:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="48,134,0,0" TextWrapping="Wrap" Text="Model vozila:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="48,172,0,0" TextWrapping="Wrap" Text="Predjeni kilomteri:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="48,209,0,0" TextWrapping="Wrap" Text="Broj voznji:" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxGodisteVozila" Margin="194,85,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxModelVozila" Margin="194,122,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxPredjeniKilometri" Margin="194,160,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxBrojVoznji" Margin="194,197,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButtonDnevni" Content="Dnevni" HorizontalAlignment="Left" Margin="47,335,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButtonMjesecni" Content="Mjesecni" HorizontalAlignment="Left" Margin="213,335,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="48,275,0,0" TextWrapping="Wrap" Text="Vozac::" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxVozac" Margin="194,263,27,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxRegistracija" Margin="194,17,27,0" TextWrapping="Wrap" Text="{Binding Path=regvozila,Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="28,180,0,0" TextWrapping="Wrap" Text="Godište vozila:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="28,217,0,0" TextWrapping="Wrap" Text="Model vozila:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="28,255,0,0" TextWrapping="Wrap" Text="Predjeni kilomteri:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="28,292,0,0" TextWrapping="Wrap" Text="Broj voznji:" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxGodisteVozila" Margin="174,168,47,0" TextWrapping="Wrap" Text="{Binding Path=godistevozila,Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxModelVozila" Margin="174,205,47,0" TextWrapping="Wrap" Text="{Binding Path=modelvozila,Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxPredjeniKilometri" Margin="174,243,47,0" TextWrapping="Wrap" Text="{Binding Path=predjenikilometrivozila,Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxBrojVoznji" Margin="174,280,47,0" TextWrapping="Wrap" Text="{Binding Path=brojvoznjivozila,Mode=TwoWay}" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButtonDnevni" IsChecked="{Binding Path=dnevni, Mode=TwoWay}" Content="Dnevni" HorizontalAlignment="Left" Margin="27,418,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.433,2.781"/>
+        <RadioButton x:Name="radioButtonMjesecni" IsChecked="{Binding Path=mjesecni, Mode=TwoWay}" Content="Mjesecni" HorizontalAlignment="Left" Margin="193,418,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="28,358,0,0" TextWrapping="Wrap" Text="Vozac:" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxVozac" Margin="174,346,47,0" TextWrapping="Wrap" Text="{Binding Path=vozacvozila,Mode=TwoWay}" VerticalAlignment="Top"/>
+        <Button x:Name="button" Command="{Binding Path=pretraziVozilo}" Content="Pretrazi" HorizontalAlignment="Left" Margin="243,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.043,0.375"/>
 
     </Grid>
 </Page>

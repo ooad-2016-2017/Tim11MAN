@@ -84,8 +84,8 @@
         </VisualStateManager.VisualStateGroups>
         <TextBlock x:Name="textBlockUsername" HorizontalAlignment="Left" Margin="26,41,0,0" TextWrapping="Wrap" Text="Korisničko ime:" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Width="109" Height="22"/>
         <TextBlock x:Name="textBlockPassword" HorizontalAlignment="Left" Margin="26,101,0,0" TextWrapping="Wrap" Text="Šifra:" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Width="37" Height="22"/>
-        <TextBox x:Name="textBoxUsername" HorizontalAlignment="Left" Margin="170,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Height="35"/>
-        <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Margin="170,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Height="36"/>
+        <TextBox x:Name="textBoxUsername" HorizontalAlignment="Left" Margin="170,34,0,0" TextWrapping="Wrap" Text="{Binding Path=korisnickoime, Mode=TwoWay}" VerticalAlignment="Top" Width="172" Height="35"/>
+        <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Margin="170,87,0,0" TextWrapping="Wrap" Text="{Binding Path=sifra, Mode=TwoWay}" VerticalAlignment="Top" Width="172" Height="36"/>
 
     </Grid>
 </UserControl>

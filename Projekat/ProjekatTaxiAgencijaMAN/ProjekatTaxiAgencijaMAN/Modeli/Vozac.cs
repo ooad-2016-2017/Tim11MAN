@@ -12,7 +12,7 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
         private bool slobodan;
         private List<DateTime> listaDatumaVoznji;
 
-        internal Vozilo Vozilo
+        public Vozilo Vozilo
         {
             get
             {

@@ -95,14 +95,59 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="forme\BrisanjeVozaca.xaml.cs">
+      <DependentUpon>BrisanjeVozaca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\Dispecer.xaml.cs">
+      <DependentUpon>Dispecer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\KontaktiranjeTaksija.xaml.cs">
+      <DependentUpon>KontaktiranjeTaksija.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\KontaktiranjeVozaca.xaml.cs">
+      <DependentUpon>KontaktiranjeVozaca.xaml</DependentUpon>
+    </Compile>
     <Compile Include="forme\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\PrijavaNaSistem.xaml.cs">
+      <DependentUpon>PrijavaNaSistem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\ProfilKompanije.xaml.cs">
+      <DependentUpon>ProfilKompanije.xaml</DependentUpon>
     </Compile>
     <Compile Include="forme\Registracija.xaml.cs">
       <DependentUpon>Registracija.xaml</DependentUpon>
     </Compile>
+    <Compile Include="forme\RegistracijaKompanije.xaml.cs">
+      <DependentUpon>RegistracijaKompanije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\RegistracijaMusterije.xaml.cs">
+      <DependentUpon>RegistracijaMusterije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\RegistracijaSupervizoraIliDispecera.xaml.cs">
+      <DependentUpon>RegistracijaSupervizoraIliDispecera.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\RegistracijaVozaca.xaml.cs">
+      <DependentUpon>RegistracijaVozaca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\RegistrovaniKorisnik.xaml.cs">
+      <DependentUpon>RegistrovaniKorisnik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\ReviewSlanje.xaml.cs">
+      <DependentUpon>ReviewSlanje.xaml</DependentUpon>
+    </Compile>
     <Compile Include="forme\Slika.xaml.cs">
       <DependentUpon>Slika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\SupervizorForma.xaml.cs">
+      <DependentUpon>SupervizorForma.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\UvidKompanijeUVozace.xaml.cs">
+      <DependentUpon>UvidKompanijeUVozace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forme\UvidKompanijeUVozila.xaml.cs">
+      <DependentUpon>UvidKompanijeUVozila.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -117,7 +162,25 @@
     <Compile Include="Modeli\Vozac.cs" />
     <Compile Include="Modeli\Vozilo.cs" />
     <Compile Include="Modeli\Zaposlenik.cs" />
+    <Compile Include="Pomocne\INavigationService.cs" />
+    <Compile Include="Pomocne\NavigationService.cs" />
+    <Compile Include="Pomocne\RelayCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SviPodaci.cs" />
+    <Compile Include="ViewModeli\GlavnaDispeceraVM.cs" />
+    <Compile Include="ViewModeli\GlavnaKompanijeVM.cs" />
+    <Compile Include="ViewModeli\GlavnaMusterijeVM.cs" />
+    <Compile Include="ViewModeli\GlavnaSupervizoraVM.cs" />
+    <Compile Include="ViewModeli\KontaktiranjeTaksijaVM.cs" />
+    <Compile Include="ViewModeli\KontaktiranjeVozacaVM.cs" />
+    <Compile Include="ViewModeli\PrijavaVM.cs" />
+    <Compile Include="ViewModeli\RegistracijaDispeceraIliSupervizora.cs" />
+    <Compile Include="ViewModeli\RegistracijaKompanijeVM.cs" />
+    <Compile Include="ViewModeli\RegistracijaMusterijeVM.cs" />
+    <Compile Include="ViewModeli\RegistracijaVozacaVM.cs" />
+    <Compile Include="ViewModeli\ReviewSlanjeVM.cs" />
+    <Compile Include="ViewModeli\UvidUVozace.cs" />
+    <Compile Include="ViewModeli\UvidUVozila.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -153,6 +216,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="forme\KontaktiranjeVozaca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="forme\Prijava.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -177,6 +244,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="forme\RegistracijaSupervizoraIliDispecera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="forme\RegistracijaVozaca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -189,11 +260,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\RregistracijaSupervizoraIliDispecera.xaml">
+    <Page Include="forme\Slika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\Slika.xaml">
+    <Page Include="forme\SupervizorForma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -222,6 +293,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
