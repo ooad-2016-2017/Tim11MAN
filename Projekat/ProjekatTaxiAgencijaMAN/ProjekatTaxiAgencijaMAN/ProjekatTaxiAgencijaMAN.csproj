@@ -107,6 +107,16 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Modeli\Dispecer.cs" />
+    <Compile Include="Modeli\Kompanija.cs" />
+    <Compile Include="Modeli\Musterija.cs" />
+    <Compile Include="Modeli\Narudzba.cs" />
+    <Compile Include="Modeli\RegistrovanaMusterija.cs" />
+    <Compile Include="Modeli\Ruta.cs" />
+    <Compile Include="Modeli\Supervizor.cs" />
+    <Compile Include="Modeli\Vozac.cs" />
+    <Compile Include="Modeli\Vozilo.cs" />
+    <Compile Include="Modeli\Zaposlenik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
