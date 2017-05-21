@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,9 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Vozilo
     {
-        private string vrstaVozila, registracijskeTablice, brojVozila;
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        private string registracijskeTablice;
+        private string vrstaVozila, brojVozila;
         private double predjenikilometri;
         private int godisteVozila;
 

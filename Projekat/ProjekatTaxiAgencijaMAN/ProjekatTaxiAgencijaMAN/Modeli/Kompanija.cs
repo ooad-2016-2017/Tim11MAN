@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,9 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Kompanija
     {
-        private string nazivKompanije, adresaKompanije, emailKompanije, korisnickoIme, sifra;
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        private string nazivKompanije;
+        private string adresaKompanije, emailKompanije, korisnickoIme, sifra;
         private DateTime datumOsnivanja;
         private int brojTelefona;
         private List<Zaposlenik> listaZaposlenika;

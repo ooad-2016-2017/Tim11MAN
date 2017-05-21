@@ -159,6 +159,7 @@
     <Compile Include="Modeli\RegistrovanaMusterija.cs" />
     <Compile Include="Modeli\Ruta.cs" />
     <Compile Include="Modeli\Supervizor.cs" />
+    <Compile Include="Modeli\TaxiDbContext.cs" />
     <Compile Include="Modeli\Vozac.cs" />
     <Compile Include="Modeli\Vozilo.cs" />
     <Compile Include="Modeli\Zaposlenik.cs" />

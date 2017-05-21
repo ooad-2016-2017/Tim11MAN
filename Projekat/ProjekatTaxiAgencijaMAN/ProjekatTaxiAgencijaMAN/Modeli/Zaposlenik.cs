@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
     public class Zaposlenik
     {
         private static int id=0;
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         private int idZaposlenog;
         private string ime, prezime, brojTelefona, korisnickoIme, password;
         private DateTime datumRodjenja, datumZaposlenja;
