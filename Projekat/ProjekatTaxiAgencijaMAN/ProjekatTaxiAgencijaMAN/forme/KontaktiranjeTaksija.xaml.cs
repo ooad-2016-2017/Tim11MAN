@@ -28,38 +28,31 @@ namespace ProjekatTaxiAgencijaMAN.forme
     /// </summary>
     public sealed partial class KontaktiranjeTaksija : Page
     {
-        private Geoposition prva, druga;
+        private bool nemoj = false;
+        private BasicGeoposition pocetna;
         public KontaktiranjeTaksija()
         {
             this.InitializeComponent();
-        }
-        
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            var locator = new Geolocator();
-            locator.DesiredAccuracyInMeters = 50;
-            var position = await locator.GetGeopositionAsync();
-            await mapaPodaci.TrySetViewAsync(position.Coordinate.Point, 15D);
-            prva = position;
-
-            MapIcon mapIcon = new MapIcon();
-            
-            mapIcon.NormalizedAnchorPoint = new Point(0.25, 0.9);
-            mapIcon.Location = position.Coordinate.Point;
-            mapIcon.Title = "You are here";
-            mapaPodaci.MapElements.Add(mapIcon);
-
-            
-
         }
 
         private void mapaPodaci_MapTapped(Windows.UI.Xaml.Controls.Maps.MapControl sender, Windows.UI.Xaml.Controls.Maps.MapInputEventArgs args)
         {
             var tappedGeoPosition = args.Location.Position;
-            BasicGeoposition pocetna = new BasicGeoposition();
-            pocetna.Latitude = prva.Coordinate.Latitude;
-            pocetna.Longitude = prva.Coordinate.Longitude;
+            if (!nemoj)
+            {
+                pocetna = tappedGeoPosition;
+                nemoj = true;
+            }
             ShowRouteOnMap(pocetna, tappedGeoPosition);
+
+        }
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var locator = new Geolocator();
+            locator.DesiredAccuracyInMeters = 50;
+            var position = await locator.GetGeopositionAsync();
+            await mapaPodaci.TrySetViewAsync(position.Coordinate.Point, 15D);            
 
         }
 
