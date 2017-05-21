@@ -112,12 +112,19 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             // i treba validirati email
             bool postojiIme = false;
 
+            var baza = new TaxiDbContext();
+
+            foreach (var vozilo in baza.vozila)
+            {
+                if (vozilo.RegistracijskeTablice == registracijaVozila) postojiIme = true;
+            }
+
             if (postojiIme == true || errori != "")
             {
                 // treba pozvati thread da ispise errore
                 if (postojiIme == true)
                 {
-                    errori += "Ovo korisnicko ime vec postoji";
+                    errori += "Ova registracija vec postoji ";
                 }
                 IspisiErrore(errori);
             }
@@ -140,6 +147,10 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
                 regm = v1;
 
+                baza.zaposlenici.Add(regm);
+                baza.vozaci.Add(v1);
+                baza.vozila.Add(v);
+
                 imeVozaca = "";
                 prezimeVozaca = "";
                 datumVozaca = DateTime.Now;
@@ -149,9 +160,14 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 godisteVozila = "";
                 registracijaVozila = "";
 
-                Promjena("Vracanje na fabricke postavke");
-
-                // sad ga samo treba dodat u bazu ovdje
+                Promjena("imeVozaca");
+                Promjena("prezimeVozaca");
+                Promjena("datumVozaca");
+                Promjena("datumZVozaca");
+                Promjena("brojTelefonaVozaca");
+                Promjena("modelVozila");
+                Promjena("godisteVozila");
+                Promjena("registracijaVozila");
             }
         }
     }

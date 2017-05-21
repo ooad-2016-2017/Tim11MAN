@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ProjekatTaxiAgencijaMAN.Pomocne;
+using ProjekatTaxiAgencijaMAN.Modeli;
+using Windows.UI.Popups;
 
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
@@ -38,15 +40,40 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             return true;
         }
 
+        public async void IspisError(string error)
+        {
+            var raz = new MessageDialog(error);
+            await raz.ShowAsync();
+        }
+
         public void pretrazi(object o)
         {
+            var baza = new TaxiDbContext();
+
+            
+
             if (!provjeriid(idvozaca))
             {
                 // obavijestiti da id nije uredu
+                IspisError("Neispravan ID");
             }
             else
             {
+                bool provjera1 = false;
                 // proci kroz vozace i provjeriti ima li vozaca sa ovim id ako nema obavijestiti
+                foreach (var vozac in baza.vozaci)
+                {
+                    if (vozac.VozacId == Convert.ToInt32(idvozaca))
+                    {
+                        provjera1 = true;
+                        // nastavak ...
+                    }
+                }
+
+                if (!provjera1)
+                {
+                    IspisError("Nema vozaca sa ovim ID");
+                }
             }
         }
     }

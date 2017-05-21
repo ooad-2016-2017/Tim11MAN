@@ -59,6 +59,13 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 Password = "sifra"
             });
 
+            List<Supervizor> spr = new List<Supervizor>();
+            spr.Add(new Modeli.Supervizor()
+            {
+                KorisnickoIme = "ime",
+                Password = "sifra"
+            });
+
             for(int i=0; i<rms.Count; i++)
             {
                 if (rms[i].KorisnickoIme == korisnickoime)
@@ -66,6 +73,17 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     if (rms[i].Password == sifra)
                     {
                         regmusterijaIzPrijave = rms[i];
+                    }
+                }
+            }
+
+            for (int i = 0; i < spr.Count; i++)
+            {
+                if (spr[i].KorisnickoIme == korisnickoime)
+                {
+                    if (spr[i].Password == sifra)
+                    {
+                        supervizorIzPrijave = spr[i];
                     }
                 }
             }
@@ -80,7 +98,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             }
             else if (supervizorIzPrijave != null)
             {
-
+                NavigationServis.Navigate(typeof(SupervizorForma), new GlavnaSupervizoraVM(this));
             }
             else if (kompanijaIzPrijave != null)
             {

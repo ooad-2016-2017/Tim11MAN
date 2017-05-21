@@ -1,10 +1,12 @@
-﻿using System;
+﻿using ProjekatTaxiAgencijaMAN.ViewModeli;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +27,24 @@ namespace ProjekatTaxiAgencijaMAN.forme
         public BrisanjeVozaca()
         {
             this.InitializeComponent();
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
+        }
+
+        BrisanjeVozacaVM gvm;
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            gvm = (BrisanjeVozacaVM)e.Parameter;
+            DataContext = gvm;
+        }
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+                e.Handled = true;
+            }
         }
     }
 }

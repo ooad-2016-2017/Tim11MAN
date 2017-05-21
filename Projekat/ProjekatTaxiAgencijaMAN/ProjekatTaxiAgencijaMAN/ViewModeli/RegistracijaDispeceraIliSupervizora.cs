@@ -125,6 +125,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     regm.DatumRodjenja = datumDS;
                     regm.DatumZaposlenja = datumDS;
                     regm.BrojTelefona = brojTelefonaDS;
+                    baza.zaposlenici.Add(regm);
+                    baza.SaveChanges();
                 }
                 else if (dispecerDS)
                 {
@@ -136,6 +138,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     regm.DatumRodjenja = datumDS;
                     regm.DatumZaposlenja = datumDS;
                     regm.BrojTelefona = brojTelefonaDS;
+                    baza.zaposlenici.Add(regm);
+                    baza.SaveChanges();
                 }
 
                 kime = "";
@@ -155,8 +159,6 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 Promjena("datumDS");
                 Promjena("datumZDS");
                 Promjena("brojTelefonaDS");
-
-                // sad ga samo treba dodat u bazu ovdje
             }
         }
     }

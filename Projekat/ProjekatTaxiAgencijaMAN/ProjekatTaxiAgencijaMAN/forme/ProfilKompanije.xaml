@@ -87,6 +87,7 @@
         <Button x:Name="buttonRegistrujVozaca" Command="{Binding Path=RegistrujVozaca}" Content="Registruj vozaca" HorizontalAlignment="Left" Margin="51,361,0,0" VerticalAlignment="Top" Width="204" Height="57" FontSize="20"/>
         <Button x:Name="buttonUvidUVozace" Command="{Binding Path=UvidUVozace}" Content="Uvid u vozace" HorizontalAlignment="Left" Margin="50,440,0,0" VerticalAlignment="Top" FontSize="20" Height="57" Width="204"/>
         <Button x:Name="buttonUvidUVozila" Command="{Binding Path=UvidUVozila}" Content="Uvid u vozila" HorizontalAlignment="Left" Margin="52,527,0,0" VerticalAlignment="Top" FontSize="20" Height="56" Width="203" RenderTransformOrigin="1.502,-0.804"/>
+        <Button x:Name="button" Command="{Binding Path=BrisanjeVozacaB}" Content="Brisanje vozaca" HorizontalAlignment="Left" Margin="50,295,0,0" VerticalAlignment="Top" FontSize="20" Width="205" Height="52"/>
 
     </Grid>
 </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjekatTaxiAgencijaMAN.ViewModeli;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,24 @@ namespace ProjekatTaxiAgencijaMAN
         public RegistracijaKompanije()
         {
             this.InitializeComponent();
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
+        }
+
+        RegistracijaKompanijeVM gvm;
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            gvm = (RegistracijaKompanijeVM)e.Parameter;
+            DataContext = gvm;
+        }
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+                e.Handled = true;
+            }
         }
     }
 }

@@ -173,6 +173,7 @@
     <Compile Include="Pomocne\NavigationService.cs" />
     <Compile Include="Pomocne\RelayCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModeli\BrisanjeVozacaVM.cs" />
     <Compile Include="ViewModeli\GlavnaDispeceraVM.cs" />
     <Compile Include="ViewModeli\GlavnaKompanijeVM.cs" />
     <Compile Include="ViewModeli\GlavnaMusterijeVM.cs" />

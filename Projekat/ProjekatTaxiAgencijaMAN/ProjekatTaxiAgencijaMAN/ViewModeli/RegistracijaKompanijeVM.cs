@@ -94,6 +94,13 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             // i treba validirati email
             bool postojiIme = false;
 
+            var baza = new TaxiDbContext();
+
+            foreach (var kompanija in baza.kompanije)
+            {
+                if (kompanija.KorisnickoIme == kime) postojiIme = true;
+            }
+
             if (postojiIme == true || errori != "")
             {
                 // treba pozvati thread da ispise errore
@@ -113,16 +120,24 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 regm.DatumOsnivanja = datumKompanije;
                 regm.BrojTelefona = Convert.ToInt32(brojTelefonaKompanije);
 
+                baza.kompanije.Add(regm);
+                baza.SaveChanges();
+
                 kime = "";
                 ksifra = "";
+                ksifraponovo = "";
                 imeKompanije = "";
                 emailKompanije = "";
                 datumKompanije = DateTime.Now;
                 brojTelefonaKompanije = "";
 
-                Promjena("Vracanje na fabricke postavke");
-
-                // sad ga samo treba dodat u bazu ovdje
+                Promjena("kime");
+                Promjena("ksifra");
+                Promjena("ksifraponovo");
+                Promjena("imeKompanije");
+                Promjena("emailKompanije");
+                Promjena("datumKompanije");
+                Promjena("brojTelefonaKompanije");
             }
 
         }

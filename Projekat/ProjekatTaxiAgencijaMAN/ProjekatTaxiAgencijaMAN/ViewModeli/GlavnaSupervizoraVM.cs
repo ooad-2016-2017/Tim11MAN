@@ -45,7 +45,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void registrujk(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistracijaKompanije), new RegistracijaKompanijeVM());
+            nservice.Navigate(typeof(RegistracijaKompanije), new RegistracijaKompanijeVM());
         }
 
         public void registrujd(object o)

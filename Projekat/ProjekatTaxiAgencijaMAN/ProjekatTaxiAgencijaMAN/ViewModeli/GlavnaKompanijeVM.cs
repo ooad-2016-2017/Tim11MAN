@@ -12,6 +12,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
     class GlavnaKompanijeVM
     {
         public ICommand RegistracijaVozaca { get; set; }
+        public ICommand BrisanjeVozacaB { get; set; }
         public ICommand UvidUVozace { get; set; }
         public ICommand UvidUVozila { get; set; }
         NavigationService nservice;

@@ -97,7 +97,16 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
             // treba provjeriti je li vec postoji uneseno korisnicko ime
             // i treba validirati email
+
             bool postojiIme = false;
+
+            var baza = new TaxiDbContext();
+
+            foreach (var musterija in baza.musterije)
+            {
+                //error
+                //if ((RegistrovanaMusterija)musterija.KorisnickoIme == kime) postojiIme = true;
+            }
 
             if(postojiIme==true || errori != "")
             {
@@ -121,15 +130,24 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
                 kime = "";
                 ksifra = "";
+                ksifraponovo = "";
                 ime = "";
                 prezime = "";
                 email = "";
                 datum = DateTime.Now;
                 brojtelefona = "";
 
-                Promjena("Vracanje na fabricke postavke");
+                Promjena("kime");
+                Promjena("ksifra");
+                Promjena("ksifraponovo");
+                Promjena("ime");
+                Promjena("prezime");
+                Promjena("email");
+                Promjena("datum");
+                Promjena("brojtelefona");
 
-                // sad ga samo treba dodat u bazu ovdje
+                baza.musterije.Add(regm);
+                baza.SaveChanges();
             }
 
         }

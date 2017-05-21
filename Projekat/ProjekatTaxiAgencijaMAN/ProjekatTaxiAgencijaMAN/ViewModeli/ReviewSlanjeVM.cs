@@ -26,6 +26,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         public void slanjereview(object o)
         {
             // samo dodat misljenje u bazu podataka
+            // fali dio za bazu podataka
         }
     }
 }
