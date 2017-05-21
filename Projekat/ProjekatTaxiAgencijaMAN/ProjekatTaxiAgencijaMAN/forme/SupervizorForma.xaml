@@ -9,6 +9,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button x:Name="button" Command="{Binding Path=registrujKompanijuS}" Content="Registruj Kompaniju" HorizontalAlignment="Left" FontSize="20" Margin="70,227,0,0" VerticalAlignment="Top" Width="217" Height="54"/>
+        <Button x:Name="button1" Command="{Binding Path=registrujDispeceraS}" Content="Registruj Dispecera" HorizontalAlignment="Left" FontSize="20" Margin="70,315,0,0" VerticalAlignment="Top" Width="217" Height="54"/>
+        <Button x:Name="button2" Command="{Binding Path=registrujSupervizoraS}" Content="Registruj Supervizora" HorizontalAlignment="Left" FontSize="20" Margin="70,403,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.267,-1.697" Height="54" Width="217"/>
 
     </Grid>
 </Page>

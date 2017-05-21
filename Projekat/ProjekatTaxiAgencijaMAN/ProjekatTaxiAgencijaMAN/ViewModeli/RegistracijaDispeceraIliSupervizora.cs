@@ -15,11 +15,14 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
     class RegistracijaDispeceraIliSupervizora : INotifyPropertyChanged
     {
         public ICommand RegistrujDS { get; set; }
-        public String imeVozaca { get; set; }
-        public String prezimeVozaca { get; set; }
-        public DateTime datumVozaca { get; set; }
-        public DateTime datumZVozaca { get; set; }
-        public String brojTelefonaVozaca { get; set; }
+        public string kime { get; set; }
+        public string ksifra { get; set; }
+        public string ksifraponovo { get; set; }
+        public String imeDS { get; set; }
+        public String prezimeDS { get; set; }
+        public DateTime datumDS { get; set; }
+        public DateTime datumZDS{ get; set; }
+        public String brojTelefonaDS { get; set; }
         public bool supervizorDS { get; set; }
         public bool dispecerDS { get; set; }
 
@@ -62,34 +65,43 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         {
             String errori = "";
             // ovdje se radi i validacija polja
-            if (imeVozaca == null || imeVozaca == "")
+            if (imeDS == null || imeDS == "")
             {
                 errori += "Neispravno ime ";
             }
-            if (prezimeVozaca == null || prezimeVozaca == "")
+            if (prezimeDS == null || prezimeDS == "")
             {
                 errori += "Neispravno prezime ";
             }
-            if (datumVozaca == null || datumVozaca > DateTime.Now)
+            if (datumDS == null || datumDS > DateTime.Now)
             {
                 errori += "Neispravan datum ";
             }
-            if (datumZVozaca == null || datumZVozaca > DateTime.Now)
+            if (datumZDS == null || datumZDS > DateTime.Now)
             {
                 errori += "Neispravan datum ";
             }
-            if (brojTelefonaVozaca == null || brojTelefonaVozaca == "")
+            if (brojTelefonaDS == null || brojTelefonaDS == "")
             {
                 errori += "Neispravan broj telefona ";
             }
-            if (!provjeriJeLiBroj(brojTelefonaVozaca))
+            if (!provjeriJeLiBroj(brojTelefonaDS))
             {
                 errori += "Broj telefona iskljucivo treba da sadrzi samo cifre";
             }
 
             // treba provjeriti da li postoji ova registracija vozila vec u bazi
-            // i treba validirati email
+
+            var baza = new TaxiDbContext();
             bool postojiIme = false;
+
+            foreach (var zaposlenik in baza.zaposlenici)
+            {
+                if (zaposlenik.KorisnickoIme == kime) postojiIme = true;
+            }
+
+            // i treba validirati email
+            
 
             if (postojiIme == true || errori != "")
             {
@@ -106,29 +118,43 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 if (supervizorDS)
                 {
                     regm = new Supervizor();
-                    regm.Ime = imeVozaca;
-                    regm.Prezime = prezimeVozaca;
-                    regm.DatumRodjenja = datumVozaca;
-                    regm.DatumZaposlenja = datumVozaca;
-                    regm.BrojTelefona = brojTelefonaVozaca;
+                    regm.Ime = imeDS;
+                    regm.KorisnickoIme = kime;
+                    regm.Password = ksifra;
+                    regm.Prezime = prezimeDS;
+                    regm.DatumRodjenja = datumDS;
+                    regm.DatumZaposlenja = datumDS;
+                    regm.BrojTelefona = brojTelefonaDS;
                 }
                 else if (dispecerDS)
                 {
                     regm = new ProjekatTaxiAgencijaMAN.Modeli.Dispecer();
-                    regm.Ime = imeVozaca;
-                    regm.Prezime = prezimeVozaca;
-                    regm.DatumRodjenja = datumVozaca;
-                    regm.DatumZaposlenja = datumVozaca;
-                    regm.BrojTelefona = brojTelefonaVozaca;
+                    regm.Ime = imeDS;
+                    regm.KorisnickoIme = kime;
+                    regm.Password = ksifra;
+                    regm.Prezime = prezimeDS;
+                    regm.DatumRodjenja = datumDS;
+                    regm.DatumZaposlenja = datumDS;
+                    regm.BrojTelefona = brojTelefonaDS;
                 }
 
-                imeVozaca = "";
-                prezimeVozaca = "";
-                datumVozaca = DateTime.Now;
-                datumZVozaca = DateTime.Now;
-                brojTelefonaVozaca = "";
+                kime = "";
+                ksifra = "";
+                ksifraponovo = "";
+                imeDS = "";
+                prezimeDS = "";
+                datumDS = DateTime.Now;
+                datumZDS = DateTime.Now;
+                brojTelefonaDS = "";
 
-                Promjena("Vracanje na fabricke postavke");
+                Promjena("kime");
+                Promjena("ksifra");
+                Promjena("ksifraponovo");
+                Promjena("imeDS");
+                Promjena("prezimeDS");
+                Promjena("datumDS");
+                Promjena("datumZDS");
+                Promjena("brojTelefonaDS");
 
                 // sad ga samo treba dodat u bazu ovdje
             }

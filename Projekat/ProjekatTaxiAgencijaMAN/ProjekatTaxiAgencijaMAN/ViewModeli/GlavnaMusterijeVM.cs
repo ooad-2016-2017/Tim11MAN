@@ -23,8 +23,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         {
             this.prijavaVM = prijavaVM;
             regm = prijavaVM.regmusterijaIzPrijave;
-            //ImeRegK = regm.ImeKorisnika;
-            //PrezimeRegK = regm.PrezimeKorisnika;
+            ImeRegK = regm.ImeKorisnika;
+            PrezimeRegK = regm.PrezimeKorisnika;
             KontaktiranjeTaksijaRegM = new RelayCommand<object>(kontaktiranjetaksija, provjerakontaktiranja);
             ReviewRegM = new RelayCommand<object>(review, provjerareview);
             nservice = new NavigationService();
