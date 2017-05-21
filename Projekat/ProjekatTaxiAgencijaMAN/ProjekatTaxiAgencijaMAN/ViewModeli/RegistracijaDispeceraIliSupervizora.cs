@@ -14,7 +14,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class RegistracijaDispeceraIliSupervizora : INotifyPropertyChanged
     {
-        ICommand RegistrujDS;
+        public ICommand RegistrujDS { get; set; }
         public String imeVozaca { get; set; }
         public String prezimeVozaca { get; set; }
         public DateTime datumVozaca { get; set; }

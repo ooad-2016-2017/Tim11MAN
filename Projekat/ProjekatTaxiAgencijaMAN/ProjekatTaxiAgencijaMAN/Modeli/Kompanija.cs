@@ -10,113 +10,24 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Kompanija
     {
+        private static int id = 0;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private string nazivKompanije;
-        private string adresaKompanije, emailKompanije, korisnickoIme, sifra;
-        private DateTime datumOsnivanja;
-        private int brojTelefona;
-        private List<Zaposlenik> listaZaposlenika;
+        public int KompanijaId { get; set; }
+        public string NazivKompanije { get; set; }
+        public string AdresaKompanije { get; set; }
+        public string EmailKompanije{ get; set; }
+        public string KorisnickoIme { get; set; }
+        public string Sifra{ get; set; }
+        public DateTime DatumOsnivanja { get; set; }
+        public int BrojTelefona { get; set; }
+        public List<Zaposlenik> ListaZaposlenika { get; set; }
 
-        public string KorisnickoIme
+        public Kompanija()
         {
-            get
-            {
-                return korisnickoIme;
-            }
-            set
-            {
-                korisnickoIme = value;
-            }
+            KompanijaId = id;
+            id++;
         }
 
-        public string Sifra
-        {
-            get
-            {
-                return sifra;
-            }
-            set
-            {
-                sifra = value;
-            }
-        }
-
-        public string NazivKompanije
-        {
-            get
-            {
-                return nazivKompanije;
-            }
-
-            set
-            {
-                nazivKompanije = value;
-            }
-        }
-
-        public string AdresaKompanije
-        {
-            get
-            {
-                return adresaKompanije;
-            }
-
-            set
-            {
-                adresaKompanije = value;
-            }
-        }
-
-        public string EmailKompanije
-        {
-            get
-            {
-                return emailKompanije;
-            }
-
-            set
-            {
-                emailKompanije = value;
-            }
-        }
-
-        public DateTime DatumOsnivanja
-        {
-            get
-            {
-                return datumOsnivanja;
-            }
-
-            set
-            {
-                datumOsnivanja = value;
-            }
-        }
-
-        public int BrojTelefona
-        {
-            get
-            {
-                return brojTelefona;
-            }
-
-            set
-            {
-                brojTelefona = value;
-            }
-        }
-
-        public List<Zaposlenik> ListaZaposlenika
-        {
-            get
-            {
-                return listaZaposlenika;
-            }
-
-            set
-            {
-                listaZaposlenika = value;
-            }
-        }
     }
 }

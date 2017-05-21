@@ -11,7 +11,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class KontaktiranjeVozacaVM
     {
-        ICommand PretraziVozaca;
+        public ICommand PretraziVozaca { get; set; }
         public String brojTelefonaVozaca { get; set; }
         public String id { get; set; }
 

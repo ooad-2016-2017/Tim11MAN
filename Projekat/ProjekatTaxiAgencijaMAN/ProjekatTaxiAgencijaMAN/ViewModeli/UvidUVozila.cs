@@ -19,7 +19,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         public bool dnevni { get; set; }
         public bool mjesecni { get; set; }
 
-        ICommand pretraziVozilo;
+        public ICommand pretraziVozilo { get; set; }
 
         public UvidUVozila()
         {

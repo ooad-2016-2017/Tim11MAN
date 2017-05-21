@@ -19,7 +19,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         public bool dnevni { get; set; }
         public bool mjesecni { get; set; }
 
-        ICommand pretraziBV;
+        public ICommand pretraziBV { get; set; }
 
         public bool provjeriid(String id)
         {

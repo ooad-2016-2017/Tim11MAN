@@ -170,7 +170,7 @@
         <TextBox x:Name="textBoxPrezimeP" HorizontalAlignment="Left" Margin="144,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="206"/>
         <TextBox x:Name="textBoxBrojTelP" HorizontalAlignment="Left" Margin="144,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="206"/>
         <TextBox x:Name="textBoxLokacijaP" HorizontalAlignment="Left" Margin="144,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="206"/>
-        <Maps:MapControl x:Name="mapaPodaci" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="340" Height="252"/>
+        <Maps:MapControl x:Name="mapaPodaci" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="340" Height="252" MapTapped="mapaPodaci_MapTapped"/>
         <TextBlock x:Name="textBlockNapomenaP" HorizontalAlignment="Left" Margin="10,460,0,0" TextWrapping="Wrap" Text="Napomena(vrijeme polaska i sl.):" VerticalAlignment="Top" RenderTransformOrigin="0.371,2.667"/>
         <TextBox x:Name="textBoxNapomenaP" HorizontalAlignment="Left" Margin="10,485,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" Height="50"/>
         <TextBlock x:Name="textBlockCijenaP" HorizontalAlignment="Left" Margin="10,540,0,0" TextWrapping="Wrap" Text="Cijena:" VerticalAlignment="Top"/>

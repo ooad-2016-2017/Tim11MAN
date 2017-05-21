@@ -11,7 +11,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class ReviewSlanjeVM
     {
-        ICommand posaljiB;
+        public ICommand posaljiB { get; set; }
         public string misljenje { get; set; }
 
         public ReviewSlanjeVM()

@@ -13,7 +13,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class RegistracijaKompanijeVM
     {
-        ICommand RegistracijaKompanije;
+        public ICommand RegistracijaKompanije { get; set; }
         public String imeKompanije { get; set; }
         public String emailKompanije { get; set; }
         public DateTime datumKompanije { get; set; }

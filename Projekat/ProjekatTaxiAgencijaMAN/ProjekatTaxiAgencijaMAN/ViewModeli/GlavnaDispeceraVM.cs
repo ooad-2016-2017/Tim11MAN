@@ -11,8 +11,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class GlavnaDispeceraVM
     {
-        ICommand KontaktiranjeVozacaD;
-        ICommand ProvjeraVozilaD;
+        public ICommand KontaktiranjeVozacaD { get; set; }
+        public ICommand ProvjeraVozilaD { get; set; }
         NavigationService nservice;
         public PrijavaVM prijavaVM;
         ProjekatTaxiAgencijaMAN.Modeli.Dispecer regm;
@@ -42,7 +42,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void provjeravozila(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.UvidKompanijeUVozila), new ProjekatTaxiAgencijaMAN.ViewModeli.UvidUVozila());
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.UvidKompanijeUVozila), new ProjekatTaxiAgencijaMAN.ViewModeli.UvidUVozila());
         }
     }
 }

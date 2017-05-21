@@ -12,33 +12,52 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class PrijavaVM
     {
-        public ICommand GlavnaStranica;
-        public ICommand RegistracijaStranica;
-        public ICommand KontaktiranjeTaksijaStranica;
+        public ICommand GlavnaStranica { get; set; }
+        public ICommand RegistracijaStranica { get; set; }
+        public ICommand KontaktiranjeTaksijaStranica { get; set; }
         public NavigationService NavigationServis;
-        public Musterija musterijaIzPrijave;
-        public RegistrovanaMusterija regmusterijaIzPrijave;
+        public Musterija musterijaIzPrijave = null;
+        public RegistrovanaMusterija regmusterijaIzPrijave = null;
         public ProjekatTaxiAgencijaMAN.Modeli.Dispecer dispecerIzPrijave;
-        public Supervizor supervizorIzPrijave;
-        public Kompanija kompanijaIzPrijave;
+        public Supervizor supervizorIzPrijave = null;
+        public Kompanija kompanijaIzPrijave = null;
         public String korisnickoime { get; set; }
         public String sifra { get; set; }
 
         public PrijavaVM()
         {
-            GlavnaStranica = new RelayCommand<object>(glavnaStranica);
-            RegistracijaStranica = new RelayCommand<object>(registracijaStranica);
-            KontaktiranjeTaksijaStranica = new RelayCommand<object>(kontaktiranjeTaksijaStranica);
+            GlavnaStranica = new RelayCommand<object>(glavnaStranica, prva);
+            RegistracijaStranica = new RelayCommand<object>(registracijaStranica, druga);
+            KontaktiranjeTaksijaStranica = new RelayCommand<object>(kontaktiranjeTaksijaStranica, treca);
             NavigationServis = new NavigationService();
+        }
+
+        public Boolean prva(Object o)
+        {
+            return true;
+        }
+
+        public Boolean druga(Object o)
+        {
+            return true;
+        }
+
+        public Boolean treca(Object o)
+        {
+            return true;
         }
 
         public async void glavnaStranica(object o)
         {
             // sad ovdje treba provjeriti ima li registrovani korisnik sa ovim podacima
             // kompanija, dispecer, regkorisnik, neregkorisnik ili supervizor
-            SviPodaci svipodaci = new SviPodaci();
-            svipodaci.postaviPodatke();
-            List<RegistrovanaMusterija> rms = svipodaci.regMusterije;
+
+            List<RegistrovanaMusterija> rms = new List<RegistrovanaMusterija>();
+            rms.Add(new RegistrovanaMusterija()
+            {
+                KorisnickoIme = "loca",
+                Password = "sifra"
+            });
 
             for(int i=0; i<rms.Count; i++)
             {
@@ -53,7 +72,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
             if (regmusterijaIzPrijave != null)
             {
-                NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.RegistrovaniKorisnik), new GlavnaMusterijeVM(this));
+                NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistrovaniKorisnik), new GlavnaMusterijeVM(this));
             }
             else if (dispecerIzPrijave != null)
             {
@@ -76,7 +95,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void registracijaStranica(object o)
         {
-            NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.RegistracijaMusterije), new RegistracijaMusterijeVM());
+            NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistracijaMusterije), new RegistracijaMusterijeVM());
         }
 
         public void kontaktiranjeTaksijaStranica(object o)

@@ -12,118 +12,21 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
         private static int id=0;
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private int idZaposlenog;
-        private string ime, prezime, brojTelefona, korisnickoIme, password;
-        private DateTime datumRodjenja, datumZaposlenja;
+        public int ZaposlenikId { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public string BrojTelefona { get; set; }
+        public string KorisnickoIme { get; set; }
+        public string Password { get; set; }
+        public DateTime DatumRodjenja { get; set; }
+        public DateTime DatumZaposlenja { get; set; }
 
         public Zaposlenik()
         {
-            idZaposlenog = id;
+            ZaposlenikId = id;
             id++;
         }
 
-        public string KorisnickoIme
-        {
-            get
-            {
-                return korisnickoIme;
-            }
-
-            set
-            {
-                korisnickoIme = value;
-            }
-        }
-
-        public string Password
-        {
-            get
-            {
-                return password;
-            }
-
-            set
-            {
-                password = value;
-            }
-        }
-
-        public int IdZaposlenog
-        {
-            get
-            {
-                return idZaposlenog;
-            }
-
-            set
-            {
-                idZaposlenog = value;
-            }
-        }
-
-        public string Ime
-        {
-            get
-            {
-                return ime;
-            }
-
-            set
-            {
-                ime = value;
-            }
-        }
-
-        public string Prezime
-        {
-            get
-            {
-                return prezime;
-            }
-
-            set
-            {
-                prezime = value;
-            }
-        }
-
-        public string BrojTelefona
-        {
-            get
-            {
-                return brojTelefona;
-            }
-
-            set
-            {
-                brojTelefona = value;
-            }
-        }
-
-        public DateTime DatumRodjenja
-        {
-            get
-            {
-                return datumRodjenja;
-            }
-
-            set
-            {
-                datumRodjenja = value;
-            }
-        }
-
-        public DateTime DatumZaposlenja
-        {
-            get
-            {
-                return datumZaposlenja;
-            }
-
-            set
-            {
-                datumZaposlenja = value;
-            }
-        }
+        
     }
 }

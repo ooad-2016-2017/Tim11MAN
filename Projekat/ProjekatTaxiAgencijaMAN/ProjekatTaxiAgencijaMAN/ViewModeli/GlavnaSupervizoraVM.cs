@@ -11,7 +11,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class GlavnaSupervizoraVM
     {
-        ICommand registrujKompanijuS;
+        public ICommand registrujKompanijuS { get; set; }
         NavigationService nservice;
         public PrijavaVM prijavaVM;
         ProjekatTaxiAgencijaMAN.Modeli.Supervizor regm;
@@ -31,7 +31,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void registrujk(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.RegistracijaKompanije), new RegistracijaKompanijeVM());
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistracijaKompanije), new RegistracijaKompanijeVM());
         }
     }
 }

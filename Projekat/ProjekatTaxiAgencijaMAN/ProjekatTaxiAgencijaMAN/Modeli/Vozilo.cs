@@ -9,75 +9,22 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Vozilo
     {
+        private static int id = 0;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private string registracijskeTablice;
-        private string vrstaVozila, brojVozila;
-        private double predjenikilometri;
-        private int godisteVozila;
+        public int VoziloId { get; set; }
+        public string RegistracijskeTablice { get; set; }
+        public string VrstaVozila { get; set; }
+        public string BrojVozila { get; set; }
+        public double Predjenikilometri { get; set; }
+        public int GodisteVozila { get; set; }
 
-        public string VrstaVozila
+        public Vozilo()
         {
-            get
-            {
-                return vrstaVozila;
-            }
-
-            set
-            {
-                vrstaVozila = value;
-            }
+            VoziloId = id;
+            id++;
         }
 
-        public string RegistracijskeTablice
-        {
-            get
-            {
-                return registracijskeTablice;
-            }
-
-            set
-            {
-                registracijskeTablice = value;
-            }
-        }
-
-        public string BrojVozila
-        {
-            get
-            {
-                return brojVozila;
-            }
-
-            set
-            {
-                brojVozila = value;
-            }
-        }
-
-        public double PredjeniKilometri
-        {
-            get
-            {
-                return predjenikilometri;
-            }
-
-            set
-            {
-                predjenikilometri = value;
-            }
-        }
-
-        public int GodisteVozila
-        {
-            get
-            {
-                return godisteVozila;
-            }
-
-            set
-            {
-                godisteVozila = value;
-            }
-        }
+        
     }
 }

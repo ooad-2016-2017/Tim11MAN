@@ -11,9 +11,9 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class GlavnaKompanijeVM
     {
-        ICommand RegistracijaVozaca;
-        ICommand UvidUVozace;
-        ICommand UvidUVozila;
+        public ICommand RegistracijaVozaca { get; set; }
+        public ICommand UvidUVozace { get; set; }
+        public ICommand UvidUVozila { get; set; }
         NavigationService nservice;
         public PrijavaVM prijavaVM;
         Kompanija regm;
@@ -47,17 +47,17 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void registrujvozaca(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.RegistracijaVozaca), new RegistracijaVozacaVM(this));
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistracijaVozaca), new RegistracijaVozacaVM(this));
         }
 
         public void uviduvozace(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.UvidKompanijeUVozace), new UvidUVozace());
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.UvidKompanijeUVozace), new UvidUVozace());
         }
 
         public void uviduvozila(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.UvidKompanijeUVozila), new UvidUVozila());
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.UvidKompanijeUVozila), new UvidUVozila());
         }
     }
 }

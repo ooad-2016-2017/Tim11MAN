@@ -12,25 +12,13 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
         private static int idKorisnikaglobalni = 0;
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private int idKorisnika = 0;
+        public int MusterijaId { get; set; }
 
         public Musterija()
         {
-            idKorisnika = idKorisnikaglobalni;
+            MusterijaId = idKorisnikaglobalni;
             idKorisnikaglobalni++;
         }
 
-        public int IdKorisnika
-        {
-            get
-            {
-                return idKorisnika;
-            }
-
-            set
-            {
-                idKorisnika = value;
-            }
-        }
     }
 }

@@ -8,111 +8,13 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class RegistrovanaMusterija : Musterija
     {
-        private string imeKorisnika, prezimeKorisnika, korisnickoIme, password, emailAdresa, brojTelefona;
-        private DateTime datumRodjenja;
-        private List<DateTime> datumVoznji; //atribut uz pomoc kojeg ce se pored ostalog odredjivati popust
-
-        public string ImeKorisnika
-        {
-            get
-            {
-                return imeKorisnika;
-            }
-
-            set
-            {
-                imeKorisnika = value;
-            }
-        }
-
-        public string PrezimeKorisnika
-        {
-            get
-            {
-                return prezimeKorisnika;
-            }
-
-            set
-            {
-                prezimeKorisnika = value;
-            }
-        }
-
-        public string KorisnickoIme
-        {
-            get
-            {
-                return korisnickoIme;
-            }
-
-            set
-            {
-                korisnickoIme = value;
-            }
-        }
-
-        public string Password
-        {
-            get
-            {
-                return password;
-            }
-
-            set
-            {
-                password = value;
-            }
-        }
-
-        public string EmailAdresa
-        {
-            get
-            {
-                return emailAdresa;
-            }
-
-            set
-            {
-                emailAdresa = value;
-            }
-        }
-
-        public String BrojTelefona
-        {
-            get
-            {
-                return brojTelefona;
-            }
-            set
-            {
-                brojTelefona = value;
-            }
-        }
-
-        public DateTime DatumRodjenja
-        {
-            get
-            {
-                return datumRodjenja;
-            }
-
-            set
-            {
-                datumRodjenja = value;
-            }
-        }
-
-        public List<DateTime> DatumVoznji
-        {
-            get
-            {
-                return datumVoznji;
-            }
-
-            set
-            {
-                datumVoznji = value;
-            }
-        }
+        public string ImeKorisnika { get; set; }
+        public string PrezimeKorisnika { get; set; }
+        public string KorisnickoIme { get; set; }
+        public string Password { get; set; }
+        public string EmailAdresa { get; set; }
+        public string BrojTelefona { get; set; }
+        public DateTime DatumRodjenja { get; set; }
+        public List<DateTime> DatumVoznji { get; set; } //atribut uz pomoc kojeg ce se pored ostalog odredjivati popust
     }
 }

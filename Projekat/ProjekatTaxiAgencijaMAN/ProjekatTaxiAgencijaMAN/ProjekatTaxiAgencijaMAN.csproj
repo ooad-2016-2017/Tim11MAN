@@ -152,6 +152,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20170521180327_InitialMigration.cs" />
+    <Compile Include="Migrations\20170521180327_InitialMigration.designer.cs">
+      <DependentUpon>20170521180327_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\TaxiDbContextModelSnapshot.cs" />
+    <Compile Include="Modeli\DefaultPodaci.cs" />
     <Compile Include="Modeli\Dispecer.cs" />
     <Compile Include="Modeli\Kompanija.cs" />
     <Compile Include="Modeli\Musterija.cs" />
@@ -167,7 +173,6 @@
     <Compile Include="Pomocne\NavigationService.cs" />
     <Compile Include="Pomocne\RelayCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SviPodaci.cs" />
     <Compile Include="ViewModeli\GlavnaDispeceraVM.cs" />
     <Compile Include="ViewModeli\GlavnaKompanijeVM.cs" />
     <Compile Include="ViewModeli\GlavnaMusterijeVM.cs" />
@@ -190,6 +195,7 @@
     <None Include="ProjekatTaxiAgencijaMAN_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\poclok.jpg" />
     <Content Include="ikone\slikaProfila.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

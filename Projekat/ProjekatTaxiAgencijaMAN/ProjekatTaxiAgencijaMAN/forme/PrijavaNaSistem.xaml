@@ -60,6 +60,6 @@
         </VisualStateManager.VisualStateGroups>
         <forme:Prijava x:Name="userControlPrijava" HorizontalAlignment="Left" Margin="-16,45,0,0" VerticalAlignment="Top" Height="146" Width="362"/>
         <Button x:Name="buttonPrijava" Content="Prijava" HorizontalAlignment="Left" Margin="86,250,0,0" VerticalAlignment="Top" Width="174" FontSize="20" Height="45"/>
-        <TextBlock x:Name="textBlockRegistracija" Margin="123,374,0,0" Text=" Registruj se" VerticalAlignment="Top" RenderTransformOrigin="-1.102,0.733" Height="27" HorizontalAlignment="Left" Width="96" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" FontWeight="Bold"/>
+        <Button x:Name="textBlockRegistracija" Margin="86,368,0,0" Content=" Registruj se" VerticalAlignment="Top" RenderTransformOrigin="-1.102,0.733" Height="47" HorizontalAlignment="Left" Width="174" FontSize="20" />
     </Grid>
 </Page>

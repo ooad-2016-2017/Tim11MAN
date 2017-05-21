@@ -15,7 +15,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class RegistracijaVozacaVM : INotifyPropertyChanged
     {
-        ICommand RegistracijaVozaca;
+        public ICommand RegistracijaVozaca { get; set; }
         GlavnaKompanijeVM kompanija;
         public String imeVozaca { get; set; }
         public String prezimeVozaca { get; set; }
