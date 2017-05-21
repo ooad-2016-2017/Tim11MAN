@@ -9,19 +9,187 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockPodaciOVozacu.Margin" Value="156,81,0,0"/>
+                        <Setter Target="textBlockPodaciOVozacu.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockIme.Margin" Value="98,146,0,0"/>
+                        <Setter Target="textBlockIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockPrezime.Margin" Value="100,185,0,0"/>
+                        <Setter Target="textBlockPrezime.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockDatumRodjenja.Margin" Value="98,259,0,0"/>
+                        <Setter Target="textBlockDatumRodjenja.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockDatumZaposlenja.Margin" Value="98,303,0,0"/>
+                        <Setter Target="textBlockDatumZaposlenja.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockBrojTelefona.Margin" Value="98,224,0,0"/>
+                        <Setter Target="textBlockBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockPodaciOVozilu.Margin" Value="156,364,0,0"/>
+                        <Setter Target="textBlockPodaciOVozilu.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockModel.Margin" Value="119,435,0,0"/>
+                        <Setter Target="textBlockModel.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockGodiste.Margin" Value="119,474,0,0"/>
+                        <Setter Target="textBlockGodiste.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockRegistracija.Margin" Value="119,518,0,0"/>
+                        <Setter Target="textBlockRegistracija.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxIme.Margin" Value="296,134,553,0"/>
+                        <Setter Target="textBoxIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxPrezime.Margin" Value="296,178,553,0"/>
+                        <Setter Target="textBoxPrezime.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxBrojTelefona.Margin" Value="296,217,553,0"/>
+                        <Setter Target="textBoxBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxModel.Margin" Value="296,418,0,0"/>
+                        <Setter Target="textBoxModel.Width" Value="177"/>
+                        <Setter Target="textBoxModel.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxGodiste.Margin" Value="296,462,0,0"/>
+                        <Setter Target="textBoxGodiste.Width" Value="177"/>
+                        <Setter Target="textBoxGodiste.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxRegistracija.Margin" Value="296,506,0,0"/>
+                        <Setter Target="textBoxRegistracija.Width" Value="177"/>
+                        <Setter Target="textBoxRegistracija.FontSize" Value="20"/>
+
+                        <Setter Target="datePickerDatumRodjenja.Margin" Value="296,256,0,0"/>
+                        <Setter Target="datePickerDatumRodjenja.Height" Value="40"/>
+                        <Setter Target="datePickerDatumRodjenja.Width" Value="174"/>
+                        <Setter Target="datePickerDatumRodjenja.FontSize" Value="20"/>
+
+                        <Setter Target="datePickerDatumZaposlenja.Margin" Value="296,301,0,0"/>
+                        <Setter Target="datePickerDatumZaposlenja.Height" Value="40"/>
+                        <Setter Target="datePickerDatumZaposlenja.Width" Value="174"/>
+                        <Setter Target="datePickerDatumZaposlenja.FontSize" Value="20"/>
+
+                        <Setter Target="buttonRegistruj.Margin" Value="682,500,0,0"/>
+                        <Setter Target="buttonRegistruj.FontSize" Value="20"/>
+
+                        <Setter Target="buttonOdustani.Margin" Value="836,500,0,0"/>
+                        <Setter Target="buttonOdustani.FontSize" Value="20"/>
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBlockPodaciOVozacu.Margin" Value="297,113,0,0"/>
+                        <Setter Target="textBlockPodaciOVozacu.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockIme.Margin" Value="239,198,0,0"/>
+                        <Setter Target="textBlockIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockPrezime.Margin" Value="241,237,0,0"/>
+                        <Setter Target="textBlockPrezime.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockDatumRodjenja.Margin" Value="239,311,0,0"/>
+                        <Setter Target="textBlockDatumRodjenja.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockDatumZaposlenja.Margin" Value="239,355,0,0"/>
+                        <Setter Target="textBlockDatumZaposlenja.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockBrojTelefona.Margin" Value="239,276,0,0"/>
+                        <Setter Target="textBlockBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockPodaciOVozilu.Margin" Value="297,416,0,0"/>
+                        <Setter Target="textBlockPodaciOVozilu.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockModel.Margin" Value="260,487,0,0"/>
+                        <Setter Target="textBlockModel.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockGodiste.Margin" Value="260,526,0,0"/>
+                        <Setter Target="textBlockGodiste.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockRegistracija.Margin" Value="260,570,0,0"/>
+                        <Setter Target="textBlockRegistracija.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxIme.Margin" Value="437,186,669,0"/>
+                        <Setter Target="textBoxIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxPrezime.Margin" Value="437,230,669,0"/>
+                        <Setter Target="textBoxPrezime.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxBrojTelefona.Margin" Value="437,269,669,0"/>
+                        <Setter Target="textBoxBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxModel.Margin" Value="437,470,0,0"/>
+                        <Setter Target="textBoxModel.Width" Value="177"/>
+                        <Setter Target="textBoxModel.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxGodiste.Margin" Value="437,514,0,0"/>
+                        <Setter Target="textBoxGodiste.Width" Value="177"/>
+                        <Setter Target="textBoxGodiste.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxRegistracija.Margin" Value="437,558,0,0"/>
+                        <Setter Target="textBoxRegistracija.Width" Value="177"/>
+                        <Setter Target="textBoxRegistracija.FontSize" Value="20"/>
+
+                        <Setter Target="datePickerDatumRodjenja.Margin" Value="437,308,0,0"/>
+                        <Setter Target="datePickerDatumRodjenja.Height" Value="40"/>
+                        <Setter Target="datePickerDatumRodjenja.Width" Value="174"/>
+                        <Setter Target="datePickerDatumRodjenja.FontSize" Value="20"/>
+
+                        <Setter Target="datePickerDatumZaposlenja.Margin" Value="437,353,0,0"/>
+                        <Setter Target="datePickerDatumZaposlenja.Height" Value="40"/>
+                        <Setter Target="datePickerDatumZaposlenja.Width" Value="174"/>
+                        <Setter Target="datePickerDatumZaposlenja.FontSize" Value="20"/>
+
+                        <Setter Target="buttonRegistruj.Margin" Value="823,560,0,0"/>
+                        <Setter Target="buttonRegistruj.FontSize" Value="20"/>
+
+                        <Setter Target="buttonOdustani.Margin" Value="977,560,0,0"/>
+                        <Setter Target="buttonOdustani.FontSize" Value="20"/>
+
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
         <TextBox x:Name="textBoxIme" Margin="178,51,28,0" TextWrapping="Wrap" Text="{Binding Path=imeVozaca, Mode=TwoWay}" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961"/>
         <TextBox x:Name="textBoxPrezime" Margin="178,88,28,0" TextWrapping="Wrap" Text="{Binding Path=prezimeVozaca, Mode=TwoWay}" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961" Height="34"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="37,63,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="37,102,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="37,141,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockIme" HorizontalAlignment="Left" Margin="37,63,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockPrezime" HorizontalAlignment="Left" Margin="37,102,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockBrojTelefona" HorizontalAlignment="Left" Margin="37,141,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxBrojTelefona" Margin="178,127,28,0" TextWrapping="Wrap" Text="{Binding Path=brojTelefonaVozaca, Mode=TwoWay}" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.961" Height="34"/>
         <TextBlock x:Name="textBlockDatumRodjenja" HorizontalAlignment="Left" Margin="37,181,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top"/>
         <DatePicker x:Name="datePickerDatumRodjenja" HorizontalAlignment="Left" Date="{Binding Path=datumVozaca, Mode=TwoWay}" Margin="178,176,0,0" VerticalAlignment="Top" Height="25" MinWidth="114" Width="154"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="100,26,0,0" TextWrapping="Wrap" Text="Podaci o vozacu" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="100,276,0,0" TextWrapping="Wrap" Text="Podaci o vozilu" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="37,323,0,0" TextWrapping="Wrap" Text="Model:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="37,360,0,0" TextWrapping="Wrap" Text="Godište:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="37,397,0,0" TextWrapping="Wrap" Text="Registracija:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockPodaciOVozacu" HorizontalAlignment="Left" Margin="100,26,0,0" TextWrapping="Wrap" Text="Podaci o vozacu" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockPodaciOVozilu" HorizontalAlignment="Left" Margin="100,276,0,0" TextWrapping="Wrap" Text="Podaci o vozilu" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockModel" HorizontalAlignment="Left" Margin="37,323,0,0" TextWrapping="Wrap" Text="Model:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockGodiste" HorizontalAlignment="Left" Margin="37,360,0,0" TextWrapping="Wrap" Text="Godište:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockRegistracija" HorizontalAlignment="Left" Margin="37,397,0,0" TextWrapping="Wrap" Text="Registracija:" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxModel" HorizontalAlignment="Left" Margin="178,311,0,0" TextWrapping="Wrap" Text="{Binding Path=modelVozila, Mode=TwoWay}" VerticalAlignment="Top" Width="154"/>
         <TextBox x:Name="textBoxGodiste" HorizontalAlignment="Left" Margin="178,348,0,0" TextWrapping="Wrap" Text="{Binding Path=godisteVozila, Mode=TwoWay}" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.564,0.438"/>
         <TextBox x:Name="textBoxRegistracija" HorizontalAlignment="Left" Margin="178,385,0,0" TextWrapping="Wrap" Text="{Binding Path=registracijaVozila, Mode=TwoWay}" VerticalAlignment="Top" Width="154"/>

@@ -8,10 +8,55 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockID.FontSize" Value="20"/>
+                        <Setter Target="textBox.FontSize" Value="20"/>
+                        <Setter Target="buttonPretrazi.FontSize" Value="20"/>
+                        <Setter Target="buttonPretrazi.Margin" Value="143,100,0,0"/>
+                        <Setter Target="textBlockBrojTelefona.Width" Value="255"/>
+                        <Setter Target="textBlockBrojTelefona.Height" Value="40"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+
+                        <Setter Target="textBlockID.FontSize" Value="25"/>
+                        <Setter Target="textBlockID.Margin" Value="10,39,0,0"/>
+                        <Setter Target="textBox.FontSize" Value="25"/>
+                        <Setter Target="buttonPretrazi.FontSize" Value="25"/>
+                        <Setter Target="buttonPretrazi.Margin" Value="143,100,0,0"/>
+                        <Setter Target="textBlockBrojTelefona.Width" Value="255"/>
+                        <Setter Target="textBlockBrojTelefona.Height" Value="47"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <TextBlock x:Name="textBlockID" HorizontalAlignment="Left" Margin="43,39,0,0" TextWrapping="Wrap" Text="ID vozaca:" VerticalAlignment="Top" RenderTransformOrigin="0.468,-1.7"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="152,27,0,0" TextWrapping="Wrap" Text="{Binding Path=id, Mode=TwoWay}" VerticalAlignment="Top" Width="146"/>
         <Button x:Name="buttonPretrazi" Command="{Binding Path=PretraziVozaca}" Content="Pretrazi" HorizontalAlignment="Left" Margin="81,92,0,0" VerticalAlignment="Top" Width="155"/>
-        <TextBlock x:Name="textBlockBrojTelefona" HorizontalAlignment="Left" Margin="43,179,0,0" TextWrapping="Wrap" Text="{Binding Path=brojTelefonaVozaca,UpdateSourceTrigger=Default, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockBrojTelefona" HorizontalAlignment="Left" Margin="43,179,0,0" TextWrapping="Wrap" Text="{Binding Path=brojTelefonaVozaca,UpdateSourceTrigger=Default, Mode=TwoWay}" VerticalAlignment="Top" Width="255"/>
 
     </Grid>
 </Page>

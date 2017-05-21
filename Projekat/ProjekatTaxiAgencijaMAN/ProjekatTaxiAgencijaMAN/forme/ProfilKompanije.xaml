@@ -8,6 +8,80 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockNaziv.Margin" Value="50,74,0,0"/>
+                        <Setter Target="textBlockNaziv.Height" Value="43"/>
+                        <Setter Target="textBlockNaziv.Width" Value="230"/>
+                        <Setter Target="textBlockNaziv.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockAdresa.Margin" Value="50,122,0,0"/>
+                        <Setter Target="textBlockAdresa.FontSize" Value="25"/>
+                        
+                        <Setter Target="buttonRegistrujVozaca.Margin" Value="290,295,0,0"/>
+                        <Setter Target="buttonRegistrujVozaca.Height" Value="52"/>
+                        <Setter Target="buttonRegistrujVozaca.Width" Value="205"/>
+                        <Setter Target="buttonRegistrujVozaca.FontSize" Value="25"/>
+
+                        <Setter Target="buttonUvidUVozila.Margin" Value="534,295,0,0"/>
+                        <Setter Target="buttonUvidUVozila.Height" Value="52"/>
+                        <Setter Target="buttonUvidUVozila.Width" Value="205"/>
+                        <Setter Target="buttonUvidUVozila.FontSize" Value="25"/>
+                        
+                        <Setter Target="buttonUvidUVozace.Margin" Value="781,295,0,0"/>
+                        <Setter Target="buttonUvidUVozace.Height" Value="52"/>
+                        <Setter Target="buttonUvidUVozace.Width" Value="205"/>
+                        <Setter Target="buttonUvidUVozace.FontSize" Value="25"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockNaziv.Margin" Value="70,76,0,0"/>
+                        <Setter Target="textBlockNaziv.Height" Value="43"/>
+                        <Setter Target="textBlockNaziv.Width" Value="230"/>
+                        <Setter Target="textBlockNaziv.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockAdresa.Margin" Value="70,161,0,0"/>
+                        <Setter Target="textBlockAdresa.FontSize" Value="30"/>
+                        
+                        <Setter Target="buttonRegistrujVozaca.Margin" Value="349,394,0,0"/>
+                        <Setter Target="buttonRegistrujVozaca.Height" Value="52"/>
+                        <Setter Target="buttonRegistrujVozaca.Width" Value="262"/>
+                        <Setter Target="buttonRegistrujVozaca.FontSize" Value="30"/>
+
+                        <Setter Target="buttonUvidUVozila.Margin" Value="690,394,0,0"/>
+                        <Setter Target="buttonUvidUVozila.Height" Value="52"/>
+                        <Setter Target="buttonUvidUVozila.Width" Value="205"/>
+                        <Setter Target="buttonUvidUVozila.FontSize" Value="30"/>
+
+                        <Setter Target="buttonUvidUVozace.Margin" Value="973,394,0,0"/>
+                        <Setter Target="buttonUvidUVozace.Height" Value="52"/>
+                        <Setter Target="buttonUvidUVozace.Width" Value="205"/>
+                        <Setter Target="buttonUvidUVozace.FontSize" Value="30"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <TextBlock x:Name="textBlockNaziv" HorizontalAlignment="Left" Margin="50,74,0,0" TextWrapping="Wrap" Text="{Binding Path=NazivKompanijeRegK,UpdateSourceTrigger=Default, Mode=TwoWay}" VerticalAlignment="Top" Width="155" FontSize="20" Height="43"/>
         <TextBlock x:Name="textBlockAdresa" HorizontalAlignment="Left" Margin="51,122,0,0" TextWrapping="Wrap" Text="{Binding Path=AdresaKompanijeRegK,UpdateSourceTrigger=Default, Mode=TwoWay}" VerticalAlignment="Top" FontSize="20"/>
         <Button x:Name="buttonRegistrujVozaca" Command="{Binding Path=RegistrujVozaca}" Content="Registruj vozaca" HorizontalAlignment="Left" Margin="51,361,0,0" VerticalAlignment="Top" Width="204" Height="57" FontSize="20"/>

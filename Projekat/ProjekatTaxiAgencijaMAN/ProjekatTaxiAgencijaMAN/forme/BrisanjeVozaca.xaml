@@ -31,8 +31,7 @@
                         <Setter Target="textBoxPretraziV.Margin" Value="344,68,0,0"/>
                         <Setter Target="textBoxPretraziV.FontSize" Value="30"/>
                         <Setter Target="textBoxPretraziV.Height" Value="50"/>
-                        <Setter Target="textBoxPretraziV.Width" Value="354"/>
-                        <Setter Target="textBoxPretraziV.Text" Value="Tablet"/>
+                        <Setter Target="textBoxPretraziV.Width" Value="354"/>       
 
                         <Setter Target="buttonPretrazi.Margin" Value="753,68,0,522"/>
                         <Setter Target="buttonPretrazi.Height" Value="50"/>
@@ -65,7 +64,6 @@
                         <Setter Target="textBoxPretraziV.FontSize" Value="40"/>
                         <Setter Target="textBoxPretraziV.Height" Value="70"/>
                         <Setter Target="textBoxPretraziV.Width" Value="350"/>
-                        <Setter Target="textBoxPretraziV.Text" Value="Desktop"/>
 
                         <Setter Target="buttonPretrazi.Margin" Value="917,74,0,562"/>
                         <Setter Target="buttonPretrazi.Height" Value="70"/>

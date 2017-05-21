@@ -9,6 +9,145 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockNazivKompanije.Margin" Value="118,112,0,0"/>
+                        <Setter Target="textBlockNazivKompanije.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockAdresaKompanije.Margin" Value="118,168,0,0"/>
+                        <Setter Target="textBlockAdresaKompanije.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockDatumOsnivanja.Margin" Value="118,228,0,0"/>
+                        <Setter Target="textBlockDatumOsnivanja.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockBrojTelefona.Margin" Value="118,286,0,0"/>
+                        <Setter Target="textBlockBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockEmail.Margin" Value="592,112,0,0"/>
+                        <Setter Target="textBlockEmail.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxNazivKompanije.Margin" Value="298,112,0,0"/>
+                        <Setter Target="textBoxNazivKompanije.Height" Value="37"/>
+                        <Setter Target="textBoxNazivKompanije.Width" Value="156"/>
+                        <Setter Target="textBoxNazivKompanije.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxAdresaKompanije.Margin" Value="298,168,0,0"/>
+                        <Setter Target="textBoxAdresaKompanije.Height" Value="37"/>
+                        <Setter Target="textBoxAdresaKompanije.Width" Value="156"/>
+                        <Setter Target="textBoxAdresaKompanije.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxBrojTelefona.Margin" Value="298,286,0,0"/>
+                        <Setter Target="textBoxBrojTelefona.Height" Value="37"/>
+                        <Setter Target="textBoxBrojTelefona.Width" Value="156"/>
+                        <Setter Target="textBoxBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxEmail.Margin" Value="750,112,0,0"/>
+                        <Setter Target="textBoxEmail.Height" Value="37"/>
+                        <Setter Target="textBoxEmail.Width" Value="156"/>
+                        <Setter Target="textBoxEmail.FontSize" Value="20"/>
+
+                        <Setter Target="datePickerDatumOsnivanja.Margin" Value="298,228,0,0"/>
+                        <Setter Target="datePickerDatumOsnivanja.Height" Value="37"/>
+                        <Setter Target="datePickerDatumOsnivanja.Width" Value="156"/>
+                        <Setter Target="datePickerDatumOsnivanja.FontSize" Value="20"/>
+
+                        <Setter Target="buttonRegistrujKompaniju.Margin" Value="592,348,0,0"/>
+                        <Setter Target="buttonRegistrujKompaniju.Height" Value="48"/>
+                        <Setter Target="buttonRegistrujKompaniju.Width" Value="133"/>
+                        <Setter Target="buttonRegistrujKompaniju.FontSize" Value="20"/>
+
+                        <Setter Target="buttonOdustani.Margin" Value="773,348,0,0"/>
+                        <Setter Target="buttonOdustani.Height" Value="48"/>
+                        <Setter Target="buttonOdustani.Width" Value="133"/>
+                        <Setter Target="buttonOdustani.FontSize" Value="20"/>
+
+                        <Setter Target="userControlRegistracija.Margin" Value="561,146,0,0"/>
+                        <Setter Target="userControlRegistracija.Height" Value="155"/>
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockNazivKompanije.Margin" Value="229,223,0,0"/>
+                        <Setter Target="textBlockNazivKompanije.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockAdresaKompanije.Margin" Value="229,279,0,0"/>
+                        <Setter Target="textBlockAdresaKompanije.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockDatumOsnivanja.Margin" Value="229,339,0,0"/>
+                        <Setter Target="textBlockDatumOsnivanja.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockBrojTelefona.Margin" Value="229,397,0,0"/>
+                        <Setter Target="textBlockBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockEmail.Margin" Value="703,223,0,0"/>
+                        <Setter Target="textBlockEmail.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxNazivKompanije.Margin" Value="409,223,0,0"/>
+                        <Setter Target="textBoxNazivKompanije.Height" Value="37"/>
+                        <Setter Target="textBoxNazivKompanije.Width" Value="156"/>
+                        <Setter Target="textBoxNazivKompanije.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxAdresaKompanije.Margin" Value="409,279,0,0"/>
+                        <Setter Target="textBoxAdresaKompanije.Height" Value="37"/>
+                        <Setter Target="textBoxAdresaKompanije.Width" Value="156"/>
+                        <Setter Target="textBoxAdresaKompanije.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxBrojTelefona.Margin" Value="409,397,0,0"/>
+                        <Setter Target="textBoxBrojTelefona.Height" Value="37"/>
+                        <Setter Target="textBoxBrojTelefona.Width" Value="156"/>
+                        <Setter Target="textBoxBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxEmail.Margin" Value="861,223,0,0"/>
+                        <Setter Target="textBoxEmail.Height" Value="37"/>
+                        <Setter Target="textBoxEmail.Width" Value="156"/>
+                        <Setter Target="textBoxEmail.FontSize" Value="20"/>
+
+                        <Setter Target="datePickerDatumOsnivanja.Margin" Value="409,339,0,0"/>
+                        <Setter Target="datePickerDatumOsnivanja.Height" Value="37"/>
+                        <Setter Target="datePickerDatumOsnivanja.Width" Value="156"/>
+                        <Setter Target="datePickerDatumOsnivanja.FontSize" Value="20"/>
+
+                        <Setter Target="buttonRegistrujKompaniju.Margin" Value="703,459,0,0"/>
+                        <Setter Target="buttonRegistrujKompaniju.Height" Value="48"/>
+                        <Setter Target="buttonRegistrujKompaniju.Width" Value="133"/>
+                        <Setter Target="buttonRegistrujKompaniju.FontSize" Value="20"/>
+
+                        <Setter Target="buttonOdustani.Margin" Value="884,459,0,0"/>
+                        <Setter Target="buttonOdustani.Height" Value="48"/>
+                        <Setter Target="buttonOdustani.Width" Value="133"/>
+                        <Setter Target="buttonOdustani.FontSize" Value="20"/>
+
+                        <Setter Target="userControlRegistracija.Margin" Value="672,257,0,0"/>
+                        <Setter Target="userControlRegistracija.Height" Value="155"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
         <TextBlock x:Name="textBlockNazivKompanije" HorizontalAlignment="Left" Margin="26,112,0,0" TextWrapping="Wrap" Text="Naziv:" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlockAdresaKompanije" HorizontalAlignment="Left" Margin="26,138,0,0" TextWrapping="Wrap" Text="Adresa:" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlockDatumOsnivanja" HorizontalAlignment="Left" Margin="26,168,0,0" TextWrapping="Wrap" Text="Datum osnivanja:" VerticalAlignment="Top"/>
@@ -22,7 +161,7 @@
         <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="210,422,0,0" VerticalAlignment="Top" Width="114" Height="32"/>
         <DatePicker x:Name="datePickerDatumOsnivanja" Date="{Binding Path=datumKompanije, Mode=TwoWay}" HorizontalAlignment="Left" Margin="170,163,0,0" VerticalAlignment="Top" Width="154" Height="25" MinWidth="114"/>
 
-        <forme:Registracija HorizontalAlignment="Left" Margin="-5,259,0,0" VerticalAlignment="Top"/>
+        <forme:Registracija x:Name="userControlRegistracija" HorizontalAlignment="Left" Margin="-5,259,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

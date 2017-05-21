@@ -9,20 +9,158 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlockImeMusterije" HorizontalAlignment="Left" Margin="26,112,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlockPrezimeMusterije" HorizontalAlignment="Left" Margin="26,138,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockIme.Margin" Value="118,112,0,0"/>
+                        <Setter Target="textBlockIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockPrezime.Margin" Value="118,168,0,0"/>
+                        <Setter Target="textBlockPrezime.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockDatumRodjenja.Margin" Value="118,228,0,0"/>
+                        <Setter Target="textBlockDatumRodjenja.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockBrojTelefona.Margin" Value="118,286,0,0"/>
+                        <Setter Target="textBlockBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockEmail.Margin" Value="592,112,0,0"/>
+                        <Setter Target="textBlockEmail.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxIme.Margin" Value="298,112,0,0"/>
+                        <Setter Target="textBoxIme.Height" Value="37"/>
+                        <Setter Target="textBoxIme.Width" Value="156"/>
+                        <Setter Target="textBoxIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxPrezime.Margin" Value="298,168,0,0"/>
+                        <Setter Target="textBoxPrezime.Height" Value="37"/>
+                        <Setter Target="textBoxPrezime.Width" Value="156"/>
+                        <Setter Target="textBoxPrezime.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxBrojTelefona.Margin" Value="298,286,0,0"/>
+                        <Setter Target="textBoxBrojTelefona.Height" Value="37"/>
+                        <Setter Target="textBoxBrojTelefona.Width" Value="156"/>
+                        <Setter Target="textBoxBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxEmail.Margin" Value="750,112,0,0"/>
+                        <Setter Target="textBoxEmail.Height" Value="37"/>
+                        <Setter Target="textBoxEmail.Width" Value="156"/>
+                        <Setter Target="textBoxEmail.FontSize" Value="20"/>
+
+                        <Setter Target="datePickerDatumRodjenja.Margin" Value="298,228,0,0"/>
+                        <Setter Target="datePickerDatumRodjenja.Height" Value="37"/>
+                        <Setter Target="datePickerDatumRodjenja.Width" Value="156"/>
+                        <Setter Target="datePickerDatumRodjenja.FontSize" Value="20"/>
+
+                        <Setter Target="buttonRegistrujMusteriju.Margin" Value="592,348,0,0"/>
+                        <Setter Target="buttonRegistrujMusteriju.Height" Value="48"/>
+                        <Setter Target="buttonRegistrujMusteriju.Width" Value="133"/>
+                        <Setter Target="buttonRegistrujMusteriju.FontSize" Value="20"/>
+
+                        <Setter Target="buttonOdustani.Margin" Value="773,348,0,0"/>
+                        <Setter Target="buttonOdustani.Height" Value="48"/>
+                        <Setter Target="buttonOdustani.Width" Value="133"/>
+                        <Setter Target="buttonOdustani.FontSize" Value="20"/>
+
+                        <Setter Target="userControlRegistracija.Margin" Value="561,146,0,0"/>
+                        <Setter Target="userControlRegistracija.Height" Value="155"/>
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockIme.Margin" Value="229,223,0,0"/>
+                        <Setter Target="textBlockIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockPrezime.Margin" Value="229,279,0,0"/>
+                        <Setter Target="textBlockPrezime.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockDatumRodjenja.Margin" Value="229,339,0,0"/>
+                        <Setter Target="textBlockDatumRodjenja.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockBrojTelefona.Margin" Value="229,397,0,0"/>
+                        <Setter Target="textBlockBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockEmail.Margin" Value="703,223,0,0"/>
+                        <Setter Target="textBlockEmail.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxIme.Margin" Value="409,223,0,0"/>
+                        <Setter Target="textBoxIme.Height" Value="37"/>
+                        <Setter Target="textBoxIme.Width" Value="156"/>
+                        <Setter Target="textBoxIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxPrezime.Margin" Value="409,279,0,0"/>
+                        <Setter Target="textBoxPrezime.Height" Value="37"/>
+                        <Setter Target="textBoxPrezime.Width" Value="156"/>
+                        <Setter Target="textBoxPrezime.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxBrojTelefona.Margin" Value="409,397,0,0"/>
+                        <Setter Target="textBoxBrojTelefona.Height" Value="37"/>
+                        <Setter Target="textBoxBrojTelefona.Width" Value="156"/>
+                        <Setter Target="textBoxBrojTelefona.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxEmail.Margin" Value="861,223,0,0"/>
+                        <Setter Target="textBoxEmail.Height" Value="37"/>
+                        <Setter Target="textBoxEmail.Width" Value="156"/>
+                        <Setter Target="textBoxEmail.FontSize" Value="20"/>
+
+                        <Setter Target="datePickerDatumRodjenja.Margin" Value="409,339,0,0"/>
+                        <Setter Target="datePickerDatumRodjenja.Height" Value="37"/>
+                        <Setter Target="datePickerDatumRodjenja.Width" Value="156"/>
+                        <Setter Target="datePickerDatumRodjenja.FontSize" Value="20"/>
+
+                        <Setter Target="buttonRegistrujMusteriju.Margin" Value="703,459,0,0"/>
+                        <Setter Target="buttonRegistrujMusteriju.Height" Value="48"/>
+                        <Setter Target="buttonRegistrujMusteriju.Width" Value="133"/>
+                        <Setter Target="buttonRegistrujMusteriju.FontSize" Value="20"/>
+
+                        <Setter Target="buttonOdustani.Margin" Value="884,459,0,0"/>
+                        <Setter Target="buttonOdustani.Height" Value="48"/>
+                        <Setter Target="buttonOdustani.Width" Value="133"/>
+                        <Setter Target="buttonOdustani.FontSize" Value="20"/>
+
+                        <Setter Target="userControlRegistracija.Margin" Value="672,257,0,0"/>
+                        <Setter Target="userControlRegistracija.Height" Value="155"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <TextBlock x:Name="textBlockIme" HorizontalAlignment="Left" Margin="26,112,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockPrezime" HorizontalAlignment="Left" Margin="26,138,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlockDatumRodjenja" HorizontalAlignment="Left" Margin="26,168,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlockEmail" HorizontalAlignment="Left" Margin="26,228,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlockBrojTelefona" HorizontalAlignment="Left" Margin="26,198,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"/>
-        <Button x:Name="buttonRegistrujKompaniju" Content="Registruj" HorizontalAlignment="Left" Margin="18,424,0,0" VerticalAlignment="Top" Width="114" Command="{Binding Path=Registracija}"/>
-        <TextBox x:Name="textBoxImeMusterije" HorizontalAlignment="Left" Margin="170,103,0,0" TextWrapping="Wrap" Text="{Binding Path=ime, Mode=TwoWay}" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
+        <Button x:Name="buttonRegistrujMusteriju" Content="Registruj" HorizontalAlignment="Left" Margin="18,424,0,0" VerticalAlignment="Top" Width="114" Command="{Binding Path=Registracija}"/>
+        <TextBox x:Name="textBoxIme" HorizontalAlignment="Left" Margin="170,103,0,0" TextWrapping="Wrap" Text="{Binding Path=ime, Mode=TwoWay}" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
         <TextBox x:Name="textBoxPrezime" HorizontalAlignment="Left" Margin="170,133,0,0" TextWrapping="Wrap" Text="{Binding Path=prezime, Mode=TwoWay}" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
         <TextBox x:Name="textBoxBrojTelefona" HorizontalAlignment="Left" Margin="170,193,0,0" TextWrapping="Wrap" Text="{Binding Path=brojtelefona, Mode=TwoWay}" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10" RenderTransformOrigin="0.513,1.12"/>
         <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Margin="170,223,0,0" TextWrapping="Wrap" Text="{Binding Path=email, Mode=TwoWay}" VerticalAlignment="Top" Width="154" Height="25" MinHeight="10"/>
         <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="210,424,0,0" VerticalAlignment="Top" Width="114" Height="32"/>
         <DatePicker x:Name="datePickerDatumRodjenja" HorizontalAlignment="Left" Margin="170,163,0,0" VerticalAlignment="Top" Width="154" Height="25" MinWidth="114" Date="{Binding Path=datum, Mode=TwoWay}"/>
 
-        <forme:Registracija HorizontalAlignment="Left" Margin="-5,254,0,0" VerticalAlignment="Top" Width="336"/>
+        <forme:Registracija x:Name="userControlRegistracija" HorizontalAlignment="Left" Margin="-5,254,0,0" VerticalAlignment="Top" Width="336"/>
 
     </Grid>
 </Page>

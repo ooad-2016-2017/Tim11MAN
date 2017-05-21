@@ -10,9 +10,87 @@
     d:DesignWidth="370">
 
     <Grid Margin="0,0,9.667,9.667">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Korisnicko ime:" VerticalAlignment="Top" Margin="31,39,0,0"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sifra" VerticalAlignment="Top" Margin="31,76,0,0"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Potvrdi sifru:" VerticalAlignment="Top" Margin="31,113,0,0"/>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockKorisnickoIme.Margin" Value="31,37,0,0"/>
+                        <Setter Target="textBlockKorisnickoIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockSifra.Margin" Value="31,81,0,0"/>
+                        <Setter Target="textBlockSifra.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockPotvrdiSifru.Margin" Value="31,121,0,0"/>
+                        <Setter Target="textBlockPotvrdiSifru.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxKorisnickoIme.Margin" Value="189,27,0,0"/>
+                        <Setter Target="textBoxKorisnickoIme.Height" Value="37"/>
+                        <Setter Target="textBoxKorisnickoIme.Width" Value="156"/>
+                        <Setter Target="textBoxKorisnickoIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxSifra.Margin" Value="189,69,0,0"/>
+                        <Setter Target="textBoxSifra.Height" Value="37"/>
+                        <Setter Target="textBoxSifra.Width" Value="156"/>
+                        <Setter Target="textBoxSifra.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxPotvrdiSifru.Margin" Value="189,113,0,0"/>
+                        <Setter Target="textBoxPotvrdiSifru.Height" Value="37"/>
+                        <Setter Target="textBoxPotvrdiSifru.Width" Value="156"/>
+                        <Setter Target="textBoxPotvrdiSifru.FontSize" Value="20"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockKorisnickoIme.Margin" Value="31,37,0,0"/>
+                        <Setter Target="textBlockKorisnickoIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockSifra.Margin" Value="31,81,0,0"/>
+                        <Setter Target="textBlockSifra.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockPotvrdiSifru.Margin" Value="31,121,0,0"/>
+                        <Setter Target="textBlockPotvrdiSifru.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxKorisnickoIme.Margin" Value="189,27,0,0"/>
+                        <Setter Target="textBoxKorisnickoIme.Height" Value="37"/>
+                        <Setter Target="textBoxKorisnickoIme.Width" Value="156"/>
+                        <Setter Target="textBoxKorisnickoIme.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxSifra.Margin" Value="189,69,0,0"/>
+                        <Setter Target="textBoxSifra.Height" Value="37"/>
+                        <Setter Target="textBoxSifra.Width" Value="156"/>
+                        <Setter Target="textBoxSifra.FontSize" Value="20"/>
+
+                        <Setter Target="textBoxPotvrdiSifru.Margin" Value="189,113,0,0"/>
+                        <Setter Target="textBoxPotvrdiSifru.Height" Value="37"/>
+                        <Setter Target="textBoxPotvrdiSifru.Width" Value="156"/>
+                        <Setter Target="textBoxPotvrdiSifru.FontSize" Value="20"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <TextBlock x:Name="textBlockKorisnickoIme" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Korisnicko ime:" VerticalAlignment="Top" Margin="31,39,0,0"/>
+        <TextBlock x:Name="textBlockSifra" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sifra" VerticalAlignment="Top" Margin="31,76,0,0"/>
+        <TextBlock x:Name="textBlockPotvrdiSifru" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Potvrdi sifru:" VerticalAlignment="Top" Margin="31,113,0,0"/>
         <TextBox x:Name="textBoxKorisnickoIme" HorizontalAlignment="Left" Margin="170,27,0,0" TextWrapping="Wrap" Text="{Binding Path=kime, Mode=TwoWay}" VerticalAlignment="Top" Width="156" Height="20"/>
         <TextBox x:Name="textBoxSifra" HorizontalAlignment="Left" Margin="170,64,0,0" TextWrapping="Wrap" Text="{Binding Path=ksifra, Mode=TwoWay}" VerticalAlignment="Top" Width="156"/>
         <TextBox x:Name="textBoxPotvrdiSifru" HorizontalAlignment="Left" Margin="170,101,0,0" TextWrapping="Wrap" Text="{Binding Path=ksifraponovo, Mode=TwoWay}" VerticalAlignment="Top" Width="156"/>

@@ -24,6 +24,16 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
 
+                        <Setter Target="buttonKontaktirajVozaca.Margin" Value="420,256,0,0"/>
+                        <Setter Target="buttonKontaktirajVozaca.Height" Value="57"/>
+                        <Setter Target="buttonKontaktirajVozaca.Width" Value="205"/>
+                        <Setter Target="buttonKontaktirajVozaca.FontSize" Value="20"/>
+
+                        <Setter Target="buttonProvjera.Margin" Value="420,408,0,0"/>
+                        <Setter Target="buttonProvjera.Height" Value="57"/>
+                        <Setter Target="buttonProvjera.Width" Value="205"/>
+                        <Setter Target="buttonProvjera.FontSize" Value="20"/>
+
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -31,7 +41,15 @@
                         <AdaptiveTrigger MinWindowWidth="1280"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="buttonKontaktirajVozaca.Margin" Value="552,254,0,0"/>
+                        <Setter Target="buttonKontaktirajVozaca.Height" Value="57"/>
+                        <Setter Target="buttonKontaktirajVozaca.Width" Value="205"/>
+                        <Setter Target="buttonKontaktirajVozaca.FontSize" Value="20"/>
 
+                        <Setter Target="buttonProvjera.Margin" Value="552,401,0,0"/>
+                        <Setter Target="buttonProvjera.Height" Value="57"/>
+                        <Setter Target="buttonProvjera.Width" Value="205"/>
+                        <Setter Target="buttonProvjera.FontSize" Value="20"/>
 
 
                     </VisualState.Setters>

@@ -107,7 +107,7 @@
 
                         <Setter Target="textBlockLokacijaP.Margin" Value="97,324,0,0"/>
                         <Setter Target="textBlockLokacijaP.Height" Value="45"/>
-                        <Setter Target="textBlockLokacijaP.FontSize" Value="30"/>
+                        <Setter Target="textBlockLokacijaP.FontSize" Value="26"/>
 
                         <Setter Target="textBlockRutaP.Margin" Value="749,52,0,0"/>
                         <Setter Target="textBlockRutaP.Height" Value="45"/>
@@ -158,6 +158,7 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
+
 
 
         <TextBlock x:Name="textBlockImeP" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Height="31"/>

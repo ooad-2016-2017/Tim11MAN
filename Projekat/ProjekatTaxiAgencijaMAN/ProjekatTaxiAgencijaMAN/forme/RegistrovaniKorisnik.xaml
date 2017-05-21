@@ -8,6 +8,74 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockIme.Margin" Value="50,74,0,0"/>
+                        <Setter Target="textBlockIme.Height" Value="43"/>
+                        <Setter Target="textBlockIme.Width" Value="230"/>
+                        <Setter Target="textBlockIme.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockPrezime.Margin" Value="50,122,0,0"/>
+                        <Setter Target="textBlockPrezime.FontSize" Value="25"/>
+
+                        <Setter Target="buttonKontaktirajTaxi.Margin" Value="290,295,0,0"/>
+                        <Setter Target="buttonKontaktirajTaxi.Height" Value="52"/>
+                        <Setter Target="buttonKontaktirajTaxi.Width" Value="205"/>
+                        <Setter Target="buttonKontaktirajTaxi.FontSize" Value="25"/>
+
+                        <Setter Target="buttonReview.Margin" Value="534,295,0,0"/>
+                        <Setter Target="buttonReview.Height" Value="52"/>
+                        <Setter Target="buttonReview.Width" Value="205"/>
+                        <Setter Target="buttonReview.FontSize" Value="25"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockIme.Margin" Value="70,76,0,0"/>
+                        <Setter Target="textBlockIme.Height" Value="43"/>
+                        <Setter Target="textBlockIme.Width" Value="230"/>
+                        <Setter Target="textBlockIme.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockPrezime.Margin" Value="70,161,0,0"/>
+                        <Setter Target="textBlockPrezime.FontSize" Value="30"/>
+
+                        <Setter Target="buttonKontaktirajTaxi.Margin" Value="349,394,0,0"/>
+                        <Setter Target="buttonKontaktirajTaxi.Height" Value="52"/>
+                        <Setter Target="buttonKontaktirajTaxi.Width" Value="262"/>
+                        <Setter Target="buttonKontaktirajTaxi.FontSize" Value="30"/>
+
+                        <Setter Target="buttonReview.Margin" Value="690,394,0,0"/>
+                        <Setter Target="buttonReview.Height" Value="52"/>
+                        <Setter Target="buttonReview.Width" Value="205"/>
+                        <Setter Target="buttonReview.FontSize" Value="30"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
         <Button x:Name="buttonKontaktirajTaxi" Command="{Binding Path=KontaktiranjeTaksijaRegM}" Content="Kontaktiraj Taxi" HorizontalAlignment="Left" Margin="50,321,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlockIme" Text="{Binding Path=ImeRegK,UpdateSourceTrigger=Default, Mode=TwoWay}" HorizontalAlignment="Left" Margin="50,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" FontSize="20" Height="43"/>
         <TextBlock x:Name="textBlockPrezime" Text="{Binding Path=PrezimeRegK,UpdateSourceTrigger=Default, Mode=TwoWay}" HorizontalAlignment="Left" Margin="51,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
