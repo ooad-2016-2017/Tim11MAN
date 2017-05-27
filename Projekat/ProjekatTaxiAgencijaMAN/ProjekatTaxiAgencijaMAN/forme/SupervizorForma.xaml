@@ -8,9 +8,65 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="button" Command="{Binding Path=registrujKompanijuS}" Content="Registruj Kompaniju" HorizontalAlignment="Left" FontSize="20" Margin="70,227,0,0" VerticalAlignment="Top" Width="217" Height="54"/>
-        <Button x:Name="button1" Command="{Binding Path=registrujDispeceraS}" Content="Registruj Dispecera" HorizontalAlignment="Left" FontSize="20" Margin="70,315,0,0" VerticalAlignment="Top" Width="217" Height="54"/>
-        <Button x:Name="button2" Command="{Binding Path=registrujSupervizoraS}" Content="Registruj Supervizora" HorizontalAlignment="Left" FontSize="20" Margin="70,403,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.267,-1.697" Height="54" Width="217"/>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="buttonRegistrujKompaniju.Margin" Value="384,205,0,0"/>
+                        <Setter Target="buttonRegistrujKompaniju.FontSize" Value="25"/>
+                        <Setter Target="buttonRegistrujKompaniju.Width" Value="253"/>
+
+                        <Setter Target="buttonRegistrujDispecera.Margin" Value="384,293,0,0"/>
+                        <Setter Target="buttonRegistrujDispecera.FontSize" Value="25"/>
+                        <Setter Target="buttonRegistrujDispecera.Width" Value="253"/>
+                        
+                        <Setter Target="buttonRegistrujSupervizora.Margin" Value="384,381,0,0"/>
+                        <Setter Target="buttonRegistrujSupervizora.FontSize" Value="25"/>
+                        <Setter Target="buttonRegistrujSupervizora.Width" Value="253"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="buttonRegistrujKompaniju.Margin" Value="487,258,0,0"/>
+                        <Setter Target="buttonRegistrujKompaniju.FontSize" Value="30"/>
+                        <Setter Target="buttonRegistrujKompaniju.Width" Value="303"/>
+
+                        <Setter Target="buttonRegistrujDispecera.Margin" Value="487,346,0,0"/>
+                        <Setter Target="buttonRegistrujDispecera.FontSize" Value="30"/>
+                        <Setter Target="buttonRegistrujDispecera.Width" Value="303"/>
+
+                        <Setter Target="buttonRegistrujSupervizora.Margin" Value="487,434,0,0"/>
+                        <Setter Target="buttonRegistrujSupervizora.FontSize" Value="30"/>
+                        <Setter Target="buttonRegistrujSupervizora.Width" Value="303"/>
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Button x:Name="buttonRegistrujKompaniju" Command="{Binding Path=registrujKompanijuS}" Content="Registruj Kompaniju" HorizontalAlignment="Left" FontSize="20" Margin="70,227,0,0" VerticalAlignment="Top" Width="217" Height="54"/>
+        <Button x:Name="buttonRegistrujDispecera" Command="{Binding Path=registrujDispeceraS}" Content="Registruj Dispecera" HorizontalAlignment="Left" FontSize="20" Margin="70,315,0,0" VerticalAlignment="Top" Width="217" Height="54"/>
+        <Button x:Name="buttonRegistrujSupervizora" Command="{Binding Path=registrujSupervizoraS}" Content="Registruj Supervizora" HorizontalAlignment="Left" FontSize="20" Margin="70,403,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.267,-1.697" Height="54" Width="217"/>
 
     </Grid>
 </Page>

@@ -8,20 +8,129 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="102,29,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top"/>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="textBlockID.FontSize" Value="20"/>
+                        <Setter Target="textBoxKorisnickoIme.FontSize" Value="20"/>
+                        <Setter Target="buttonPretrazi.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockIme.FontSize" Value="20"/>
+                        <Setter Target="textBlockIme.Margin" Value="30,177,0,0"/>
+
+                        <Setter Target="textBlockPrezime.FontSize" Value="20"/>
+                        <Setter Target="textBlockPrezime.Margin" Value="30,228,0,0"/>
+
+                        <Setter Target="textBlockPredjeniKilometri.FontSize" Value="20"/>
+                        <Setter Target="textBlockPredjeniKilometri.Margin" Value="30,277,0,0"/>
+
+                        <Setter Target="textBlockBrojVoznji.FontSize" Value="20"/>
+                        <Setter Target="textBlockBrojVoznji.Margin" Value="30,331,0,0"/>
+
+                        <Setter Target="textBoxIme.FontSize" Value="20"/>
+                        <Setter Target="textBoxIme.Margin" Value="230,165,45,0"/>
+
+                        <Setter Target="textBoxPrezime.FontSize" Value="20"/>
+                        <Setter Target="textBoxPrezime.Margin" Value="230,216,45,0"/>
+
+                        <Setter Target="textBoxPredjeniKilometri.FontSize" Value="20"/>
+                        <Setter Target="textBoxPredjeniKilometri.Margin" Value="230,265,45,0"/>
+
+                        <Setter Target="textBoxBrojVoznji.FontSize" Value="20"/>
+                        <Setter Target="textBoxBrojVoznji.Margin" Value="230,319,45,0"/>
+
+                        <Setter Target="radioButtonDnevni.FontSize" Value="20"/>
+                        <Setter Target="radioButtonDnevni.Margin" Value="30,471,0,0"/>
+
+                        <Setter Target="radioButtonMjesecni.FontSize" Value="20"/>
+                        <Setter Target="radioButtonMjesecni.Margin" Value="230,477,0,0"/>
+
+                        <Setter Target="textBlockRegistracijaVozila.FontSize" Value="20"/>
+                        <Setter Target="textBlockRegistracijaVozila.Margin" Value="30,384,0,0"/>
+
+                        <Setter Target="textBoxRegistracijaVozila.FontSize" Value="20"/>
+                        <Setter Target="textBoxRegistracijaVozila.Margin" Value="230,372,45,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBlockID.FontSize" Value="25"/>
+                        <Setter Target="textBoxKorisnickoIme.FontSize" Value="25"/>
+                        <Setter Target="buttonPretrazi.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockIme.FontSize" Value="25"/>
+                        <Setter Target="textBlockIme.Margin" Value="30,177,0,0"/>
+
+                        <Setter Target="textBlockPrezime.FontSize" Value="25"/>
+                        <Setter Target="textBlockPrezime.Margin" Value="30,228,0,0"/>
+
+                        <Setter Target="textBlockPredjeniKilometri.FontSize" Value="25"/>
+                        <Setter Target="textBlockPredjeniKilometri.Margin" Value="30,277,0,0"/>
+
+                        <Setter Target="textBlockBrojVoznji.FontSize" Value="25"/>
+                        <Setter Target="textBlockBrojVoznji.Margin" Value="30,331,0,0"/>
+
+                        <Setter Target="textBoxIme.FontSize" Value="25"/>
+                        <Setter Target="textBoxIme.Margin" Value="251,165,45,0"/>
+
+                        <Setter Target="textBoxPrezime.FontSize" Value="25"/>
+                        <Setter Target="textBoxPrezime.Margin" Value="251,216,45,0"/>
+
+                        <Setter Target="textBoxPredjeniKilometri.FontSize" Value="25"/>
+                        <Setter Target="textBoxPredjeniKilometri.Margin" Value="251,265,45,0"/>
+
+                        <Setter Target="textBoxBrojVoznji.FontSize" Value="25"/>
+                        <Setter Target="textBoxBrojVoznji.Margin" Value="251,319,45,0"/>
+
+                        <Setter Target="radioButtonDnevni.FontSize" Value="25"/>
+                        <Setter Target="radioButtonDnevni.Margin" Value="30,477,0,0"/>
+
+                        <Setter Target="radioButtonMjesecni.FontSize" Value="25"/>
+                        <Setter Target="radioButtonMjesecni.Margin" Value="251,477,0,0"/>
+
+                        <Setter Target="textBlockRegistracijaVozila.FontSize" Value="25"/>
+                        <Setter Target="textBlockRegistracijaVozila.Margin" Value="30,384,0,0"/>
+
+                        <Setter Target="textBoxRegistracijaVozila.FontSize" Value="25"/>
+                        <Setter Target="textBoxRegistracijaVozila.Margin" Value="251,372,45,0"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <TextBlock x:Name="textBlockID" HorizontalAlignment="Left" Margin="102,29,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxKorisnickoIme" Margin="143,17,78,0" TextWrapping="Wrap" Text="{Binding Path=idvozaca, Mode=TwoWay}" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="30,153,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="30,190,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="30,228,0,0" TextWrapping="Wrap" Text="Predjeni kilomteri:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="30,265,0,0" TextWrapping="Wrap" Text="Broj voznji:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockIme" HorizontalAlignment="Left" Margin="30,153,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockPrezime" HorizontalAlignment="Left" Margin="30,190,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockPredjeniKilometri" HorizontalAlignment="Left" Margin="30,228,0,0" TextWrapping="Wrap" Text="Predjeni kilomteri:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockBrojVoznji" HorizontalAlignment="Left" Margin="30,265,0,0" TextWrapping="Wrap" Text="Broj voznji:" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxIme" Margin="176,141,45,0" TextWrapping="Wrap" Text="{Binding Path=imevozaca, Mode=TwoWay}" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxPrezime" Margin="176,178,45,0" TextWrapping="Wrap" Text="{Binding Path=prezimevozaca, Mode=TwoWay}" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxPredjeniKilometri" Margin="176,216,45,0" TextWrapping="Wrap" Text="{Binding Path=predjenikilometrivozaca, Mode=TwoWay}" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxBrojVoznji" Margin="176,253,45,0" TextWrapping="Wrap" Text="{Binding Path=brojvoznjivozaca, Mode=TwoWay}" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioButtonDnevni" IsChecked="{Binding Path=dnevni, Mode=TwoWay}" Content="Dnevni" HorizontalAlignment="Left" Margin="29,391,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioButtonMjesecni" IsChecked="{Binding Path=mjesecni, Mode=TwoWay}" Content="Mjesecni" HorizontalAlignment="Left" Margin="195,391,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="30,331,0,0" TextWrapping="Wrap" Text="Registracija vozila" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockRegistracijaVozila" HorizontalAlignment="Left" Margin="30,331,0,0" TextWrapping="Wrap" Text="Registracija vozila" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxRegistracijaVozila" Margin="176,319,45,0" TextWrapping="Wrap" Text="{Binding Path=regvozilavozaca, Mode=TwoWay}" VerticalAlignment="Top"/>
-        <Button x:Name="button" Command="{Binding Path=pretraziBV}" Content="Pretrazi" HorizontalAlignment="Left" Margin="212,76,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonPretrazi" Command="{Binding Path=pretraziBV}" Content="Pretrazi" HorizontalAlignment="Left" Margin="212,76,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
