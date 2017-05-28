@@ -37,6 +37,10 @@
                         <Setter Target="buttonRegistrujSupervizora.FontSize" Value="25"/>
                         <Setter Target="buttonRegistrujSupervizora.Width" Value="253"/>
 
+                        <Setter Target="buttonEmail.Margin" Value="384,470,0,0"/>
+                        <Setter Target="buttonEmail.FontSize" Value="25"/>
+                        <Setter Target="buttonEmail.Width" Value="253"/>
+
 
                     </VisualState.Setters>
                 </VisualState>
@@ -58,6 +62,9 @@
                         <Setter Target="buttonRegistrujSupervizora.FontSize" Value="30"/>
                         <Setter Target="buttonRegistrujSupervizora.Width" Value="303"/>
 
+                        <Setter Target="buttonEmail.Margin" Value="487,520,0,0"/>
+                        <Setter Target="buttonEmail.FontSize" Value="30"/>
+                        <Setter Target="buttonEmail.Width" Value="303"/>
 
 
                     </VisualState.Setters>
@@ -67,6 +74,7 @@
         <Button x:Name="buttonRegistrujKompaniju" Command="{Binding Path=registrujKompanijuS}" Content="Registruj Kompaniju" HorizontalAlignment="Left" FontSize="20" Margin="70,227,0,0" VerticalAlignment="Top" Width="217" Height="54"/>
         <Button x:Name="buttonRegistrujDispecera" Command="{Binding Path=registrujDispeceraS}" Content="Registruj Dispecera" HorizontalAlignment="Left" FontSize="20" Margin="70,315,0,0" VerticalAlignment="Top" Width="217" Height="54"/>
         <Button x:Name="buttonRegistrujSupervizora" Command="{Binding Path=registrujSupervizoraS}" Content="Registruj Supervizora" HorizontalAlignment="Left" FontSize="20" Margin="70,403,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.267,-1.697" Height="54" Width="217"/>
+        <Button x:Name="buttonEmail" Content="Posalji Email" Command="{Binding Email}" HorizontalAlignment="Left" Margin="70,495,0,0" VerticalAlignment="Top" Height="47" Width="217" FontSize="20"/>
 
     </Grid>
 </Page>

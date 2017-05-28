@@ -95,58 +95,60 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\BrisanjeVozaca.xaml.cs">
+    <Compile Include="Email\Helper\EmailCommunicateBehaviour.cs" />
+    <Compile Include="Email\Helper\ICommunicateBehaviour.cs" />
+    <Compile Include="View\BrisanjeVozaca.xaml.cs">
       <DependentUpon>BrisanjeVozaca.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\Dispecer.xaml.cs">
+    <Compile Include="View\Dispecer.xaml.cs">
       <DependentUpon>Dispecer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\KontaktiranjeTaksija.xaml.cs">
+    <Compile Include="View\KontaktiranjeTaksija.xaml.cs">
       <DependentUpon>KontaktiranjeTaksija.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\KontaktiranjeVozaca.xaml.cs">
+    <Compile Include="View\KontaktiranjeVozaca.xaml.cs">
       <DependentUpon>KontaktiranjeVozaca.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\Prijava.xaml.cs">
+    <Compile Include="View\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\PrijavaNaSistem.xaml.cs">
+    <Compile Include="View\PrijavaNaSistem.xaml.cs">
       <DependentUpon>PrijavaNaSistem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\ProfilKompanije.xaml.cs">
+    <Compile Include="View\ProfilKompanije.xaml.cs">
       <DependentUpon>ProfilKompanije.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\Registracija.xaml.cs">
+    <Compile Include="View\Registracija.xaml.cs">
       <DependentUpon>Registracija.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\RegistracijaKompanije.xaml.cs">
+    <Compile Include="View\RegistracijaKompanije.xaml.cs">
       <DependentUpon>RegistracijaKompanije.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\RegistracijaMusterije.xaml.cs">
+    <Compile Include="View\RegistracijaMusterije.xaml.cs">
       <DependentUpon>RegistracijaMusterije.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\RegistracijaSupervizoraIliDispecera.xaml.cs">
+    <Compile Include="View\RegistracijaSupervizoraIliDispecera.xaml.cs">
       <DependentUpon>RegistracijaSupervizoraIliDispecera.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\RegistracijaVozaca.xaml.cs">
+    <Compile Include="View\RegistracijaVozaca.xaml.cs">
       <DependentUpon>RegistracijaVozaca.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\RegistrovaniKorisnik.xaml.cs">
+    <Compile Include="View\RegistrovaniKorisnik.xaml.cs">
       <DependentUpon>RegistrovaniKorisnik.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\ReviewSlanje.xaml.cs">
+    <Compile Include="View\ReviewSlanje.xaml.cs">
       <DependentUpon>ReviewSlanje.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\Slika.xaml.cs">
+    <Compile Include="View\Slika.xaml.cs">
       <DependentUpon>Slika.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\SupervizorForma.xaml.cs">
+    <Compile Include="View\SupervizorForma.xaml.cs">
       <DependentUpon>SupervizorForma.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\UvidKompanijeUVozace.xaml.cs">
+    <Compile Include="View\UvidKompanijeUVozace.xaml.cs">
       <DependentUpon>UvidKompanijeUVozace.xaml</DependentUpon>
     </Compile>
-    <Compile Include="forme\UvidKompanijeUVozila.xaml.cs">
+    <Compile Include="View\UvidKompanijeUVozila.xaml.cs">
       <DependentUpon>UvidKompanijeUVozila.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
@@ -212,87 +214,87 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="forme\BrisanjeVozaca.xaml">
+    <Page Include="View\BrisanjeVozaca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\Dispecer.xaml">
+    <Page Include="View\Dispecer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\KontaktiranjeTaksija.xaml">
+    <Page Include="View\KontaktiranjeTaksija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\KontaktiranjeVozaca.xaml">
+    <Page Include="View\KontaktiranjeVozaca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\Prijava.xaml">
+    <Page Include="View\Prijava.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\PrijavaNaSistem.xaml">
+    <Page Include="View\PrijavaNaSistem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\ProfilKompanije.xaml">
+    <Page Include="View\ProfilKompanije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\Registracija.xaml">
+    <Page Include="View\Registracija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\RegistracijaKompanije.xaml">
+    <Page Include="View\RegistracijaKompanije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\RegistracijaMusterije.xaml">
+    <Page Include="View\RegistracijaMusterije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\RegistracijaSupervizoraIliDispecera.xaml">
+    <Page Include="View\RegistracijaSupervizoraIliDispecera.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\RegistracijaVozaca.xaml">
+    <Page Include="View\RegistracijaVozaca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\RegistrovaniKorisnik.xaml">
+    <Page Include="View\RegistrovaniKorisnik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\ReviewSlanje.xaml">
+    <Page Include="View\ReviewSlanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\Slika.xaml">
+    <Page Include="View\Slika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\SupervizorForma.xaml">
+    <Page Include="View\SupervizorForma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\UrediProfilKompanije.xaml">
+    <Page Include="View\UrediProfilKompanije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\UrediProfilMusterije.xaml">
+    <Page Include="View\UrediProfilMusterije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\UredjivanjeVozaca.xaml">
+    <Page Include="View\UredjivanjeVozaca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\UvidKompanijeUVozace.xaml">
+    <Page Include="View\UvidKompanijeUVozace.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="forme\UvidKompanijeUVozila.xaml">
+    <Page Include="View\UvidKompanijeUVozila.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
