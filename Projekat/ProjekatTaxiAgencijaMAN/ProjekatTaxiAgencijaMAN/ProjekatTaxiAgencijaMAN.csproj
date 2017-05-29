@@ -97,6 +97,15 @@
     </Compile>
     <Compile Include="Email\Helper\EmailCommunicateBehaviour.cs" />
     <Compile Include="Email\Helper\ICommunicateBehaviour.cs" />
+    <Compile Include="KlaseZaAzure\Dispeceri.cs" />
+    <Compile Include="KlaseZaAzure\Kompanije.cs" />
+    <Compile Include="KlaseZaAzure\Musterije.cs" />
+    <Compile Include="KlaseZaAzure\Narudzba.cs" />
+    <Compile Include="KlaseZaAzure\RegistrovaneMusterije.cs" />
+    <Compile Include="KlaseZaAzure\Ruta.cs" />
+    <Compile Include="KlaseZaAzure\Supervizori.cs" />
+    <Compile Include="KlaseZaAzure\Vozac.cs" />
+    <Compile Include="KlaseZaAzure\Vozilo.cs" />
     <Compile Include="KlaseZaAzure\Zaposlenik.cs" />
     <Compile Include="View\BrisanjeVozaca.xaml.cs">
       <DependentUpon>BrisanjeVozaca.xaml</DependentUpon>

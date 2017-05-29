@@ -8,5 +8,10 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Dispecer : Zaposlenik
     {
+        public int Id { get; set; }
+        public Dispecer():base()
+        {
+            Id = id;
+        }
     }
 }

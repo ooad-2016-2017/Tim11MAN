@@ -159,6 +159,6 @@
         <TextBlock x:Name="textBlockNapomenaP" HorizontalAlignment="Left" Margin="10,460,0,0" TextWrapping="Wrap" Text="Napomena(vrijeme polaska i sl.):" VerticalAlignment="Top" RenderTransformOrigin="0.371,2.667"/>
         <TextBox x:Name="textBoxNapomenaP" HorizontalAlignment="Left" Margin="10,485,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" Height="50"/>
         <TextBlock x:Name="textBlockCijenaP" HorizontalAlignment="Left" Margin="10,540,0,0" TextWrapping="Wrap" Text="Cijena:" VerticalAlignment="Top"/>
-        <Button x:Name="buttonZahtjevP" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="121,598,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonZahtjevP" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="121,598,0,0" VerticalAlignment="Top" Click="buttonZahtjevP_Click"/>
     </Grid>
 </Page>

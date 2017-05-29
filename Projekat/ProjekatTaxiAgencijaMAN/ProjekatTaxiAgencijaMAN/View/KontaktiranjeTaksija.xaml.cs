@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using ProjekatTaxiAgencijaMAN.Modeli;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,26 +30,52 @@ namespace ProjekatTaxiAgencijaMAN.forme
     public sealed partial class KontaktiranjeTaksija : Page
     {
         private bool nemoj = false;
+        private int brojac = 0;
         private BasicGeoposition pocetna;
-        public KontaktiranjeTaksija()
+        MapRouteView viewOfRouteGlobal;
+        MapIcon ikonica1;
+        MapIcon ikonica2;
+        Musterija m;
+        public KontaktiranjeTaksija(Musterija m)
         {
             this.InitializeComponent();
+            this.m = m;
         }
 
         private void mapaPodaci_MapTapped(Windows.UI.Xaml.Controls.Maps.MapControl sender, Windows.UI.Xaml.Controls.Maps.MapInputEventArgs args)
         {
+            brojac++;
+            if (brojac > 2)
+            {
+                brojac = 0;
+                nemoj = false;
+                mapaPodaci.Routes.Remove(viewOfRouteGlobal);
+                mapaPodaci.MapElements.Remove(ikonica1);
+                mapaPodaci.MapElements.Remove(ikonica2);
+            }
             var tappedGeoPosition = args.Location.Position;
             
             MapIcon ikonica = new MapIcon();
             ikonica.Location = args.Location;
             mapaPodaci.MapElements.Add(ikonica);
+            if (brojac == 1)
+            {
+                ikonica1 = ikonica;
+            }
+            else if (brojac == 2)
+            {
+                ikonica2 = ikonica;
+            }
             
             if (!nemoj)
             {
                 pocetna = tappedGeoPosition;
                 nemoj = true;
             }
-            ShowRouteOnMap(pocetna, tappedGeoPosition);
+            if (brojac == 2)
+            {
+                ShowRouteOnMap(pocetna, tappedGeoPosition);
+            }
 
         }
 
@@ -76,6 +103,7 @@ namespace ProjekatTaxiAgencijaMAN.forme
             {
                 // Use the route to initialize a MapRouteView.
                 MapRouteView viewOfRoute = new MapRouteView(routeResult.Route);
+                viewOfRouteGlobal = viewOfRoute;
                 viewOfRoute.RouteColor = Colors.Blue;
                 viewOfRoute.OutlineColor = Colors.Black;
 
@@ -91,5 +119,9 @@ namespace ProjekatTaxiAgencijaMAN.forme
             }
         }
 
+        private void buttonZahtjevP_Click(object sender, RoutedEventArgs e)
+        {
+            //pristup bazi i dodat narudzbu u nju
+        }
     }
 }

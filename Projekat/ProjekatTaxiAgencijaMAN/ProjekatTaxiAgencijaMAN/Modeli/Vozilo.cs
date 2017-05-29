@@ -15,7 +15,6 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
         public int VoziloId { get; set; }
         public string RegistracijskeTablice { get; set; }
         public string VrstaVozila { get; set; }
-        public string BrojVozila { get; set; }
         public double Predjenikilometri { get; set; }
         public int GodisteVozila { get; set; }
 

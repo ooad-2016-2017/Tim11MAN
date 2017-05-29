@@ -8,5 +8,10 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Supervizor : Zaposlenik
     {
+        public int Id { get; set; }
+        public Supervizor():base()
+        {
+            Id = id;
+        }
     }
 }

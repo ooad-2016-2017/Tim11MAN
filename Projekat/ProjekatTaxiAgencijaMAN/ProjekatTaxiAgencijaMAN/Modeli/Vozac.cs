@@ -9,8 +9,6 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Vozac : Zaposlenik
     {
-        private static int id = 0;
-
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int VozacId { get; set; }
 
@@ -18,7 +16,7 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
         public bool Slobodan { get; set; }
         public List<DateTime> ListaDatumaVoznji { get; set; }
 
-        public Vozac()
+        public Vozac():base()
         {
             VozacId = id;
             id++;

@@ -24,7 +24,7 @@ namespace ProjekatTaxiAgencijaMAN.KlaseZaAzure
         {
             get;set;
         }
-        public string ime
+        public string Ime
         {
             get;set;
         }
@@ -36,7 +36,7 @@ namespace ProjekatTaxiAgencijaMAN.KlaseZaAzure
         {
             get;set;
         }
-        public string Sifra
+        public string Password
         {
             get;set;
         }

@@ -68,8 +68,9 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void Registruj(object o)
         {
-            IMobileServiceTable <Zaposlenik > userTableObj = App.MobileService.GetTable<Zaposlenik>();
-
+            IMobileServiceTable <KlaseZaAzure.Zaposlenik > userTableObj = App.MobileService.GetTable<KlaseZaAzure.Zaposlenik>();
+            IMobileServiceTable<KlaseZaAzure.Vozilo> userTableObj1 = App.MobileService.GetTable<KlaseZaAzure.Vozilo>();
+            IMobileServiceTable<KlaseZaAzure.Vozac> userTableObj2 = App.MobileService.GetTable<KlaseZaAzure.Vozac>();
             String errori = "";
             // ovdje se radi i validacija polja
             if (imeVozaca == null || imeVozaca == "")
@@ -118,8 +119,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             bool postojiIme = false;
 
             var baza = new TaxiDbContext();
-            /*
-            foreach (var vozilo in baza.vozila)
+            
+            /*foreach (var vozilo in baza.vozila)
             {
                 if (vozilo.RegistracijskeTablice == registracijaVozila) postojiIme = true;
             }
@@ -139,7 +140,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 regm.Ime = imeVozaca;
                 regm.Prezime = prezimeVozaca;
                 regm.DatumRodjenja = datumVozaca;
-                regm.DatumZaposlenja = datumVozaca;
+                regm.DatumZaposlenja = datumZVozaca;
                 regm.BrojTelefona = brojTelefonaVozaca;
 
                 Vozilo v = new Vozilo();
@@ -158,18 +159,46 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
                 try
                 {
-                    Zaposlenik z = new Zaposlenik();
+                    KlaseZaAzure.Zaposlenik z = new KlaseZaAzure.Zaposlenik();
 
-                    z.ZaposlenikId = 0;
-                    z.KorisnickoIme = "kime";
-                    z.Prezime = "Prezime";
-                    z.Password= "sifra";
-                    z.Ime = "Ime";
-                    z.BrojTelefona = "bt";
-                    z.DatumRodjenja = DateTime.Now;
-                    z.DatumZaposlenja = DateTime.Now;
+                    z.id = regm.ZaposlenikId.ToString();
+                    z.KorisnickoIme = "";
+                    z.Prezime = prezimeVozaca;
+                    z.Password= "";
+                    z.Ime = imeVozaca;
+                    z.BrojTelefona = brojTelefonaVozaca;
+                    z.DatumRodjenja = datumVozaca;
+                    z.DatumZaposlenja = datumZVozaca;
 
                     userTableObj.InsertAsync(z);
+
+
+                    KlaseZaAzure.Vozilo v12 = new KlaseZaAzure.Vozilo();
+
+                    v12.id = v.VoziloId.ToString();
+                    v12.Registracija = registracijaVozila;
+                    v12.Vrsta = modelVozila;
+                    v12.Godiste = Convert.ToInt32(godisteVozila);
+                    v12.PredjeniKilometri = 0;
+
+                    userTableObj1.InsertAsync(v12);
+
+                    KlaseZaAzure.Vozac v123 = new KlaseZaAzure.Vozac();
+
+                    v123.id= regm.ZaposlenikId.ToString();
+                    v123.BrojTelefona = brojTelefonaVozaca;
+                    v123.DatumRodjenja = datumVozaca;
+                    v123.DatumZaposlenja = datumZVozaca;
+                    v123.Ime = imeVozaca;
+                    v123.Prezime = prezimeVozaca;
+                    v123.KorisnickoIme = "";
+                    v123.Sifra = "";
+                    v123.Slobodan = true;
+                    v123.VoziloID = v.VoziloId;
+                    v123.ZaposlenikID = regm.ZaposlenikId;
+
+                    userTableObj2.InsertAsync(v123);
+
                 }
                 catch(Exception e)
                 {

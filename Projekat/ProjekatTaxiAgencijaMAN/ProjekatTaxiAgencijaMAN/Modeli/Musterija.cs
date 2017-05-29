@@ -9,7 +9,7 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Musterija
     {
-        private static int idKorisnikaglobalni = 0;
+        public static int idKorisnikaglobalni = 0;
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int MusterijaId { get; set; }
