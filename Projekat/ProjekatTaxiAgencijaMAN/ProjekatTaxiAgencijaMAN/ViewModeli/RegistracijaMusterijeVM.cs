@@ -9,11 +9,12 @@ using ProjekatTaxiAgencijaMAN.forme;
 using ProjekatTaxiAgencijaMAN.Pomocne;
 using ProjekatTaxiAgencijaMAN.Modeli;
 using Windows.UI.Popups;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class RegistracijaMusterijeVM : INotifyPropertyChanged
-    {
+    {        
         public ICommand Registracija { get; set; }
         public String ime { get; set; }
         public String prezime { get; set; }

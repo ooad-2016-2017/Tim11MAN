@@ -66,6 +66,13 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 Password = "sifra"
             });
 
+            List<Kompanija> kmp = new List<Kompanija>();
+            kmp.Add(new Kompanija()
+            {
+                KorisnickoIme = "k",
+                Sifra = "s"
+            });
+
             for(int i=0; i<rms.Count; i++)
             {
                 if (rms[i].KorisnickoIme == korisnickoime)
@@ -73,6 +80,17 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     if (rms[i].Password == sifra)
                     {
                         regmusterijaIzPrijave = rms[i];
+                    }
+                }
+            }
+
+            for (int i = 0; i < kmp.Count; i++)
+            {
+                if (kmp[i].KorisnickoIme == korisnickoime)
+                {
+                    if (kmp[i].Sifra== sifra)
+                    {
+                        kompanijaIzPrijave = kmp[i];
                     }
                 }
             }
@@ -102,7 +120,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             }
             else if (kompanijaIzPrijave != null)
             {
-
+                NavigationServis.Navigate(typeof(ProfilKompanije), new GlavnaKompanijeVM(this));
             }
             else
             {

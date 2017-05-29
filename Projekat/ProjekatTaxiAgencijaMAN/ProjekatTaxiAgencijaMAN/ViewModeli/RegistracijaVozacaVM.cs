@@ -10,11 +10,14 @@ using System.ComponentModel;
 using ProjekatTaxiAgencijaMAN.forme;
 using ProjekatTaxiAgencijaMAN.Modeli;
 using Windows.UI.Popups;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class RegistracijaVozacaVM : INotifyPropertyChanged
     {
+        
+
         public ICommand RegistracijaVozaca { get; set; }
         GlavnaKompanijeVM kompanija;
         public String imeVozaca { get; set; }
@@ -65,6 +68,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void Registruj(object o)
         {
+            IMobileServiceTable <Zaposlenik > userTableObj = App.MobileService.GetTable<Zaposlenik>();
+
             String errori = "";
             // ovdje se radi i validacija polja
             if (imeVozaca == null || imeVozaca == "")
@@ -113,12 +118,12 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             bool postojiIme = false;
 
             var baza = new TaxiDbContext();
-
+            /*
             foreach (var vozilo in baza.vozila)
             {
                 if (vozilo.RegistracijskeTablice == registracijaVozila) postojiIme = true;
             }
-
+            */
             if (postojiIme == true || errori != "")
             {
                 // treba pozvati thread da ispise errore
@@ -149,7 +154,28 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
                 baza.zaposlenici.Add(regm);
                 baza.vozaci.Add(v1);
-                baza.vozila.Add(v);
+                //baza.vozila.Add(v);
+
+                try
+                {
+                    Zaposlenik z = new Zaposlenik();
+
+                    z.ZaposlenikId = 0;
+                    z.KorisnickoIme = "kime";
+                    z.Prezime = "Prezime";
+                    z.Password= "sifra";
+                    z.Ime = "Ime";
+                    z.BrojTelefona = "bt";
+                    z.DatumRodjenja = DateTime.Now;
+                    z.DatumZaposlenja = DateTime.Now;
+
+                    userTableObj.InsertAsync(z);
+                }
+                catch(Exception e)
+                {
+
+                }
+
 
                 imeVozaca = "";
                 prezimeVozaca = "";

@@ -38,6 +38,11 @@ namespace ProjekatTaxiAgencijaMAN.forme
         private void mapaPodaci_MapTapped(Windows.UI.Xaml.Controls.Maps.MapControl sender, Windows.UI.Xaml.Controls.Maps.MapInputEventArgs args)
         {
             var tappedGeoPosition = args.Location.Position;
+            
+            MapIcon ikonica = new MapIcon();
+            ikonica.Location = args.Location;
+            mapaPodaci.MapElements.Add(ikonica);
+            
             if (!nemoj)
             {
                 pocetna = tappedGeoPosition;
@@ -71,7 +76,7 @@ namespace ProjekatTaxiAgencijaMAN.forme
             {
                 // Use the route to initialize a MapRouteView.
                 MapRouteView viewOfRoute = new MapRouteView(routeResult.Route);
-                viewOfRoute.RouteColor = Colors.Yellow;
+                viewOfRoute.RouteColor = Colors.Blue;
                 viewOfRoute.OutlineColor = Colors.Black;
 
                 // Add the new MapRouteView to the Routes collection

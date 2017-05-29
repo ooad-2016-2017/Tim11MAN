@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Email\Helper\EmailCommunicateBehaviour.cs" />
     <Compile Include="Email\Helper\ICommunicateBehaviour.cs" />
+    <Compile Include="KlaseZaAzure\Zaposlenik.cs" />
     <Compile Include="View\BrisanjeVozaca.xaml.cs">
       <DependentUpon>BrisanjeVozaca.xaml</DependentUpon>
     </Compile>
