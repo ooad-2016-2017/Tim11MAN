@@ -1,0 +1,17 @@
+KREACIJSKI PATERNI
+
+1. SINGLETON PATTERN
+
+ - Singleton pattern mogao bi se primjeniti na klasu SupervizorFormaVM jer ona sluzi za registracije kompanije, dispecera ili supervizora te ne bi trebalo dozvoliti instanciranje ove klase vise puta. Zbog toga je moguce rjesenje kreiranje klase Singleton koja ce instancirati zeljenu klasu samo jednom, a metoda unutar Singleton klase ce sluziti za vracanje iste instance klase SupervizorFormaVM
+
+ 2. PROTOTYPE PATTERN
+
+ - Uloga Prototype paterna je da kreira nove objekte klonirajući  jedan od postojecih objekata. Ako je trošak kreiranja novog objekta velik ili ako kreiranje objekta zahtjeva dosta resursa, tada se vrši kloniranje već postojećeg objekata. U aplikaciji TaxiAgencijaMAN trenutno ne postoje objekti koji zahtjevaju kloniranje te ovaj pattern nije primjenjiv. U slucaju prosirenja aplikacije sa nesto slozenijim objektima i funkcionalnostima, jedno od rjesenja moglo bi biti kloniranje tih objekata u slucaju da njihovo instanciranje predstavlja veci trosak ili guvitak resursa.
+
+ 3. FACTORY METHOD PATTERN
+
+  - Uloga Factory Method paterna je da omogući kreiranje objekata na način da podklase odluče koju klasu je instancirati. Aplikacija TaxiAgencijaMAN trenutno ne sadrzi apstraktne klase te je uvijek jasno koju instancu treba kreirati i upravo zbog toga ovaj patern nije primjenljiv na trenutnu verziju aplikacije.
+
+  5. BUILDER PATTERN
+
+   - Uloga Builder paterna je odvajanje specifikacije kompleksnih objekata od njihove stvarne konstrukcije, tj. isti konstrukcijski proces može kreirati različite reprezentacije. Klasni sistem aplikacije ne sadrzi klase koje bi izgradjivale objekte na razlicite nacine. Takodjer, sistem ne vrsi implementaciju iz vise razlicitih dijelova i zbog toga je ovaj patern neprimjenjiv.

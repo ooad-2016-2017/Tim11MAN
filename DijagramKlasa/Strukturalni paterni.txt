@@ -1,0 +1,30 @@
+STRUKTURALNI
+ 
+ 1. ADAPTER PATTERN
+
+  - Klasa ruta koristi interface za rad s mapama ali u slucaju da se kreira neki novi sistem odredjivanja zeljene rute voznje bilo bi neophodno izmjeniti klasu Ruta i nacin na koji je implementirana. Zbog toga, rjesenje bi moglo biti kreiranje Adapter klase koja ce naslijediti trenutne interface koje Ruta koristi i implementirati ih u svrhu postizanja novih funkcionalnosti. Ovo podrzava otvoreno - zatvoreni princip tj. klase se mogu nadogradjivati ali se ne mijenjaju.
+
+  2. FACADE PATTERN
+
+  - Namjena ovog patterna je povezivanje formi koje predstavljaju korisnicki interface i logickog pogleda na sistem. Skup ViewModel-a je logicki dio sistema, pa bi u svrhu implementacije ovog paterna trebalo kreirati jednu klasu u kojoj su sadrzani svi ViewModeli. Ta klasa je klasa Facade i ona bi upravljala ViewModel-ima u zavisnosti od toga sta korisnik zatrazi koristenjem korisnikog interface-a.
+
+  3. DECORATOR PATTERN
+
+  - Namjena Decorator paterna omogucavanje dinamičkog dodavanja novih elemenata i funkcionalnosti postojećim objektima pri cemu objekat ne zna da je uradjena dekoracija. Ovaj pattern mi mogao biti iskoristen u slucaju prosirivanja aplikacije na naci da se Vozacu dozvoli koristenje vise od jednog vozila, ali trenutno je svaki registrovani vozac vezan za jedno vozilo.
+
+  4. BRIDGE PATTERN
+
+  - Namjena ovog patterna je da odvoji apstrakciju i impelementaiju i na taj nacin postize da se oni razlikuju. Pattern se moze primjeniti npr pri nasljedjivanju interfac-a ICommunicateBehavoiiur.
+
+  5. PROXY PATTERN
+
+  - Namjena Proxy paterna je da omogući pristup i kontrolu pristupa tvarnim objektima. Ovaj pattern bi se mogao iskoristiti na nacin da se kreira nova Proxy klasa koja kreira instancu klase SupervizorFormaVM, a klasa SupervizorFormaVM  s proglasava privatnom klasom. Kada korisnik koji pristupa sistemu unosi svoj username i password, metoda za autentikaciju ce provjeriti podatke i instancirati klasu samo u slucaju da se podaci podudaraju.
+
+  6. COMPOSITE PATTERN
+
+   - Namjena Composite Patterna je formiranje strukture stabla pomocu klasa u kojoj su pojedinacni objekti i kompozicije pojedinacnih objekata tretirani podjednako. Ovaj patrn nije primjenjiv na trenutnu verziju aplikacije TaxiAgencijaMAN.
+
+   7. FLYWEIGHT PATTERN
+
+   - Osnovna namjena Flyweight paterna je da se omogući da više različitih objekata dijele isto glavno stanje, a imaju različito sporedno stanje. U sistemu aplikacije TaxiAgencijaMAN, atributi razlicitih instanci se medjusobno razlikuju te zbog toga Flyweight pattern nije rjesenje koje je primjenjivo na aplikaciju.
+
