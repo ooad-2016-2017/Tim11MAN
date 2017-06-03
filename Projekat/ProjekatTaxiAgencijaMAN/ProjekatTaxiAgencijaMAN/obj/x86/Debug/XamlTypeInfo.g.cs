@@ -219,7 +219,6 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
 
         private object Activate_0_BrisanjeVozaca() { return new global::ProjekatTaxiAgencijaMAN.forme.BrisanjeVozaca(); }
         private object Activate_3_Dispecer() { return new global::ProjekatTaxiAgencijaMAN.forme.Dispecer(); }
-        private object Activate_4_KontaktiranjeTaksija() { return new global::ProjekatTaxiAgencijaMAN.forme.KontaktiranjeTaksija(); }
         private object Activate_5_KontaktiranjeVozaca() { return new global::ProjekatTaxiAgencijaMAN.forme.KontaktiranjeVozaca(); }
         private object Activate_6_Prijava() { return new global::ProjekatTaxiAgencijaMAN.forme.Prijava(); }
         private object Activate_7_PrijavaNaSistem() { return new global::ProjekatTaxiAgencijaMAN.forme.PrijavaNaSistem(); }
@@ -274,7 +273,6 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
 
             case 4:   //  ProjekatTaxiAgencijaMAN.forme.KontaktiranjeTaksija
                 userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_KontaktiranjeTaksija;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

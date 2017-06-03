@@ -62,7 +62,10 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void registruj(object o)
         {
+            IMobileServiceTable<KlaseZaAzure.RegistrovaneMusterije> userTableObj = App.MobileService.GetTable<KlaseZaAzure.RegistrovaneMusterije>();
+            IMobileServiceTable<KlaseZaAzure.Musterije> userTableMusterije = App.MobileService.GetTable<KlaseZaAzure.Musterije>();
             String errori = "";
+
             // ovdje se radi i validacija polja
             if(ime == null || ime == "")
             {
@@ -149,6 +152,33 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
                 baza.musterije.Add(regm);
                 baza.SaveChanges();
+
+                try
+                {
+                    KlaseZaAzure.Musterije musterija = new KlaseZaAzure.Musterije();
+                    KlaseZaAzure.RegistrovaneMusterije registrovanaMusterija = new KlaseZaAzure.RegistrovaneMusterije();
+               
+
+                    musterija.id = regm.Id.ToString();
+
+                    userTableMusterije.InsertAsync(musterija);
+
+                    registrovanaMusterija.id = regm.Id.ToString();
+                    registrovanaMusterija.Ime = ime;
+                    registrovanaMusterija.Prezime = prezime;
+                    registrovanaMusterija.KorisnickoIme = kime;
+                    registrovanaMusterija.Sifra = ksifra;
+                    registrovanaMusterija.Email = email;
+                    registrovanaMusterija.BrojTelefona = brojtelefona;
+                    registrovanaMusterija.DatumRodjenja = datum;
+
+                    userTableObj.InsertAsync(registrovanaMusterija);
+
+                }
+                catch (Exception e)
+                {
+
+                }
             }
 
         }

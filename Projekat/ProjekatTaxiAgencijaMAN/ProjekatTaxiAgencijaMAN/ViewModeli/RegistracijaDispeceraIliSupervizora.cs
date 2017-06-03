@@ -9,6 +9,7 @@ using Windows.UI.Popups;
 using System.ComponentModel;
 using System.Windows.Input;
 using ProjekatTaxiAgencijaMAN.Pomocne;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
@@ -63,6 +64,9 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void Registruj(object o)
         {
+            IMobileServiceTable<KlaseZaAzure.Dispeceri> userTableDispeceri = App.MobileService.GetTable<KlaseZaAzure.Dispeceri>();
+            IMobileServiceTable<KlaseZaAzure.Supervizori> userTableSupervizori = App.MobileService.GetTable<KlaseZaAzure.Supervizori>();
+            IMobileServiceTable<KlaseZaAzure.Zaposlenik> userTableZaposlenik = App.MobileService.GetTable<KlaseZaAzure.Zaposlenik>();
             String errori = "";
             // ovdje se radi i validacija polja
             if (imeDS == null || imeDS == "")
@@ -127,6 +131,34 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     regm.BrojTelefona = brojTelefonaDS;
                     baza.zaposlenici.Add(regm);
                     baza.SaveChanges();
+
+                    try
+                    {
+                        KlaseZaAzure.Zaposlenik zaposlenik = new KlaseZaAzure.Zaposlenik();
+
+                        zaposlenik.id = regm.ZaposlenikId.ToString();
+                        zaposlenik.KorisnickoIme = kime;
+                        zaposlenik.Prezime = prezimeDS ;
+                        zaposlenik.Password = ksifra;
+                        zaposlenik.Ime = imeDS;
+                        zaposlenik.BrojTelefona = brojTelefonaDS;
+                        zaposlenik.DatumRodjenja = datumDS;
+                        zaposlenik.DatumZaposlenja = datumZDS;
+
+                        userTableZaposlenik.InsertAsync(zaposlenik);
+
+                        KlaseZaAzure.Supervizori supervizor = new KlaseZaAzure.Supervizori();
+
+                        supervizor.id = regm.ZaposlenikId.ToString();
+
+                        userTableSupervizori.InsertAsync(supervizor);
+                        
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
+
                 }
                 else if (dispecerDS)
                 {
@@ -140,6 +172,33 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     regm.BrojTelefona = brojTelefonaDS;
                     baza.zaposlenici.Add(regm);
                     baza.SaveChanges();
+
+                    try
+                    {
+                        KlaseZaAzure.Zaposlenik zaposlenik = new KlaseZaAzure.Zaposlenik();
+
+                        zaposlenik.id = regm.ZaposlenikId.ToString();
+                        zaposlenik.KorisnickoIme = kime;
+                        zaposlenik.Prezime = prezimeDS;
+                        zaposlenik.Password = ksifra;
+                        zaposlenik.Ime = imeDS;
+                        zaposlenik.BrojTelefona = brojTelefonaDS;
+                        zaposlenik.DatumRodjenja = datumDS;
+                        zaposlenik.DatumZaposlenja = datumZDS;
+
+                        userTableZaposlenik.InsertAsync(zaposlenik);
+
+                        KlaseZaAzure.Dispeceri dispecer = new KlaseZaAzure.Dispeceri();
+
+                        dispecer.id = regm.ZaposlenikId.ToString();
+
+                        userTableDispeceri.InsertAsync(dispecer);
+
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
                 }
 
                 kime = "";

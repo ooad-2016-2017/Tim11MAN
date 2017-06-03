@@ -8,6 +8,7 @@ using System.Windows.Input;
 using Windows.UI.Popups;
 using ProjekatTaxiAgencijaMAN.Pomocne;
 using ProjekatTaxiAgencijaMAN.Modeli;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
@@ -59,6 +60,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void registruj(object o)
         {
+
+            IMobileServiceTable<KlaseZaAzure.Kompanije> userTableObj = App.MobileService.GetTable<KlaseZaAzure.Kompanije>();
             String errori = "";
             // ovdje se radi i validacija polja
             if (imeKompanije == null || imeKompanije == "")
@@ -122,6 +125,25 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
                 baza.kompanije.Add(regm);
                 baza.SaveChanges();
+
+                try
+                {
+                    KlaseZaAzure.Kompanije kompanija = new KlaseZaAzure.Kompanije();
+
+                    kompanija.id = regm.KompanijaId.ToString();
+                    kompanija.Adresa = imeKompanije;
+                    kompanija.BrojTelefona = brojTelefonaKompanije;
+                    kompanija.DatumOsnivanja = datumKompanije;
+                    kompanija.KorisnickoIme = kime;
+                    kompanija.Sifra = ksifra;
+                    kompanija.Email = emailKompanije;
+
+                    userTableObj.InsertAsync(kompanija);
+                }
+                catch(Exception e)
+                {
+
+                }
 
                 kime = "";
                 ksifra = "";
