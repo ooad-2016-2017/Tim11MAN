@@ -1,0 +1,4 @@
+COMMAND PATTERN
+
+ - Command Pattern je jedan od paterna ponasanja i koristen je pri implementaciji igrice Crazy Taxi. Jedan od razloga zasto je 	
+   ovaj patern koristan je sto moze omoguciti korisniku da promijeni tipke za upravljanje. U trenutnoj verziji igrice, tipke za upravljanje su obicne strelice na tastaturi, ali u slucaju prosirivanja i dodavanja novih mogucnosti, opcija i tipki za upravljanje ovih opcija, jednostavno bi bilo iz klase Upravljanje naslijediti novu klasu za drugaciji nacin upravljanja, u klasu InputHandler dodati instanciranje nove klase u metodi HandleInput.
