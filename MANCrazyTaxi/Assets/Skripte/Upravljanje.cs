@@ -1,11 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Upravljanje : MonoBehaviour {
+public class Upravljanje : MonoBehaviour
+{
 
     public float speed = 1500f;
     public float rotationSpeed = 15f;
+    public GameObject auto;
 
     public WheelJoint2D Nazad;
     public WheelJoint2D Napred;
@@ -14,6 +17,7 @@ public class Upravljanje : MonoBehaviour {
 
     private float movement = 0f;
     private float rotation = 0f;
+
 
     void Update()
     {
@@ -40,4 +44,6 @@ public class Upravljanje : MonoBehaviour {
 
         rb.AddTorque(-rotation * rotationSpeed * Time.fixedDeltaTime);
     }
+
+
 }
