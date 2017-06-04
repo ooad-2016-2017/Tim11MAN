@@ -107,6 +107,11 @@
     <Compile Include="KlaseZaAzure\Vozac.cs" />
     <Compile Include="KlaseZaAzure\Vozilo.cs" />
     <Compile Include="KlaseZaAzure\Zaposlenik.cs" />
+    <Compile Include="Migrations\20170604024632_InitialMigration.cs" />
+    <Compile Include="Migrations\20170604024632_InitialMigration.designer.cs">
+      <DependentUpon>20170604024632_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\TaxiDbContextModelSnapshot.cs" />
     <Compile Include="View\BrisanjeVozaca.xaml.cs">
       <DependentUpon>BrisanjeVozaca.xaml</DependentUpon>
     </Compile>
@@ -164,11 +169,6 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20170521180327_InitialMigration.cs" />
-    <Compile Include="Migrations\20170521180327_InitialMigration.designer.cs">
-      <DependentUpon>20170521180327_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\TaxiDbContextModelSnapshot.cs" />
     <Compile Include="Modeli\DefaultPodaci.cs" />
     <Compile Include="Modeli\Dispecer.cs" />
     <Compile Include="Modeli\Kompanija.cs" />

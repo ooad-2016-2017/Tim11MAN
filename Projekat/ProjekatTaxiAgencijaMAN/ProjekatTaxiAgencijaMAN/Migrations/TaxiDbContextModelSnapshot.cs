@@ -14,6 +14,31 @@ namespace ProjekatTaxiAgencijaMANMigrations
             builder
                 .Annotation("ProductVersion", "7.0.0-beta6-13815");
 
+            builder.Entity("ProjekatTaxiAgencijaMAN.Modeli.Dispecer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BrojTelefona");
+
+                    b.Property<DateTime>("DatumRodjenja");
+
+                    b.Property<DateTime>("DatumZaposlenja");
+
+                    b.Property<string>("Ime");
+
+                    b.Property<string>("KorisnickoIme");
+
+                    b.Property<string>("Password");
+
+                    b.Property<string>("Prezime");
+
+                    b.Property<int>("ZaposlenikId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Key("Id");
+                });
+
             builder.Entity("ProjekatTaxiAgencijaMAN.Modeli.Kompanija", b =>
                 {
                     b.Property<int>("KompanijaId")
@@ -64,6 +89,31 @@ namespace ProjekatTaxiAgencijaMANMigrations
                     b.Key("NarudzbaId");
                 });
 
+            builder.Entity("ProjekatTaxiAgencijaMAN.Modeli.RegistrovanaMusterija", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BrojTelefona");
+
+                    b.Property<DateTime>("DatumRodjenja");
+
+                    b.Property<string>("EmailAdresa");
+
+                    b.Property<string>("ImeKorisnika");
+
+                    b.Property<string>("KorisnickoIme");
+
+                    b.Property<int>("MusterijaId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Password");
+
+                    b.Property<string>("PrezimeKorisnika");
+
+                    b.Key("Id");
+                });
+
             builder.Entity("ProjekatTaxiAgencijaMAN.Modeli.Ruta", b =>
                 {
                     b.Property<int>("RutaId")
@@ -86,6 +136,31 @@ namespace ProjekatTaxiAgencijaMANMigrations
                     b.Property<double>("ProcjenjenoVrijeme");
 
                     b.Key("RutaId");
+                });
+
+            builder.Entity("ProjekatTaxiAgencijaMAN.Modeli.Supervizor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BrojTelefona");
+
+                    b.Property<DateTime>("DatumRodjenja");
+
+                    b.Property<DateTime>("DatumZaposlenja");
+
+                    b.Property<string>("Ime");
+
+                    b.Property<string>("KorisnickoIme");
+
+                    b.Property<string>("Password");
+
+                    b.Property<string>("Prezime");
+
+                    b.Property<int>("ZaposlenikId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Key("Id");
                 });
 
             builder.Entity("ProjekatTaxiAgencijaMAN.Modeli.Vozac", b =>
@@ -121,8 +196,6 @@ namespace ProjekatTaxiAgencijaMANMigrations
                 {
                     b.Property<int>("VoziloId")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("BrojVozila");
 
                     b.Property<int>("GodisteVozila");
 

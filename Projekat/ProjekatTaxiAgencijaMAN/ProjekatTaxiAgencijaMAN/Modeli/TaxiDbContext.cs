@@ -18,6 +18,9 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
         public DbSet<Zaposlenik> zaposlenici { get; set; }
         public DbSet<Kompanija> kompanije { get; set; }
         public DbSet<Vozac> vozaci { get; set; }
+        public DbSet<RegistrovanaMusterija> regMusterije { get; set; }
+        public DbSet<Dispecer> dispeceri { get; set; }
+        public DbSet<Supervizor> supervizor { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

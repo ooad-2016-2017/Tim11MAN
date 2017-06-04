@@ -10,6 +10,26 @@ namespace ProjekatTaxiAgencijaMANMigrations
         public override void Up(MigrationBuilder migration)
         {
             migration.CreateTable(
+                name: "Dispecer",
+                columns: table => new
+                {
+                    Id = table.Column(type: "INTEGER", nullable: false),
+                        //.Annotation("Sqlite:Autoincrement", true),
+                    BrojTelefona = table.Column(type: "TEXT", nullable: true),
+                    DatumRodjenja = table.Column(type: "TEXT", nullable: false),
+                    DatumZaposlenja = table.Column(type: "TEXT", nullable: false),
+                    Ime = table.Column(type: "TEXT", nullable: true),
+                    KorisnickoIme = table.Column(type: "TEXT", nullable: true),
+                    Password = table.Column(type: "TEXT", nullable: true),
+                    Prezime = table.Column(type: "TEXT", nullable: true),
+                    ZaposlenikId = table.Column(type: "INTEGER", nullable: false)
+                        //.Annotation("Sqlite:Autoincrement", true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Dispecer", x => x.Id);
+                });
+            migration.CreateTable(
                 name: "Kompanija",
                 columns: table => new
                 {
@@ -39,11 +59,31 @@ namespace ProjekatTaxiAgencijaMANMigrations
                     table.PrimaryKey("PK_Musterija", x => x.MusterijaId);
                 });
             migration.CreateTable(
+                name: "RegistrovanaMusterija",
+                columns: table => new
+                {
+                    Id = table.Column(type: "INTEGER", nullable: false),
+                        //.Annotation("Sqlite:Autoincrement", true),
+                    BrojTelefona = table.Column(type: "TEXT", nullable: true),
+                    DatumRodjenja = table.Column(type: "TEXT", nullable: false),
+                    EmailAdresa = table.Column(type: "TEXT", nullable: true),
+                    ImeKorisnika = table.Column(type: "TEXT", nullable: true),
+                    KorisnickoIme = table.Column(type: "TEXT", nullable: true),
+                    MusterijaId = table.Column(type: "INTEGER", nullable: false),
+                        //.Annotation("Sqlite:Autoincrement", true),
+                    Password = table.Column(type: "TEXT", nullable: true),
+                    PrezimeKorisnika = table.Column(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RegistrovanaMusterija", x => x.Id);
+                });
+            migration.CreateTable(
                 name: "Ruta",
                 columns: table => new
                 {
                     RutaId = table.Column(type: "INTEGER", nullable: false),
-                       // .Annotation("Sqlite:Autoincrement", true),
+                        //.Annotation("Sqlite:Autoincrement", true),
                     DuzinaRute = table.Column(type: "REAL", nullable: false),
                     KrajnjaLat = table.Column(type: "REAL", nullable: false),
                     KrajnjaLong = table.Column(type: "REAL", nullable: false),
@@ -58,12 +98,31 @@ namespace ProjekatTaxiAgencijaMANMigrations
                     table.PrimaryKey("PK_Ruta", x => x.RutaId);
                 });
             migration.CreateTable(
+                name: "Supervizor",
+                columns: table => new
+                {
+                    Id = table.Column(type: "INTEGER", nullable: false),
+                        //.Annotation("Sqlite:Autoincrement", true),
+                    BrojTelefona = table.Column(type: "TEXT", nullable: true),
+                    DatumRodjenja = table.Column(type: "TEXT", nullable: false),
+                    DatumZaposlenja = table.Column(type: "TEXT", nullable: false),
+                    Ime = table.Column(type: "TEXT", nullable: true),
+                    KorisnickoIme = table.Column(type: "TEXT", nullable: true),
+                    Password = table.Column(type: "TEXT", nullable: true),
+                    Prezime = table.Column(type: "TEXT", nullable: true),
+                    ZaposlenikId = table.Column(type: "INTEGER", nullable: false)
+                        //.Annotation("Sqlite:Autoincrement", true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Supervizor", x => x.Id);
+                });
+            migration.CreateTable(
                 name: "Vozilo",
                 columns: table => new
                 {
                     VoziloId = table.Column(type: "INTEGER", nullable: false),
                         //.Annotation("Sqlite:Autoincrement", true),
-                    BrojVozila = table.Column(type: "TEXT", nullable: true),
                     GodisteVozila = table.Column(type: "INTEGER", nullable: false),
                     Predjenikilometri = table.Column(type: "REAL", nullable: false),
                     RegistracijskeTablice = table.Column(type: "TEXT", nullable: true),
@@ -112,7 +171,7 @@ namespace ProjekatTaxiAgencijaMANMigrations
                     Prezime = table.Column(type: "TEXT", nullable: true),
                     Slobodan = table.Column(type: "INTEGER", nullable: false),
                     VoziloVoziloId = table.Column(type: "INTEGER", nullable: true),
-                    ZaposlenikId = table.Column(type: "INTEGER", nullable: false),
+                    ZaposlenikId = table.Column(type: "INTEGER", nullable: false)
                         //.Annotation("Sqlite:Autoincrement", true)
                 },
                 constraints: table =>
@@ -160,7 +219,10 @@ namespace ProjekatTaxiAgencijaMANMigrations
 
         public override void Down(MigrationBuilder migration)
         {
+            migration.DropTable("Dispecer");
             migration.DropTable("Narudzba");
+            migration.DropTable("RegistrovanaMusterija");
+            migration.DropTable("Supervizor");
             migration.DropTable("Zaposlenik");
             migration.DropTable("Musterija");
             migration.DropTable("Ruta");
