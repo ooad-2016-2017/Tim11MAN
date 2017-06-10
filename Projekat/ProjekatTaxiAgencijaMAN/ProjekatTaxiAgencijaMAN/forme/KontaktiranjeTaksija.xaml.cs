@@ -36,10 +36,55 @@ namespace ProjekatTaxiAgencijaMAN.forme
         MapIcon ikonica1;
         MapIcon ikonica2;
         Musterija m;
+
+        double cijenaRacunanje (double duzina)
+        {
+            if (duzina < 1000) return 1;
+            return duzina / 1000;
+        }
+
         public KontaktiranjeTaksija(Musterija m)
         {
             this.InitializeComponent();
             this.m = m;
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+        }
+
+        public KontaktiranjeTaksija()
+        {
+            this.InitializeComponent();
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+        }
+
+        public double GetDistanceBetweenPoints(double lat1, double long1, double lat2, double long2)
+        {
+            double distance = 0;
+
+            double dLat = (lat2 - lat1) / 180 * Math.PI;
+            double dLong = (long2 - long1) / 180 * Math.PI;
+
+            double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2)
+                        + Math.Cos(lat1 / 180 * Math.PI) * Math.Cos(lat2 / 180 * Math.PI)
+                        * Math.Sin(dLong / 2) * Math.Sin(dLong / 2);
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
+            //Calculate radius of earth
+            // For this you can assume any of the two points.
+            double radiusE = 6378135; // Equatorial radius, in metres
+            double radiusP = 6356750; // Polar Radius
+
+            //Numerator part of function
+            double nr = Math.Pow(radiusE * radiusP * Math.Cos(lat1 / 180 * Math.PI), 2);
+            //Denominator part of the function
+            double dr = Math.Pow(radiusE * Math.Cos(lat1 / 180 * Math.PI), 2)
+                            + Math.Pow(radiusP * Math.Sin(lat1 / 180 * Math.PI), 2);
+            double radius = Math.Sqrt(nr / dr);
+
+            //Calculate distance in meters.
+            distance = radius * c;
+            return distance; // distance in meters
         }
 
         private void mapaPodaci_MapTapped(Windows.UI.Xaml.Controls.Maps.MapControl sender, Windows.UI.Xaml.Controls.Maps.MapInputEventArgs args)
@@ -47,8 +92,7 @@ namespace ProjekatTaxiAgencijaMAN.forme
             brojac++;
             if (brojac > 2)
             {
-                brojac = 0;
-                nemoj = false;
+                brojac = 1;
                 mapaPodaci.Routes.Remove(viewOfRouteGlobal);
                 mapaPodaci.MapElements.Remove(ikonica1);
                 mapaPodaci.MapElements.Remove(ikonica2);
@@ -60,21 +104,16 @@ namespace ProjekatTaxiAgencijaMAN.forme
             mapaPodaci.MapElements.Add(ikonica);
             if (brojac == 1)
             {
+                pocetna = tappedGeoPosition;
                 ikonica1 = ikonica;
             }
             else if (brojac == 2)
             {
                 ikonica2 = ikonica;
-            }
-            
-            if (!nemoj)
-            {
-                pocetna = tappedGeoPosition;
-                nemoj = true;
-            }
-            if (brojac == 2)
-            {
                 ShowRouteOnMap(pocetna, tappedGeoPosition);
+                double privremeni = Math.Round(GetDistanceBetweenPoints(pocetna.Latitude, pocetna.Longitude, tappedGeoPosition.Latitude, tappedGeoPosition.Longitude), 2);
+                textBlockDuzinaRute.Text = privremeni.ToString()+" m";
+                textBlockCijenaP.Text = "Cijena: " + Math.Round(cijenaRacunanje(privremeni),2) + " KM";
             }
 
         }

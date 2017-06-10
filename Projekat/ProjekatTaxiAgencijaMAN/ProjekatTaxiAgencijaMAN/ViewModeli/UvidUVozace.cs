@@ -12,6 +12,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class UvidUVozace
     {
+        DPodaci podaci;
         public string idvozaca { get; set; }
         public string imevozaca { get; set; }
         public string prezimevozaca { get; set; }
@@ -30,8 +31,9 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             return true;
         }
 
-        public UvidUVozace()
+        public UvidUVozace(GlavnaKompanijeVM gkvm)
         {
+            podaci = gkvm.podaci;
             pretraziBV = new RelayCommand<object>(pretrazi, provjera);
         }
 
@@ -60,13 +62,38 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             else
             {
                 bool provjera1 = false;
-                // proci kroz vozace i provjeriti ima li vozaca sa ovim id ako nema obavijestiti
-                foreach (var vozac in baza.vozaci)
+
+                // NE RADI
+                if (false)
                 {
-                    if (vozac.VozacId == Convert.ToInt32(idvozaca))
+                    // OVO NE RADI!!!
+                    // proci kroz vozace i provjeriti ima li vozaca sa ovim id ako nema obavijestiti
+                    foreach (var vozac in baza.vozaci)
                     {
-                        provjera1 = true;
-                        // nastavak ...
+                        if (vozac.VozacId == Convert.ToInt32(idvozaca))
+                        {
+                            provjera1 = true;
+                            // nastavak ...
+                        }
+                    }
+                }
+                // NE RADI
+
+                foreach(Zaposlenik v in podaci.zaposlenici)
+                {
+                    if(v is Vozac)
+                    {
+                        Vozac v1 = (Vozac)v;
+                        if (v.ZaposlenikId == Convert.ToInt32(idvozaca))
+                        {
+                            
+                            provjera1 = true;
+                            imevozaca = v.Ime;
+                            prezimevozaca = v.Prezime;
+                            brojvoznjivozaca = "0";
+                            predjenikilometrivozaca = v1.Vozilo.Predjenikilometri.ToString();
+                            regvozilavozaca = v1.Vozilo.RegistracijskeTablice;
+                        }
                     }
                 }
 

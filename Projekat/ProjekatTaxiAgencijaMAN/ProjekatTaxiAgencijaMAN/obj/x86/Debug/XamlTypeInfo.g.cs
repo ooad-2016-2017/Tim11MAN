@@ -147,7 +147,7 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
             _typeNameTable[11] = "ProjekatTaxiAgencijaMAN.RegistracijaMusterije";
             _typeNameTable[12] = "ProjekatTaxiAgencijaMAN.RegistracijaSupervizoraIliDispecera";
             _typeNameTable[13] = "ProjekatTaxiAgencijaMAN.RegistracijaVozaca";
-            _typeNameTable[14] = "ProjekatTaxiAgencijaMAN.RegistrovaniKorisnik";
+            _typeNameTable[14] = "ProjekatTaxiAgencijaMAN.forme.RegistrovaniKorisnik";
             _typeNameTable[15] = "ProjekatTaxiAgencijaMAN.ReviewSlanje";
             _typeNameTable[16] = "ProjekatTaxiAgencijaMAN.forme.Slika";
             _typeNameTable[17] = "ProjekatTaxiAgencijaMAN.forme.SupervizorForma";
@@ -173,7 +173,7 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
             _typeTable[11] = typeof(global::ProjekatTaxiAgencijaMAN.RegistracijaMusterije);
             _typeTable[12] = typeof(global::ProjekatTaxiAgencijaMAN.RegistracijaSupervizoraIliDispecera);
             _typeTable[13] = typeof(global::ProjekatTaxiAgencijaMAN.RegistracijaVozaca);
-            _typeTable[14] = typeof(global::ProjekatTaxiAgencijaMAN.RegistrovaniKorisnik);
+            _typeTable[14] = typeof(global::ProjekatTaxiAgencijaMAN.forme.RegistrovaniKorisnik);
             _typeTable[15] = typeof(global::ProjekatTaxiAgencijaMAN.ReviewSlanje);
             _typeTable[16] = typeof(global::ProjekatTaxiAgencijaMAN.forme.Slika);
             _typeTable[17] = typeof(global::ProjekatTaxiAgencijaMAN.forme.SupervizorForma);
@@ -219,6 +219,7 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
 
         private object Activate_0_BrisanjeVozaca() { return new global::ProjekatTaxiAgencijaMAN.forme.BrisanjeVozaca(); }
         private object Activate_3_Dispecer() { return new global::ProjekatTaxiAgencijaMAN.forme.Dispecer(); }
+        private object Activate_4_KontaktiranjeTaksija() { return new global::ProjekatTaxiAgencijaMAN.forme.KontaktiranjeTaksija(); }
         private object Activate_5_KontaktiranjeVozaca() { return new global::ProjekatTaxiAgencijaMAN.forme.KontaktiranjeVozaca(); }
         private object Activate_6_Prijava() { return new global::ProjekatTaxiAgencijaMAN.forme.Prijava(); }
         private object Activate_7_PrijavaNaSistem() { return new global::ProjekatTaxiAgencijaMAN.forme.PrijavaNaSistem(); }
@@ -228,7 +229,7 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
         private object Activate_11_RegistracijaMusterije() { return new global::ProjekatTaxiAgencijaMAN.RegistracijaMusterije(); }
         private object Activate_12_RegistracijaSupervizoraIliDispecera() { return new global::ProjekatTaxiAgencijaMAN.RegistracijaSupervizoraIliDispecera(); }
         private object Activate_13_RegistracijaVozaca() { return new global::ProjekatTaxiAgencijaMAN.RegistracijaVozaca(); }
-        private object Activate_14_RegistrovaniKorisnik() { return new global::ProjekatTaxiAgencijaMAN.RegistrovaniKorisnik(); }
+        private object Activate_14_RegistrovaniKorisnik() { return new global::ProjekatTaxiAgencijaMAN.forme.RegistrovaniKorisnik(); }
         private object Activate_15_ReviewSlanje() { return new global::ProjekatTaxiAgencijaMAN.ReviewSlanje(); }
         private object Activate_16_Slika() { return new global::ProjekatTaxiAgencijaMAN.forme.Slika(); }
         private object Activate_17_SupervizorForma() { return new global::ProjekatTaxiAgencijaMAN.forme.SupervizorForma(); }
@@ -273,6 +274,7 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
 
             case 4:   //  ProjekatTaxiAgencijaMAN.forme.KontaktiranjeTaksija
                 userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_KontaktiranjeTaksija;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -340,7 +342,7 @@ namespace ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 14:   //  ProjekatTaxiAgencijaMAN.RegistrovaniKorisnik
+            case 14:   //  ProjekatTaxiAgencijaMAN.forme.RegistrovaniKorisnik
                 userType = new global::ProjekatTaxiAgencijaMAN.ProjekatTaxiAgencijaMAN_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_14_RegistrovaniKorisnik;
                 userType.SetIsLocalType();

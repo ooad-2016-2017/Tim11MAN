@@ -7,19 +7,9 @@ using ProjekatTaxiAgencijaMAN.Modeli;
 namespace ProjekatTaxiAgencijaMANMigrations
 {
     [ContextType(typeof(TaxiDbContext))]
-    partial class InitialMigration
+    partial class TaxiDbContextModelSnapshot : ModelSnapshot
     {
-        public override string Id
-        {
-            get { return "20170604024632_InitialMigration"; }
-        }
-
-        public override string ProductVersion
-        {
-            get { return "7.0.0-beta6-13815"; }
-        }
-
-        public override void BuildTargetModel(ModelBuilder builder)
+        public override void BuildModel(ModelBuilder builder)
         {
             builder
                 .Annotation("ProductVersion", "7.0.0-beta6-13815");
@@ -92,8 +82,6 @@ namespace ProjekatTaxiAgencijaMANMigrations
 
                     b.Property<int?>("RutaRutaId");
 
-                    b.Property<DateTime>("VrijemeZaPrevoz");
-
                     b.Property<int?>("ZaduzeniVozacId");
 
                     b.Key("NarudzbaId");
@@ -130,18 +118,6 @@ namespace ProjekatTaxiAgencijaMANMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<double>("DuzinaRute");
-
-                    b.Property<double>("KrajnjaLat");
-
-                    b.Property<double>("KrajnjaLong");
-
-                    b.Property<string>("OdredisnaLokacija");
-
-                    b.Property<double>("PolaznaLat");
-
-                    b.Property<string>("PolaznaLokacija");
-
-                    b.Property<double>("PolaznaLong");
 
                     b.Property<double>("ProcjenjenoVrijeme");
 

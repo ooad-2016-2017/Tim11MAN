@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "EntityFramework": "6.1.3",
     "EntityFramework.Commands": "7.0.0-beta6",
     "EntityFramework.SQLite": "7.0.0-beta6",
     "Microsoft.Azure.Mobile.Client": "3.1.0",

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using ProjekatTaxiAgencijaMAN.Pomocne;
 using ProjekatTaxiAgencijaMAN.Modeli;
+using ProjekatTaxiAgencijaMAN.forme;
 
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
@@ -41,7 +42,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void kontaktiranjetaksija(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.KontaktiranjeTaksija), new KontaktiranjeTaksijaVM(this));
+            nservice.Navigate(typeof(KontaktiranjeTaksija), new KontaktiranjeTaksijaVM(this));
         }
 
         public void review(object o)

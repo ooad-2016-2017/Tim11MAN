@@ -11,6 +11,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class GlavnaKompanijeVM
     {
+        public DPodaci podaci;
         public ICommand RegistracijaVozaca { get; set; }
         public ICommand BrisanjeVozacaB { get; set; }
         public ICommand UvidUVozace { get; set; }
@@ -24,6 +25,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         public GlavnaKompanijeVM(PrijavaVM prijavaVM)
         {
             this.prijavaVM = prijavaVM;
+            podaci = prijavaVM.podaci;
             regm = prijavaVM.kompanijaIzPrijave;
             NazivKompanijeRegK = regm.NazivKompanije;
             AdresaKompanijeRegK = regm.AdresaKompanije;
@@ -53,7 +55,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void uviduvozace(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.UvidKompanijeUVozace), new UvidUVozace());
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.UvidKompanijeUVozace), new UvidUVozace(this));
         }
 
         public void uviduvozila(object o)

@@ -12,9 +12,9 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class PrijavaVM
     {
+        public DPodaci podaci;
         public ICommand GlavnaStranica { get; set; }
         public ICommand RegistracijaStranica { get; set; }
-        public ICommand KontaktiranjeTaksijaStranica { get; set; }
         public NavigationService NavigationServis;
         public Musterija musterijaIzPrijave = null;
         public RegistrovanaMusterija regmusterijaIzPrijave = null;
@@ -28,7 +28,6 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         {
             GlavnaStranica = new RelayCommand<object>(glavnaStranica, prva);
             RegistracijaStranica = new RelayCommand<object>(registracijaStranica, druga);
-            KontaktiranjeTaksijaStranica = new RelayCommand<object>(kontaktiranjeTaksijaStranica, treca);
             NavigationServis = new NavigationService();
         }
 
@@ -49,9 +48,13 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public async void glavnaStranica(object o)
         {
+            dispecerIzPrijave = null;
+            musterijaIzPrijave = null;
+            supervizorIzPrijave = null;
+            kompanijaIzPrijave = null;
             // sad ovdje treba provjeriti ima li registrovani korisnik sa ovim podacima
             // kompanija, dispecer, regkorisnik, neregkorisnik ili supervizor
-
+            /*
             List<RegistrovanaMusterija> rms = new List<RegistrovanaMusterija>();
             rms.Add(new RegistrovanaMusterija()
             {
@@ -72,8 +75,14 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 KorisnickoIme = "k",
                 Sifra = "s"
             });
+            List<ProjekatTaxiAgencijaMAN.Modeli.Dispecer> dis = new List<ProjekatTaxiAgencijaMAN.Modeli.Dispecer>();
+            dis.Add(new ProjekatTaxiAgencijaMAN.Modeli.Dispecer()
+            {
+                KorisnickoIme = "d",
+                Password = "s"
+            });
 
-            for(int i=0; i<rms.Count; i++)
+            for (int i=0; i<rms.Count; i++)
             {
                 if (rms[i].KorisnickoIme == korisnickoime)
                 {
@@ -106,17 +115,55 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 }
             }
 
-            if (regmusterijaIzPrijave != null)
+            for (int i = 0; i < dis.Count; i++)
             {
-                NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistrovaniKorisnik), new GlavnaMusterijeVM(this));
+                if (dis[i].KorisnickoIme == korisnickoime)
+                {
+                    if (dis[i].Password == sifra)
+                    {
+                        dispecerIzPrijave = dis[i];
+                    }
+                }
+            }*/
+            podaci = new DPodaci();
+
+            List<Kompanija> kmp = podaci.kompanije;
+
+            for (int i = 0; i < kmp.Count; i++)
+            {
+                if (kmp[i].KorisnickoIme == korisnickoime)
+                {
+                    if (kmp[i].Sifra == sifra)
+                    {
+                        kompanijaIzPrijave = kmp[i];
+                    }
+                }
+            }
+            List<Musterija> rms = podaci.musterije;
+            for (int i = 0; i < rms.Count; i++)
+            {
+                RegistrovanaMusterija rm = (RegistrovanaMusterija)rms[i];
+                if (rm.KorisnickoIme == korisnickoime)
+                {
+                    if (rm.Password == sifra)
+                    {
+                        regmusterijaIzPrijave = rm;
+                    }
+                }
+            }
+
+
+            if (supervizorIzPrijave != null)
+            {
+                NavigationServis.Navigate(typeof(SupervizorForma), new GlavnaSupervizoraVM(this));
             }
             else if (dispecerIzPrijave != null)
             {
-
+                NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.Dispecer), new GlavnaDispeceraVM(this));
             }
-            else if (supervizorIzPrijave != null)
+            else if (regmusterijaIzPrijave != null)
             {
-                NavigationServis.Navigate(typeof(SupervizorForma), new GlavnaSupervizoraVM(this));
+                NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.RegistrovaniKorisnik), new GlavnaMusterijeVM(this));
             }
             else if (kompanijaIzPrijave != null)
             {
@@ -132,11 +179,6 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         public void registracijaStranica(object o)
         {
             NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistracijaMusterije), new RegistracijaMusterijeVM());
-        }
-
-        public void kontaktiranjeTaksijaStranica(object o)
-        {
-            NavigationServis.Navigate(typeof(KontaktiranjeTaksija), new KontaktiranjeTaksijaVM(this));
         }
     }
 }
