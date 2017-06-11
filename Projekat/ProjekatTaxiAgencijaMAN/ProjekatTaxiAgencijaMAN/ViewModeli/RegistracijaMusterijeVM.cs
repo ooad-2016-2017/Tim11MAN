@@ -146,6 +146,57 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 regm.DatumRodjenja = datum;
                 regm.BrojTelefona = brojtelefona;
 
+               
+                if (false)
+                {
+                    baza.musterije.Add(regm);
+                    baza.SaveChanges();
+                }
+
+                try
+                {
+                    KlaseZaAzure.Musterije musterija = new KlaseZaAzure.Musterije();
+                    KlaseZaAzure.RegistrovaneMusterije registrovanaMusterija = new KlaseZaAzure.RegistrovaneMusterije();
+
+                    musterija.id = kime;
+                    userTableMusterije.InsertAsync(musterija);
+
+                    registrovanaMusterija.id = kime;
+                    registrovanaMusterija.Ime = ime;
+                    registrovanaMusterija.Prezime = prezime;
+                    registrovanaMusterija.KorisnickoIme = kime;
+                    registrovanaMusterija.Sifra = ksifra;
+                    registrovanaMusterija.Email = email;
+                    registrovanaMusterija.BrojTelefona = brojtelefona;
+                    registrovanaMusterija.DatumRodjenja = datum;
+
+                    userTableObj.InsertAsync(registrovanaMusterija);
+
+                    var dialog = new MessageDialog("Uspjesna registracija!");
+                    dialog.ShowAsync();
+                  /*  musterija.id = regm.Id.ToString();
+
+                    userTableMusterije.InsertAsync(musterija);
+
+                    registrovanaMusterija.id = regm.Id.ToString();
+                    registrovanaMusterija.Ime = ime;
+                    registrovanaMusterija.Prezime = prezime;
+                    registrovanaMusterija.KorisnickoIme = kime;
+                    registrovanaMusterija.Sifra = ksifra;
+                    registrovanaMusterija.Email = email;
+                    registrovanaMusterija.BrojTelefona = brojtelefona;
+                    registrovanaMusterija.DatumRodjenja = datum;
+
+                    userTableObj.InsertAsync(registrovanaMusterija);
+                    */
+                    podaci.musterije.Add(regm);
+                    
+
+                }
+                catch (Exception e)
+                {
+
+                }
                 kime = "";
                 ksifra = "";
                 ksifraponovo = "";
@@ -164,40 +215,6 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 Promjena("datum");
                 Promjena("brojtelefona");
 
-                if (false)
-                {
-                    baza.musterije.Add(regm);
-                    baza.SaveChanges();
-                }
-
-                try
-                {
-                    KlaseZaAzure.Musterije musterija = new KlaseZaAzure.Musterije();
-                    KlaseZaAzure.RegistrovaneMusterije registrovanaMusterija = new KlaseZaAzure.RegistrovaneMusterije();
-               
-
-                    musterija.id = regm.Id.ToString();
-
-                    userTableMusterije.InsertAsync(musterija);
-
-                    registrovanaMusterija.id = regm.Id.ToString();
-                    registrovanaMusterija.Ime = ime;
-                    registrovanaMusterija.Prezime = prezime;
-                    registrovanaMusterija.KorisnickoIme = kime;
-                    registrovanaMusterija.Sifra = ksifra;
-                    registrovanaMusterija.Email = email;
-                    registrovanaMusterija.BrojTelefona = brojtelefona;
-                    registrovanaMusterija.DatumRodjenja = datum;
-
-                    userTableObj.InsertAsync(registrovanaMusterija);
-
-                    podaci.musterije.Add(regm);
-
-                }
-                catch (Exception e)
-                {
-
-                }
             }
 
         }

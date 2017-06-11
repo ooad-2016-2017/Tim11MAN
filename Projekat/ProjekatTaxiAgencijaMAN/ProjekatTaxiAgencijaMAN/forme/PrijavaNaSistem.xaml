@@ -31,9 +31,8 @@
                         <Setter Target="buttonPrijava.Margin" Value="552,348,0,0"/>
                         <Setter Target="buttonPrijava.FontSize" Value="20"/>
 
-                        <Setter Target="textBlockRegistracija.Margin" Value="607,415,0,0"/>
+                        <Setter Target="textBlockRegistracija.Margin" Value="552,415,0,0"/>
                         <Setter Target="textBlockRegistracija.FontSize" Value="20"/>
-                        <Setter Target="textBlockRegistracija.Width" Value="122"/>
 
                     </VisualState.Setters>
                 </VisualState>
@@ -50,10 +49,10 @@
                         <Setter Target="buttonPrijava.Margin" Value="796,407,0,0"/>
                         <Setter Target="buttonPrijava.FontSize" Value="25"/>
 
-                        <Setter Target="textBlockRegistracija.Margin" Value="833,495,0,0"/>
-                        <Setter Target="textBlockRegistracija.Height" Value="40"/>
-                        <Setter Target="textBlockRegistracija.Width" Value="132"/>
-                        <Setter Target="textBlockRegistracija.FontSize" Value="20"/>
+                        <Setter Target="textBlockRegistracija.Margin" Value="800,495,0,0"/>
+                        <Setter Target="textBlockRegistracija.Height" Value="50"/>
+                        <Setter Target="textBlockRegistracija.Width" Value="170"/>
+                        <Setter Target="textBlockRegistracija.FontSize" Value="25"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>

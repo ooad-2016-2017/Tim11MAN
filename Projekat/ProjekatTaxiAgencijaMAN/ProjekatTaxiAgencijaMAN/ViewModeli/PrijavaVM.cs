@@ -7,6 +7,7 @@ using System.Windows.Input;
 using ProjekatTaxiAgencijaMAN.Modeli;
 using ProjekatTaxiAgencijaMAN.forme;
 using ProjekatTaxiAgencijaMAN.Pomocne;
+using Microsoft.WindowsAzure;
 
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
@@ -53,6 +54,9 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             musterijaIzPrijave = null;
             supervizorIzPrijave = null;
             kompanijaIzPrijave = null;
+
+           
+
             // sad ovdje treba provjeriti ima li registrovani korisnik sa ovim podacima
             // kompanija, dispecer, regkorisnik, neregkorisnik ili supervizor
             /*

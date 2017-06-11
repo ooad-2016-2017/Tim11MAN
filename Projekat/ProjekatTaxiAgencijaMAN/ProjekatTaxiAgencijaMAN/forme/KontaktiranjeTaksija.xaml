@@ -39,6 +39,7 @@
 
 
 
+
                         <Setter Target="textBlockRutaP.Margin" Value="555,52,0,0"/>
                         <Setter Target="textBlockRutaP.Height" Value="45"/>
                         <Setter Target="textBlockRutaP.FontSize" Value="25"/>
@@ -46,6 +47,19 @@
                         <Setter Target="textBlockNapomenaP.Margin" Value="29,414,0,0"/>
                         <Setter Target="textBlockNapomenaP.Height" Value="45"/>
                         <Setter Target="textBlockNapomenaP.FontSize" Value="25"/>
+
+                        <Setter Target="textBlockBrojTelP_Copy.Margin" Value="29, 305, 0, 0"/>
+                        <Setter Target="textBlockBrojTelP_Copy.FontSize" Value="25"/>
+                        <Setter Target="textBlockBrojTelP_Copy.Height" Value="30"/>
+
+                        <Setter Target="textBoxBrojTelP.Margin" Value="0,223,537,0"/>
+                        <Setter Target="textBoxBrojTelP.Height" Value="45"/>
+                        <Setter Target="textBoxBrojTelP.Width" Value="267"/>
+                        <Setter Target="textBoxBrojTelP.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockDuzinaRute.Margin" Value="293,305,0,0"/>
+                        <Setter Target="textBlockDuzinaRute.FontSize" Value="30"/>
+                        <Setter Target="textBlockDuzinaRute.Height" Value="35"/>
 
                         <Setter Target="textBlockCijenaP.Margin" Value="29,537,0,0"/>
                         <Setter Target="textBlockCijenaP.Height" Value="45"/>
@@ -61,10 +75,6 @@
                         <Setter Target="textBoxPrezimeP.Width" Value="267"/>
                         <Setter Target="textBoxPrezimeP.FontSize" Value="25"/>
 
-                        <Setter Target="textBoxBrojTelP.Margin" Value="220,224,0,0"/>
-                        <Setter Target="textBoxBrojTelP.Height" Value="45"/>
-                        <Setter Target="textBoxBrojTelP.Width" Value="267"/>
-                        <Setter Target="textBoxBrojTelP.FontSize" Value="25"/>
 
 
 
@@ -96,6 +106,19 @@
                         <Setter Target="textBlockPrezimeP.Height" Value="45"/>
                         <Setter Target="textBlockPrezimeP.FontSize" Value="30"/>
 
+                        <Setter Target="textBlockBrojTelP_Copy.Margin" Value="97, 305, 0, 0"/>
+                        <Setter Target="textBlockBrojTelP_Copy.FontSize" Value="30"/>
+                        <Setter Target="textBlockBrojTelP_Copy.Height" Value="35"/>
+
+                        <Setter Target="textBoxBrojTelP.Margin" Value="293,239,720,0"/>
+                        <Setter Target="textBoxBrojTelP.Height" Value="45"/>
+                        <Setter Target="textBoxBrojTelP.Width" Value="267"/>
+                        <Setter Target="textBoxBrojTelP.FontSize" Value="30"/>
+
+                        <Setter Target="textBlockDuzinaRute.Margin" Value="293,305,0,0"/>
+                        <Setter Target="textBlockDuzinaRute.FontSize" Value="30"/>
+                        <Setter Target="textBlockDuzinaRute.Height" Value="35"/>
+
                         <Setter Target="textBlockBrojTelP.Margin" Value="97,238,0,0"/>
                         <Setter Target="textBlockBrojTelP.Height" Value="45"/>
                         <Setter Target="textBlockBrojTelP.FontSize" Value="30"/>
@@ -112,6 +135,7 @@
                         <Setter Target="textBlockCijenaP.Height" Value="45"/>
                         <Setter Target="textBlockCijenaP.FontSize" Value="30"/>
 
+
                         <Setter Target="textBoxImeP.Margin" Value="293,67,0,0"/>
                         <Setter Target="textBoxImeP.Height" Value="45"/>
                         <Setter Target="textBoxImeP.Width" Value="267"/>
@@ -122,10 +146,7 @@
                         <Setter Target="textBoxPrezimeP.Width" Value="267"/>
                         <Setter Target="textBoxPrezimeP.FontSize" Value="30"/>
 
-                        <Setter Target="textBoxBrojTelP.Margin" Value="293,239,0,0"/>
-                        <Setter Target="textBoxBrojTelP.Height" Value="45"/>
-                        <Setter Target="textBoxBrojTelP.Width" Value="267"/>
-                        <Setter Target="textBoxBrojTelP.FontSize" Value="30"/>
+
 
 
                         <Setter Target="textBoxNapomenaP.Margin" Value="102,481,0,0"/>
@@ -148,6 +169,7 @@
 
 
 
+
         <TextBlock x:Name="textBlockImeP" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Height="31"/>
         <TextBlock x:Name="textBlockPrezimeP" HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top"  Height="31" RenderTransformOrigin="0.591,2.5"/>
         <TextBlock x:Name="textBlockBrojTelP" HorizontalAlignment="Left" Margin="10,92,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top"  Height="29"/>
@@ -161,6 +183,6 @@
         <TextBlock x:Name="textBlockCijenaP" HorizontalAlignment="Left" Margin="10,540,0,0" TextWrapping="Wrap" Text="Cijena:" VerticalAlignment="Top"/>
         <Button x:Name="buttonZahtjevP" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="121,598,0,0" VerticalAlignment="Top" Click="buttonZahtjevP_Click" Command="{Binding Path=PosaljiZahtjev}"/>
         <TextBlock x:Name="textBlockBrojTelP_Copy" HorizontalAlignment="Left" Margin="10,134,0,0" TextWrapping="Wrap" Text="Dužina rute:" VerticalAlignment="Top"  Height="29"/>
-        <TextBlock x:Name="textBlockDuzinaRute" HorizontalAlignment="Left" Margin="144,134,0,0" TextWrapping="Wrap" Text="{Binding Path=duzinaRute,UpdateSourceTrigger=Default, Mode=TwoWay}" VerticalAlignment="Top"  Height="29"/>
+        <TextBlock x:Name="textBlockDuzinaRute" HorizontalAlignment="Left" Margin="144,134,0,0" TextWrapping="Wrap" Text="{Binding Path=duzinaRute,UpdateSourceTrigger=Default, Mode=TwoWay}" VerticalAlignment="Top"  Height="27"/>
     </Grid>
 </Page>

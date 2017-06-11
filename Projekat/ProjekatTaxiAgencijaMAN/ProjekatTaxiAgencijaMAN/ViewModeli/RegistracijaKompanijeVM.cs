@@ -138,11 +138,20 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 baza.kompanije.Add(regm);
                 baza.SaveChanges();
 
+                podaci.kompanije.Add(regm);
                 try
                 {
                     KlaseZaAzure.Kompanije kompanija = new KlaseZaAzure.Kompanije();
-
-                    kompanija.id = regm.KompanijaId.ToString();
+                    /*
+                    kompanija.id = "1";
+                    kompanija.Adresa = "Lol Street";
+                    kompanija.BrojTelefona = "035111111";
+                    kompanija.DatumOsnivanja = DateTime.Now;
+                    kompanija.KorisnickoIme = "taxikomp";
+                    kompanija.Sifra = "sifra";
+                    kompanija.Email = "taxikomp@hotmail.com";
+                    userTableObj.InsertAsync(kompanija);
+                    */
                     kompanija.Adresa = imeKompanije;
                     kompanija.BrojTelefona = brojTelefonaKompanije;
                     kompanija.DatumOsnivanja = datumKompanije;
@@ -152,7 +161,11 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
                     userTableObj.InsertAsync(kompanija);
 
-                    podaci.kompanije.Add(regm);
+                 //   var dialog = new MessageDialog("Uspjesna registracija!");
+                 //   dialog.ShowAsync();
+                    
+
+             
                 }
                 catch(Exception e)
                 {

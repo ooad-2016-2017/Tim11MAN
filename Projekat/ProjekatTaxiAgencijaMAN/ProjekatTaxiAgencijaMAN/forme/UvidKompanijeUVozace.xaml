@@ -53,12 +53,7 @@
                         <Setter Target="textBoxBrojVoznji.FontSize" Value="20"/>
                         <Setter Target="textBoxBrojVoznji.Margin" Value="230,319,45,0"/>
 
-                        <Setter Target="radioButtonDnevni.FontSize" Value="20"/>
-                        <Setter Target="radioButtonDnevni.Margin" Value="30,471,0,0"/>
-
-                        <Setter Target="radioButtonMjesecni.FontSize" Value="20"/>
-                        <Setter Target="radioButtonMjesecni.Margin" Value="230,477,0,0"/>
-
+                        
                         <Setter Target="textBlockRegistracijaVozila.FontSize" Value="20"/>
                         <Setter Target="textBlockRegistracijaVozila.Margin" Value="30,384,0,0"/>
 
@@ -98,12 +93,6 @@
 
                         <Setter Target="textBoxBrojVoznji.FontSize" Value="25"/>
                         <Setter Target="textBoxBrojVoznji.Margin" Value="251,319,45,0"/>
-
-                        <Setter Target="radioButtonDnevni.FontSize" Value="25"/>
-                        <Setter Target="radioButtonDnevni.Margin" Value="30,477,0,0"/>
-
-                        <Setter Target="radioButtonMjesecni.FontSize" Value="25"/>
-                        <Setter Target="radioButtonMjesecni.Margin" Value="251,477,0,0"/>
 
                         <Setter Target="textBlockRegistracijaVozila.FontSize" Value="25"/>
                         <Setter Target="textBlockRegistracijaVozila.Margin" Value="30,384,0,0"/>

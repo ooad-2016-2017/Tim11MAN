@@ -47,6 +47,8 @@
                         <Setter Target="buttonUvidUVozace.Height" Value="52"/>
                         <Setter Target="buttonUvidUVozace.Width" Value="205"/>
                         <Setter Target="buttonUvidUVozace.FontSize" Value="25"/>
+
+                        <Setter Target="button.FontSize" Value="25"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -77,6 +79,10 @@
                         <Setter Target="buttonUvidUVozace.Height" Value="52"/>
                         <Setter Target="buttonUvidUVozace.Width" Value="205"/>
                         <Setter Target="buttonUvidUVozace.FontSize" Value="30"/>
+
+                        <Setter Target="button.FontSize" Value="30"/>
+                        <Setter Target="button.Margin" Value="90,394,0,0"/>
+                        <Setter Target="button.Width" Value="220"/>
 
                     </VisualState.Setters>
                 </VisualState>
