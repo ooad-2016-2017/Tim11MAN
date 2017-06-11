@@ -9,7 +9,6 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
 {
     public class Zaposlenik
     {
-        //public static int id=0;
         public static int id=0;
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ZaposlenikId { get; set; }
@@ -24,7 +23,6 @@ namespace ProjekatTaxiAgencijaMAN.Modeli
         public Zaposlenik()
         {
             ZaposlenikId = id;
-            id++;
         }
 
         

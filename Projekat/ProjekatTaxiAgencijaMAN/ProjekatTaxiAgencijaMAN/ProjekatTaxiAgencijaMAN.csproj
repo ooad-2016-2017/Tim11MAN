@@ -171,6 +171,7 @@
     <Compile Include="Modeli\Musterija.cs" />
     <Compile Include="Modeli\Narudzba.cs" />
     <Compile Include="Modeli\RegistrovanaMusterija.cs" />
+    <Compile Include="Modeli\Reviewovi.cs" />
     <Compile Include="Modeli\Ruta.cs" />
     <Compile Include="Modeli\Supervizor.cs" />
     <Compile Include="Modeli\TaxiDbContext.cs" />

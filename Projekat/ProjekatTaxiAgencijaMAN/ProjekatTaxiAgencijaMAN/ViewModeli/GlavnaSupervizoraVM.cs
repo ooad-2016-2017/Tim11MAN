@@ -16,6 +16,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class GlavnaSupervizoraVM
     {
+        public DPodaci podaci;
         public ICommand registrujKompanijuS { get; set; }
         public ICommand registrujDispeceraS { get; set; }
         public ICommand registrujSupervizoraS { get; set; }
@@ -33,6 +34,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public GlavnaSupervizoraVM(PrijavaVM prijavaVM)
         {
+            podaci = prijavaVM.podaci;
             this.prijavaVM = prijavaVM;
             regm = prijavaVM.supervizorIzPrijave;
             registrujKompanijuS = new RelayCommand<object>(registrujk, provjerareg);
@@ -69,16 +71,16 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         }
         public void registrujk(object o)
         {
-            nservice.Navigate(typeof(RegistracijaKompanije), new RegistracijaKompanijeVM());
+            nservice.Navigate(typeof(RegistracijaKompanije), new RegistracijaKompanijeVM(this));
         }
 
         public void registrujd(object o)
         {
-            nservice.Navigate(typeof(RegistracijaSupervizoraIliDispecera), new ProjekatTaxiAgencijaMAN.ViewModeli.RegistracijaDispeceraIliSupervizora());
+            nservice.Navigate(typeof(RegistracijaSupervizoraIliDispecera), new ProjekatTaxiAgencijaMAN.ViewModeli.RegistracijaDispeceraIliSupervizora(this));
         }
         public void registrujs(object o)
         {
-            nservice.Navigate(typeof(RegistracijaSupervizoraIliDispecera), new ProjekatTaxiAgencijaMAN.ViewModeli.RegistracijaDispeceraIliSupervizora());
+            nservice.Navigate(typeof(RegistracijaSupervizoraIliDispecera), new ProjekatTaxiAgencijaMAN.ViewModeli.RegistracijaDispeceraIliSupervizora(this));
         }
     }
 }

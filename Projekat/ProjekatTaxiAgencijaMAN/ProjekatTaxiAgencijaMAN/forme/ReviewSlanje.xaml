@@ -61,7 +61,7 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="43,10,0,0" TextWrapping="Wrap" Text="Vaše mišljenje:
                    " VerticalAlignment="Top"/>
         <Button x:Name="buttonPosalji" Command="{Binding Path=posaljiB}"  Content="Pošalji" HorizontalAlignment="Left" Margin="43,368,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="237,368,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonOdustani" Command="{Binding Path=odustaniB}" Content="Odustani" HorizontalAlignment="Left" Margin="237,368,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="43,53,0,0" TextWrapping="Wrap" Text="{Binding Path=misljenje, Mode=TwoWay}" VerticalAlignment="Top" Height="285" Width="274"/>
 
     </Grid>

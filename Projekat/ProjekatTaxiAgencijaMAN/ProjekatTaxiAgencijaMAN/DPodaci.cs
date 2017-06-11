@@ -14,6 +14,7 @@ namespace ProjekatTaxiAgencijaMAN
         public List<Musterija> musterije { get; set; }
         public List<Narudzba> narudzbe { get; set; }
         public List<Vozilo> vozila { get; set; }
+        public List<Reviewovi> reviewovi { get; set; }
 
         public DPodaci()
         {
@@ -22,6 +23,7 @@ namespace ProjekatTaxiAgencijaMAN
             musterije = new List<Musterija>();
             narudzbe = new List<Narudzba>();
             vozila = new List<Vozilo>();
+            reviewovi = new List<Reviewovi>();
 
             zaposlenici.Add(new Dispecer()
             {
@@ -52,7 +54,11 @@ namespace ProjekatTaxiAgencijaMAN
                 DatumZaposlenja = DateTime.Now,
                 DatumRodjenja = DateTime.Now,
                 BrojTelefona = "000666111",
-                Vozilo=v1
+                Vozilo=v1,
+                ListaDatumaVoznji=new List<DateTime>()
+                {
+                    DateTime.Now
+                }
             });
             kompanije[0].ListaZaposlenika = new List<Zaposlenik>();
             kompanije[0].ListaZaposlenika.Add(zaposlenici[1] as Vozac);

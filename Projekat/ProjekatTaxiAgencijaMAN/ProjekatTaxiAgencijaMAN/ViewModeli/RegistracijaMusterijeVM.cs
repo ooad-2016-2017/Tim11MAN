@@ -14,7 +14,8 @@ using Microsoft.WindowsAzure.MobileServices;
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class RegistracijaMusterijeVM : INotifyPropertyChanged
-    {        
+    {
+        DPodaci podaci;
         public ICommand Registracija { get; set; }
         public String ime { get; set; }
         public String prezime { get; set; }
@@ -35,8 +36,9 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             }
         }
 
-        public RegistracijaMusterijeVM()
+        public RegistracijaMusterijeVM(PrijavaVM pvm)
         {
+            podaci = pvm.podaci;
             Registracija = new RelayCommand<object>(registruj, provjeraregistracija);
         }
 
@@ -106,10 +108,22 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
             var baza = new TaxiDbContext();
 
-            foreach (var musterija in baza.musterije)
+            if (false)
             {
-                //error
-                //if ((RegistrovanaMusterija)musterija.KorisnickoIme == kime) postojiIme = true;
+                foreach (var musterija in baza.musterije)
+                {
+                    //error
+                    //if ((RegistrovanaMusterija)musterija.KorisnickoIme == kime) postojiIme = true;
+                }
+            }
+
+            foreach(Musterija m in podaci.musterije)
+            {
+                if(m is RegistrovanaMusterija)
+                {
+                    RegistrovanaMusterija rm = (RegistrovanaMusterija)m;
+                    if (rm.KorisnickoIme == kime) postojiIme = true;
+                }
             }
 
             if(postojiIme==true || errori != "")
@@ -150,8 +164,11 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 Promjena("datum");
                 Promjena("brojtelefona");
 
-                baza.musterije.Add(regm);
-                baza.SaveChanges();
+                if (false)
+                {
+                    baza.musterije.Add(regm);
+                    baza.SaveChanges();
+                }
 
                 try
                 {
@@ -173,6 +190,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     registrovanaMusterija.DatumRodjenja = datum;
 
                     userTableObj.InsertAsync(registrovanaMusterija);
+
+                    podaci.musterije.Add(regm);
 
                 }
                 catch (Exception e)

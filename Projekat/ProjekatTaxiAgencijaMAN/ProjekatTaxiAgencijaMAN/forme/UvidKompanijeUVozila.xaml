@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="ProjekatTaxiAgencijaMAN.UvidKompanijeUVozila"
+    x:Class="ProjekatTaxiAgencijaMAN.forme.UvidKompanijeUVozila"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ProjekatTaxiAgencijaMAN"
@@ -129,8 +129,6 @@
         <TextBox x:Name="textBoxModelVozila" Margin="174,205,47,0" TextWrapping="Wrap" Text="{Binding Path=modelvozila,Mode=TwoWay}" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxPredjeniKilometri" Margin="174,243,47,0" TextWrapping="Wrap" Text="{Binding Path=predjenikilometrivozila,Mode=TwoWay}" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxBrojVoznji" Margin="174,280,47,0" TextWrapping="Wrap" Text="{Binding Path=brojvoznjivozila,Mode=TwoWay}" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButtonDnevni" IsChecked="{Binding Path=dnevni, Mode=TwoWay}" Content="Dnevni" HorizontalAlignment="Left" Margin="27,418,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.433,2.781"/>
-        <RadioButton x:Name="radioButtonMjesecni" IsChecked="{Binding Path=mjesecni, Mode=TwoWay}" Content="Mjesecni" HorizontalAlignment="Left" Margin="193,418,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlockVozac" HorizontalAlignment="Left" Margin="28,358,0,0" TextWrapping="Wrap" Text="Vozac:" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxVozac" Margin="174,346,47,0" TextWrapping="Wrap" Text="{Binding Path=vozacvozila,Mode=TwoWay}" VerticalAlignment="Top"/>
         <Button x:Name="buttonPretrazi" Command="{Binding Path=pretraziVozilo}" Content="Pretrazi" HorizontalAlignment="Left" Margin="243,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.043,0.375"/>

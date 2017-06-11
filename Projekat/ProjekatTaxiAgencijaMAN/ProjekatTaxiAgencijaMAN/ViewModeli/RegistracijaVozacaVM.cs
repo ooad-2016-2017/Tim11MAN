@@ -16,8 +16,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class RegistracijaVozacaVM : INotifyPropertyChanged
     {
-        
 
+        DPodaci podaci;
         public ICommand RegistracijaVozaca { get; set; }
         GlavnaKompanijeVM kompanija;
         public String imeVozaca { get; set; }
@@ -42,6 +42,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         public RegistracijaVozacaVM(GlavnaKompanijeVM kompanija)
         {
             this.kompanija = kompanija;
+            podaci = kompanija.podaci;
             RegistracijaVozaca = new RelayCommand<object>(Registruj, provjeraRegistracije);
         }
 
@@ -119,12 +120,25 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             bool postojiIme = false;
 
             var baza = new TaxiDbContext();
-            
-            /*foreach (var vozilo in baza.vozila)
+
+            if (false)
             {
-                if (vozilo.RegistracijskeTablice == registracijaVozila) postojiIme = true;
+                /*foreach (var vozilo in baza.vozila)
+                {
+                    if (vozilo.RegistracijskeTablice == registracijaVozila) postojiIme = true;
+                }
+                */
             }
-            */
+
+            foreach(Zaposlenik z in podaci.zaposlenici)
+            {
+                if(z is Vozac)
+                {
+                    Vozac v = (Vozac)z;
+                    if (v.Vozilo.RegistracijskeTablice == registracijaVozila) postojiIme = true;
+                }
+            }
+
             if (postojiIme == true || errori != "")
             {
                 // treba pozvati thread da ispise errore
@@ -150,13 +164,19 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
                 Vozac v1 = (Vozac)regm;
                 v1.Vozilo = v;
-
+                v1.Slobodan = true;
+                v1.ListaDatumaVoznji = new List<DateTime>();
                 regm = v1;
 
-                baza.zaposlenici.Add(regm);
-                baza.vozaci.Add(v1);
-                //baza.vozila.Add(v);
+                podaci.zaposlenici.Add(v1);
+                podaci.vozila.Add(v);
 
+                if (false)
+                {
+                    baza.zaposlenici.Add(regm);
+                    baza.vozaci.Add(v1);
+                    //baza.vozila.Add(v);
+                }
                 try
                 {
                     KlaseZaAzure.Zaposlenik z = new KlaseZaAzure.Zaposlenik();

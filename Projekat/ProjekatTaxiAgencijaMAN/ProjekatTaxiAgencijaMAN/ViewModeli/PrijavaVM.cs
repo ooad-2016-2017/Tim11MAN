@@ -29,6 +29,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             GlavnaStranica = new RelayCommand<object>(glavnaStranica, prva);
             RegistracijaStranica = new RelayCommand<object>(registracijaStranica, druga);
             NavigationServis = new NavigationService();
+            podaci = new DPodaci();
         }
 
         public Boolean prva(Object o)
@@ -125,7 +126,6 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     }
                 }
             }*/
-            podaci = new DPodaci();
 
             List<Kompanija> kmp = podaci.kompanije;
 
@@ -148,6 +148,21 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     if (rm.Password == sifra)
                     {
                         regmusterijaIzPrijave = rm;
+                    }
+                }
+            }
+            List<Zaposlenik> zap = podaci.zaposlenici;
+            for (int i = 0; i < zap.Count; i++)
+            {
+                if (zap[i] is Modeli.Dispecer)
+                {
+                    Modeli.Dispecer zap1 = (Modeli.Dispecer)zap[i];
+                    if (zap1.KorisnickoIme == korisnickoime)
+                    {
+                        if (zap1.Password == sifra)
+                        {
+                            dispecerIzPrijave = zap1;
+                        }
                     }
                 }
             }
@@ -178,7 +193,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void registracijaStranica(object o)
         {
-            NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistracijaMusterije), new RegistracijaMusterijeVM());
+            NavigationServis.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistracijaMusterije), new RegistracijaMusterijeVM(this));
         }
     }
 }

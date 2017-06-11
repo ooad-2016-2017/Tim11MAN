@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using ProjekatTaxiAgencijaMAN.Pomocne;
 using ProjekatTaxiAgencijaMAN.Modeli;
+using ProjekatTaxiAgencijaMAN.forme;
 
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
@@ -18,7 +19,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
         public ICommand UvidUVozila { get; set; }
         NavigationService nservice;
         public PrijavaVM prijavaVM;
-        Kompanija regm;
+        public Kompanija regm;
         public String NazivKompanijeRegK { get; set; }
         public String AdresaKompanijeRegK { get; set; }
 
@@ -32,6 +33,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             RegistracijaVozaca = new RelayCommand<object>(registrujvozaca, provjeraregistracije);
             UvidUVozace = new RelayCommand<object>(uviduvozace, provjerauvidauvozace);
             UvidUVozila = new RelayCommand<object>(uviduvozila, provjerauviduvozila);
+            BrisanjeVozacaB = new RelayCommand<object>(brisanjevozaca, brisanjeOK);
             nservice = new NavigationService();
         }
 
@@ -48,6 +50,11 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             return true;
         }
 
+        public bool brisanjeOK(object o)
+        {
+            return true;
+        }
+
         public void registrujvozaca(object o)
         {
             nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.RegistracijaVozaca), new RegistracijaVozacaVM(this));
@@ -55,12 +62,17 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void uviduvozace(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.UvidKompanijeUVozace), new UvidUVozace(this));
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.UvidKompanijeUVozace), new UvidUVozace(this));
         }
 
         public void uviduvozila(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.UvidKompanijeUVozila), new UvidUVozila());
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.UvidKompanijeUVozila), new UvidUVozila(this));
+        }
+
+        public void brisanjevozaca(object o)
+        {
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.BrisanjeVozaca), new BrisanjeVozacaVM(this));
         }
     }
 }

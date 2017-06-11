@@ -12,7 +12,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class KontaktiranjeTaksijaVM
     {
-
+        DPodaci podaci;
         public ICommand PosaljiZahtjev { get; set; }
         public String ime { get; set; }
         public String prezime { get; set; }
@@ -23,6 +23,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public KontaktiranjeTaksijaVM(GlavnaMusterijeVM prijavaVM)
         {
+            podaci = prijavaVM.podaci;
             PosaljiZahtjev = new RelayCommand<object>(naruci, mozen);
             this.pvm = prijavaVM;
         }
@@ -41,7 +42,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             }
             return true;
         }
-
+        Vozac v1;
         public void naruci(object o)
         {
             String errori = "";
@@ -80,7 +81,31 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 n.Napomene = napomena;
                 n.Narucilac = pvm.regm;
                 n.Ruta = r;
-                Vozac v1;
+
+                foreach(Zaposlenik z in podaci.zaposlenici)
+                {
+                    if(z is Vozac)
+                    {
+                        Vozac v = (Vozac)z;
+                        if (v.Slobodan == false)
+                        {
+                            v1 = v;
+                            break;
+                        }
+                    }
+                }
+
+                if (v1==null)
+                {
+                    IspisiErrore("Nema slobodnih vozaca");
+                }
+                else
+                {
+                    //v1.Slobodan = false;
+                    n.Zaduzeni = v1;
+                    podaci.narudzbe.Add(n);
+                }
+
                 // proc kroz bazu i pronaci prvog slobodnog vozaca i njega dodijeliti
                 //n.Zaduzeni = v1;
 

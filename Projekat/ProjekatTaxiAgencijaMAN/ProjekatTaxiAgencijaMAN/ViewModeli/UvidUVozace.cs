@@ -7,12 +7,14 @@ using System.Windows.Input;
 using ProjekatTaxiAgencijaMAN.Pomocne;
 using ProjekatTaxiAgencijaMAN.Modeli;
 using Windows.UI.Popups;
+using System.ComponentModel;
 
 namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
-    class UvidUVozace
+    class UvidUVozace: INotifyPropertyChanged
     {
         DPodaci podaci;
+        Kompanija regm;
         public string idvozaca { get; set; }
         public string imevozaca { get; set; }
         public string prezimevozaca { get; set; }
@@ -26,13 +28,25 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public bool provjeriid(String id)
         {
+            if (id == null) return false;
             for (int i = 0; i < id.Length; i++)
                 if (id[i] < '0' || id[i] > '9') return false;
             return true;
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void Promjena(String s)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(s));
+            }
+        }
+
         public UvidUVozace(GlavnaKompanijeVM gkvm)
         {
+            this.regm = gkvm.regm;
             podaci = gkvm.podaci;
             pretraziBV = new RelayCommand<object>(pretrazi, provjera);
         }
@@ -79,18 +93,24 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                 }
                 // NE RADI
 
-                foreach(Zaposlenik v in podaci.zaposlenici)
+                foreach(Zaposlenik v in regm.ListaZaposlenika)
                 {
                     if(v is Vozac)
                     {
                         Vozac v1 = (Vozac)v;
-                        if (v.ZaposlenikId == Convert.ToInt32(idvozaca))
+                        if (v1.VozacId == Convert.ToInt32(idvozaca))
                         {
-                            
                             provjera1 = true;
-                            imevozaca = v.Ime;
-                            prezimevozaca = v.Prezime;
-                            brojvoznjivozaca = "0";
+                            imevozaca = v1.Ime;
+                            prezimevozaca = v1.Prezime;
+                            if (v1.ListaDatumaVoznji != null)
+                            {
+                                brojvoznjivozaca = v1.ListaDatumaVoznji.Count.ToString();
+                            }
+                            else
+                            {
+                                brojvoznjivozaca = "Nema voznji";
+                            }
                             predjenikilometrivozaca = v1.Vozilo.Predjenikilometri.ToString();
                             regvozilavozaca = v1.Vozilo.RegistracijskeTablice;
                         }
@@ -99,8 +119,19 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
                 if (!provjera1)
                 {
+                    imevozaca = "";
+                    prezimevozaca = "";
+                    brojvoznjivozaca = "";
+                    predjenikilometrivozaca = "";
+                    regvozilavozaca = "";
                     IspisError("Nema vozaca sa ovim ID");
                 }
+
+                Promjena("imevozaca");
+                Promjena("prezimevozaca");
+                Promjena("brojvoznjivozaca");
+                Promjena("predjenikilometrivozaca");
+                Promjena("regvozilavozaca");
             }
         }
     }

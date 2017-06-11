@@ -15,6 +15,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class RegistracijaDispeceraIliSupervizora : INotifyPropertyChanged
     {
+        DPodaci podaci;
         public ICommand RegistrujDS { get; set; }
         public string kime { get; set; }
         public string ksifra { get; set; }
@@ -36,8 +37,9 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             return true;
         }
 
-        public RegistracijaDispeceraIliSupervizora()
+        public RegistracijaDispeceraIliSupervizora(GlavnaSupervizoraVM gsvm)
         {
+            podaci = gsvm.podaci;
             RegistrujDS = new RelayCommand<object>(Registruj, provjeraRegistracije);
         }
 
@@ -99,17 +101,33 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             var baza = new TaxiDbContext();
             bool postojiIme = false;
 
-            foreach (var zaposlenik in baza.zaposlenici)
+            if (false)
             {
-                if (zaposlenik.KorisnickoIme == kime) postojiIme = true;
+                foreach (var zaposlenik in baza.zaposlenici)
+                {
+                    if (zaposlenik.KorisnickoIme == kime) postojiIme = true;
+                }
+            }
+            // i treba validirati email
+
+
+
+            // TREBA PROCITATI SA AZURE I PROVJERITI DA LI POSTOJI OVO KORISNICKO IME
+            
+
+            // OVO JE ZA LOKALNU BAZU UNUTAR APP
+
+            foreach(Zaposlenik z in podaci.zaposlenici)
+            {
+                if(!(z is Vozac))
+                {
+                    if (z.KorisnickoIme == kime) postojiIme = true;
+                }
             }
 
-            // i treba validirati email
-            
 
             if (postojiIme == true || errori != "")
             {
-                // treba pozvati thread da ispise errore
                 if (postojiIme == true)
                 {
                     errori += "Ovo korisnicko ime vec postoji";
@@ -152,6 +170,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                         supervizor.id = regm.ZaposlenikId.ToString();
 
                         userTableSupervizori.InsertAsync(supervizor);
+
+                        podaci.zaposlenici.Add(regm);
                         
                     }
                     catch (Exception e)
@@ -193,6 +213,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                         dispecer.id = regm.ZaposlenikId.ToString();
 
                         userTableDispeceri.InsertAsync(dispecer);
+
+                        podaci.zaposlenici.Add(regm);
 
                     }
                     catch (Exception e)

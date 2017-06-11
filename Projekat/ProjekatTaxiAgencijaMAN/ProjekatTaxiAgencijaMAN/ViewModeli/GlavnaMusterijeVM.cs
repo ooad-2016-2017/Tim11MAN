@@ -12,6 +12,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class GlavnaMusterijeVM
     {
+        public DPodaci podaci;
         public ICommand KontaktiranjeTaksijaRegM { get; set; }
         public ICommand ReviewRegM { get; set; }
         NavigationService nservice;
@@ -22,6 +23,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public GlavnaMusterijeVM(PrijavaVM prijavaVM)
         {
+            podaci = prijavaVM.podaci;
             this.prijavaVM = prijavaVM;
             regm = prijavaVM.regmusterijaIzPrijave;
             ImeRegK = regm.ImeKorisnika;
@@ -47,7 +49,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void review(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.ReviewSlanje), new ReviewSlanjeVM());
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.ReviewSlanje), new ReviewSlanjeVM(this));
         }
     }
 }

@@ -14,6 +14,7 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class RegistracijaKompanijeVM
     {
+        DPodaci podaci;
         public ICommand RegistracijaKompanije { get; set; }
         public String imeKompanije { get; set; }
         public String emailKompanije { get; set; }
@@ -33,8 +34,9 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
             }
         }
 
-        public RegistracijaKompanijeVM()
+        public RegistracijaKompanijeVM(GlavnaSupervizoraVM gsvm)
         {
+            podaci = gsvm.podaci;
             RegistracijaKompanije = new RelayCommand<object>(registruj, provjeraregistracija);
         }
 
@@ -99,9 +101,19 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
             var baza = new TaxiDbContext();
 
-            foreach (var kompanija in baza.kompanije)
+            if (false)
             {
-                if (kompanija.KorisnickoIme == kime) postojiIme = true;
+                foreach (var kompanija in baza.kompanije)
+                {
+                    if (kompanija.KorisnickoIme == kime) postojiIme = true;
+                }
+            }
+
+            // PROVJERI ZA AZURE DA LI POSTOJI KOMPANIJA SA OVIM KORISNICKIM IMENOM
+
+            foreach(Kompanija k in podaci.kompanije)
+            {
+                if (k.KorisnickoIme == kime) postojiIme = true;
             }
 
             if (postojiIme == true || errori != "")
@@ -139,6 +151,8 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
                     kompanija.Email = emailKompanije;
 
                     userTableObj.InsertAsync(kompanija);
+
+                    podaci.kompanije.Add(regm);
                 }
                 catch(Exception e)
                 {

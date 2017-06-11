@@ -11,14 +11,16 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 {
     class GlavnaDispeceraVM
     {
+        public DPodaci podaci;
         public ICommand KontaktiranjeVozacaD { get; set; }
         public ICommand ProvjeraVozilaD { get; set; }
         NavigationService nservice;
         public PrijavaVM prijavaVM;
-        ProjekatTaxiAgencijaMAN.Modeli.Dispecer regm;
+        public ProjekatTaxiAgencijaMAN.Modeli.Dispecer regm;
 
         public GlavnaDispeceraVM(PrijavaVM prijavaVM)
         {
+            podaci = prijavaVM.podaci;
             this.prijavaVM = prijavaVM;
             regm = prijavaVM.dispecerIzPrijave;
             KontaktiranjeVozacaD = new RelayCommand<object>(kontaktiranjevozaca, provjerakontaktiranjevozaca);
@@ -37,12 +39,12 @@ namespace ProjekatTaxiAgencijaMAN.ViewModeli
 
         public void kontaktiranjevozaca(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.KontaktiranjeVozaca), new KontaktiranjeVozacaVM());
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.KontaktiranjeVozaca), new KontaktiranjeVozacaVM(this));
         }
 
         public void provjeravozila(object o)
         {
-            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.UvidKompanijeUVozila), new ProjekatTaxiAgencijaMAN.ViewModeli.UvidUVozila());
+            nservice.Navigate(typeof(ProjekatTaxiAgencijaMAN.forme.UvidKompanijeUVozila), new ProjekatTaxiAgencijaMAN.ViewModeli.UvidUVozila(this));
         }
     }
 }

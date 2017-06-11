@@ -87,9 +87,9 @@
         </VisualStateManager.VisualStateGroups>
 
         <TextBlock x:Name="textBlockZaBrisanje" HorizontalAlignment="Left" Margin="20,69,0,0" TextWrapping="Wrap" Text="ID vozača:" VerticalAlignment="Top" RenderTransformOrigin="0.941,0.35" FontSize="17" Height="27"/>
-        <TextBox x:Name="textBoxPretraziV" HorizontalAlignment="Left" Margin="130,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="133" Height="36"/>
+        <TextBox x:Name="textBoxPretraziV" HorizontalAlignment="Left" Margin="130,64,0,0" TextWrapping="Wrap" Text="{Binding Path=pretrazi,Mode=TwoWay}" VerticalAlignment="Top" Width="133" Height="36"/>
         <Button x:Name="buttonPretrazi" Command="{Binding Path=PretraziV}" Content="Pretraži                 " HorizontalAlignment="Left" Margin="274,64,0,0" VerticalAlignment="Top" Height="36"/>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="219" Margin="50,171,0,0" VerticalAlignment="Top" Width="260" Background="#FFEAEAEA"/>
+        <ListView x:Name="listView" ItemsSource="{Binding Path=listaVozac, Mode=TwoWay}" HorizontalAlignment="Left" Height="219" Margin="50,171,0,0" VerticalAlignment="Top" Width="260" Background="#FFEAEAEA"/>
         <Button x:Name="buttonObrisi" Command="{Binding Path=ObrisiV}" Content="Obriši vozača" HorizontalAlignment="Left" Margin="202,441,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.518,2.542" Height="36"/>
     </Grid>
 </Page>
