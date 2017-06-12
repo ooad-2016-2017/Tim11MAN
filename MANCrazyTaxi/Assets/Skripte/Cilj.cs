@@ -22,10 +22,11 @@ public class Cilj : MonoBehaviour {
                 t = Convert.ToInt32(trenutni.text.ToString());
             if(int.TryParse(najbolji.text.ToString(), out n))
                 n = Convert.ToInt32(najbolji.text.ToString());
-            if (t < n)
+            if (t < n || n==0)
             {
                 najbolji.text = t.ToString();
                 PlayerPrefs.SetInt("najboljiskor", t);
+                PlayerPrefs.Save();
             }
 
             Debug.Log("GAME WON! :D");

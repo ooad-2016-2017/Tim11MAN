@@ -14,8 +14,9 @@ public class Score : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        n = PlayerPrefs.GetInt("najboljiskor");
-        najbolji.text = n.ToString();
+        if (PlayerPrefs.HasKey("najboljiskor"))
+            n=PlayerPrefs.GetInt("najboljiskor",0);
+            najbolji.text = n.ToString();
 	}
 	
 	// Update is called once per frame

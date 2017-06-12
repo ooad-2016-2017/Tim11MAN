@@ -1,42 +1,41 @@
 Initialize engine version: 5.6.1f1 (2860b30f0b54)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: Intel(R) HD Graphics (ID=0xf31)
-    Vendor:   Intel
-    VRAM:     928 MB
-    Driver:   10.18.10.4276
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Radeon (TM) RX 480 Graphics (ID=0x67df)
+    Vendor:   ATI
+    VRAM:     3072 MB
+    Driver:   22.19.162.4
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.273 seconds
-Platform assembly: C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Nejra\Documents\ETF\IV semestar\OOAD\TAXII\Tim11MAN\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\System.dll (this message is harmless)
-desktop: 1366x768 60Hz; virtual: 3286x1080 at -1920,-311
+Platform assembly: D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.084 seconds
+Platform assembly: D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\OOAD\ooadfinal\MANCrazyTaxi\MANCrazyTaxi_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
-XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
 The referenced script on this Behaviour (Game Object 'Auto') is missing!
  
 (Filename:  Line: 1743)
 
-UnloadTime: 3.884956 ms
+UnloadTime: 2.327243 ms
 The referenced script on this Behaviour (Game Object 'Auto') is missing!
  
 (Filename:  Line: 1743)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.048749 ms
+UnloadTime: 10.403184 ms
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 292.
-Total: 0.298697 ms (FindLiveObjects: 0.068057 ms CreateObjectMapping: 0.030247 ms MarkObjects: 0.189521 ms  DeleteObjects: 0.009452 ms)
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 329.
+Total: 0.317715 ms (FindLiveObjects: 0.027892 ms CreateObjectMapping: 0.036227 ms MarkObjects: 0.245901 ms  DeleteObjects: 0.006732 ms)
 
 GAME WON! :D
  
@@ -47,40 +46,29 @@ The referenced script on this Behaviour (Game Object 'Auto') is missing!
 (Filename:  Line: 1743)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.115388 ms
+UnloadTime: 0.691536 ms
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 292.
-Total: 0.302950 ms (FindLiveObjects: 0.096414 ms CreateObjectMapping: 0.030720 ms MarkObjects: 0.163527 ms  DeleteObjects: 0.011342 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 329.
+Total: 0.333425 ms (FindLiveObjects: 0.032060 ms CreateObjectMapping: 0.035586 ms MarkObjects: 0.258083 ms  DeleteObjects: 0.006732 ms)
+
+GAME WON! :D
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 The referenced script on this Behaviour (Game Object 'Auto') is missing!
  
 (Filename:  Line: 1743)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.858754 ms
+UnloadTime: 0.790281 ms
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 292.
-Total: 0.370535 ms (FindLiveObjects: 0.125244 ms CreateObjectMapping: 0.032610 ms MarkObjects: 0.197083 ms  DeleteObjects: 0.011342 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 329.
+Total: 0.337272 ms (FindLiveObjects: 0.037189 ms CreateObjectMapping: 0.039113 ms MarkObjects: 0.251992 ms  DeleteObjects: 0.008015 ms)
 
-The referenced script on this Behaviour (Game Object 'Auto') is missing!
- 
-(Filename:  Line: 1743)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.074743 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 292.
-Total: 0.332726 ms (FindLiveObjects: 0.109175 ms CreateObjectMapping: 0.032138 ms MarkObjects: 0.176760 ms  DeleteObjects: 0.011815 ms)
-
-The referenced script on this Behaviour (Game Object 'Auto') is missing!
- 
-(Filename:  Line: 1743)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.286950 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 292.
-Total: 0.350213 ms (FindLiveObjects: 0.105394 ms CreateObjectMapping: 0.033556 ms MarkObjects: 0.196138 ms  DeleteObjects: 0.013233 ms)
-
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1cd0 -> priority: 1 
+Setting up 6 worker threads for Enlighten.
+  Thread -> id: 2f0 -> priority: 1 
+  Thread -> id: 2058 -> priority: 1 
+  Thread -> id: 2f44 -> priority: 1 
+  Thread -> id: 3f68 -> priority: 1 
+  Thread -> id: 1368 -> priority: 1 
+  Thread -> id: 3290 -> priority: 1 
