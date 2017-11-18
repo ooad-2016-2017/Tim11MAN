@@ -49,3 +49,4 @@ Sistem koji nudi bolju i bržu mogućnost poslovanja, mi vam garantujemo da će 
 * *taxi kompanija* - korisnik aplikacije koji ima uvid u svoja vozila i zaposlene vozače
 * *dispečer* - osoba koja povezuje mušterije i vozače
 * *supervizor* - osoba koja upravlja cijelim sistemom
+ 
